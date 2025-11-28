@@ -1,49 +1,77 @@
 ---
 ---
 
-<section class="border-b border-gray-100 bg-gradient-to-b from-yellow-50 to-white">
-  <div class="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 md:flex-row md:items-center md:justify-between md:px-6 md:py-24">
-    <div class="max-w-xl space-y-6">
-      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-yellow-600">
-        Escuela de emprendimiento online
-      </p>
+<section class="relative overflow-hidden bg-[#ffffff]">
 
-      <h1 class="text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
-        Liga Emprendedora: escuela de emprendimiento online para lanzar tu negocio como un partido de fútbol
-      </h1>
+  <!-- Fondo tipo estadio con fade -->
+  <div
+    class="pointer-events-none absolute inset-0"
+    style="
+      background-image: url('/estadium.webp');
+      background-size: cover;
+      background-position: center;
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 25%,
+        black 75%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 25%,
+        black 75%,
+        transparent 100%
+      );
+    "
+  ></div>
 
-      <p class="text-lg text-gray-700">
-        Liga Emprendedora es la escuela digital que usa el fútbol para llevarte de una idea suelta a un MVP en 90 días, con un método claro, una comunidad que te acompaña y recursos simples que funcionan en la vida real.
-      </p>
+  <!-- Overlay suave para contraste -->
+  <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
 
-      <div class="flex flex-wrap items-center gap-3">
-        <a
-          href="/unete"
-          class="inline-flex items-center justify-center rounded-full bg-yellow-400 px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-yellow-300"
-        >
-          Únete gratis a la Liga
-        </a>
-        <a
-          href="#como-funciona"
-          class="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-800 transition hover:bg-gray-50"
-        >
-          Ver cómo funciona
-        </a>
+  <div class="relative mx-auto flex min-h-[70vh] max-w-5xl flex-col items-center justify-center px-4 py-16 text-center md:px-6 md:py-24">
+    
+    <p class="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
+      Liga Emprendedora · Escuela online
+    </p>
+
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-[#162741]">
+      Emprender no es ver el partido.<br class="hidden sm:block" />
+      <span class="text-[#E1C875]  text-7xl [text-shadow:0_0_20px_rgba(0,0,0,0.80)]">
+Es jugarlo.</span>
+    </h1>
+
+    <p class="mt-4 max-w-2xl text-lg md:text-xl text-[#162741]/85">
+      Liga Emprendedora es la escuela digital que usa el fútbol para llevarte de una idea suelta a un MVP en 90 días,
+      con un método claro, una comunidad que te acompaña y recursos simples que funcionan en la vida real.
+    </p>
+
+    <!-- Formulario estilo “playbook” -->
+    <form
+      class="mt-8 flex w-full max-w-xl flex-col gap-3 rounded-full border border-[#162741]/30 bg-white/70 p-1.5 backdrop-blur-sm sm:flex-row"
+    >
+      <div class="flex flex-1 items-center gap-2 rounded-full bg-transparent px-4 py-2 text-left">
+        <span class="text-[#162741] text-sm">✉️</span>
+        <input
+          type="email"
+          required
+          placeholder="Ingresa tu correo"
+          class="w-full bg-transparent text-sm text-[#162741] placeholder:text-[#162741]/40 outline-none"
+        />
       </div>
 
-      <p class="text-sm text-gray-500">
-        Contenido semanal, recursos accionables y comunidad online. Sin humo, sin tecnicismos innecesarios.
-      </p>
-    </div>
+      <button
+        type="submit"
+        class="rounded-full bg-[#E1C875] px-6 py-2 text-sm font-semibold text-[#162741] shadow-md transition hover:bg-[#d9b769]"
+      >
+        Únete gratis a la Liga
+      </button>
+    </form>
 
-    <!-- Lado visual / placeholder para imagen -->
-    <div class="flex w-full justify-center md:w-auto">
-  <img 
-    src="/Encabezado.png" 
-    alt="Ilustración Liga Emprendedora"
-    class="w-100 h-auto  md:w-150"
-    loading="lazy"
-  />
-</div>
+    <p class="mt-3 text-xs text-[#162741]/70">
+      Contenido semanal, recursos accionables y comunidad online. Sin humo, sin tecnicismos innecesarios.
+    </p>
+
   </div>
 </section>
