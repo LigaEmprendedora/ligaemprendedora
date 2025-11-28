@@ -2,26 +2,46 @@
 ---
 
 <section class="w-full bg-[#faf7f7] py-20 px-4 md:px-6">
-  <div
-    class="mx-auto max-w-4xl rounded-[32px] bg-[#181111] px-6 py-12 text-center text-white shadow-lg md:px-10 md:py-16"
-  >
-    <h2 class="text-2xl md:text-3xl font-extrabold leading-snug">
-      No te quedes en la Banca.<br class="hidden sm:block" />
-      Sal a Jugar.
-    </h2>
+  <div class="mx-auto max-w-5xl rounded-[36px] overflow-hidden shadow-lg">
+    <div
+      class="relative w-full h-full bg-[#141010]"
+      style="
+        background-image: url('/comunidad-cta-bg.webp');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <!-- Overlay oscuro con transparencia -->
+      <div class="absolute inset-0 bg-black/55"></div>
 
-    <p class="mt-4 text-sm md:text-base text-white/80 max-w-2xl mx-auto">
-      Asegura tu lugar en la Pretemporada. Es tu oportunidad de entrenar gratis con los mejores
-      y preparar tu negocio para la victoria.
-    </p>
+      <!-- Contenido -->
+      <div class="relative flex flex-col items-center text-center px-6 py-14 md:py-16">
+        <h2
+          class="text-white font-extrabold leading-snug
+                 text-2xl md:text-3xl
+                 [text-shadow:0_3px_8px_rgba(0,0,0,0.35)]"
+        >
+          No te quedes en la Banca.<br class="hidden sm:block" />
+          Sal a Jugar.
+        </h2>
 
-    <div class="mt-8">
-      <a
-        href="/unete"
-        class="inline-flex items-center justify-center rounded-full bg-[#e3412b] px-9 py-3 text-sm md:text-base font-semibold text-white shadow-md transition hover:bg-[#c83825]"
-      >
-        Accede a la Lista de Espera
-      </a>
+        <p
+          class="mt-4 max-w-2xl text-sm md:text-base text-white/80 leading-relaxed
+                 [text-shadow:0_2px_5px_rgba(0,0,0,0.25)]"
+        >
+          Asegura tu lugar en la Pretemporada. Es tu oportunidad de entrenar gratis
+          con los mejores y preparar tu negocio para la victoria.
+        </p>
+
+        <a
+          href="/unete"
+          class="mt-8 inline-flex items-center justify-center rounded-full
+                 bg-[#e3412b] px-8 py-3 text-sm md:text-base font-semibold
+                 text-white shadow-md transition hover:bg-[#c83825]"
+        >
+          Accede a la Lista de Espera
+        </a>
+      </div>
     </div>
   </div>
 </section>
