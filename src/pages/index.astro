@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import HomeHero from "../home/HomeHero.astro";
+import HomeQueEsLaLiga from "../home/HomeQueEsLaLiga.astro";
+import HomeParaQuien from "../home/HomeParaQuien.astro";
+import HomeDiferenciales from "../home/HomeDiferenciales.astro";
+import HomeLibro from "../home/HomeLibro.astro";
+import HomeCtaFinal from "../home/HomeCtaFinal.astro";
+---
+
+<BaseLayout
+  title="Liga Emprendedora | Escuela de emprendimiento online con metáforas de fútbol"
+  description="Liga Emprendedora es una escuela de emprendimiento online que conecta el fútbol con los negocios para ayudarte a lanzar tu proyecto en 90 días. Comunidad de emprendedores, recursos gratuitos, newsletter y un libro en camino."
+>
+  <div class="flex min-h-screen flex-col">
+    <Header />
+
+    <main class="flex-1">
+      <HomeHero />
+      <HomeQueEsLaLiga />
+      <HomeParaQuien />
+      <HomeDiferenciales />
+      <HomeLibro />
+      <HomeCtaFinal />
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>
