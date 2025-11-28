@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import QuienesHeroFundador from "../components/QuienesHeroFundador.astro";
+import QuienesCapitanFilosofia from "../components/QuienesCapitanFilosofia.astro";
+---
+
+<BaseLayout
+  title="Quiénes Somos | Liga Emprendedora — Equipo, estrategia y mentalidad para emprendedores"
+  description="Conoce la historia de Liga Emprendedora, la visión de Oswaldo Vega y la filosofía que guía a nuestra comunidad de emprendedores."
+>
+  <div class="flex min-h-screen flex-col">
+    <Header />
+
+    <main class="flex-1">
+      <QuienesHeroFundador />
+      <QuienesCapitanFilosofia />
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

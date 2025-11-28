@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import ComunidadHero from "../comunidad/ComunidadHero.astro";
+import ComunidadBeneficios from "../comunidad/ComunidadBeneficios.astro";
+import ComunidadRoadmap from "../comunidad/ComunidadRoadmap.astro";
+import ComunidadCtaFinal from "../comunidad/ComunidadCtaFinal.astro";
+---
+
+<BaseLayout
+  title="Comunidad Liga Emprendedora | Entrena, comparte y gana en equipo"
+  description="Únete a la comunidad de Liga Emprendedora: pretemporada gratuita, retos semanales, feedback, networking y acceso prioritario al Club MVP90."
+>
+  <div class="flex min-h-screen flex-col">
+    <Header />
+
+    <main class="flex-1">
+      <ComunidadHero />
+      <ComunidadBeneficios />
+      <ComunidadRoadmap />
+      <ComunidadCtaFinal />
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

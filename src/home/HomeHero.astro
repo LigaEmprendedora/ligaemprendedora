@@ -1,11 +1,11 @@
 ---
 ---
 
-<section class="relative overflow-hidden bg-[#ffffff]">
+<section class="relative overflow-hidden bg-[#faf7f7]">
 
-  <!-- Fondo tipo estadio con fade -->
+  <!-- Fondo estadio (sin overlays, sin cambios de color) -->
   <div
-    class="pointer-events-none absolute inset-0"
+    class="pointer-events-none absolute inset-0 opacity-70"
     style="
       background-image: url('/estadium.webp');
       background-size: cover;
@@ -13,65 +13,59 @@
       -webkit-mask-image: linear-gradient(
         to bottom,
         transparent 0%,
-        black 25%,
-        black 75%,
+        black 20%,
+        black 80%,
         transparent 100%
       );
       mask-image: linear-gradient(
         to bottom,
         transparent 0%,
-        black 25%,
-        black 75%,
+        black 20%,
+        black 80%,
         transparent 100%
       );
     "
   ></div>
 
-  <!-- Overlay suave para contraste -->
-  <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+  <!-- Contenido centrado -->
+  <div class="relative mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center px-4 py-20 text-center md:px-6">
 
-  <div class="relative mx-auto flex min-h-[70vh] max-w-5xl flex-col items-center justify-center px-4 py-16 text-center md:px-6 md:py-24">
-    
-    <p class="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
-      Liga Emprendedora · Escuela online
+    <!-- Línea superior -->
+    <p class="mb-4 text-[16px] font-semibold uppercase tracking-[0.22em] text-[#162741]">
+      LIGA EMPRENDEDORA: ESCUELA DE EMPRENDIMIENTO ONLINE PARA LANZAR TU NEGOCIO COMO UN PARTIDO DE FÚTBOL
     </p>
 
-    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-[#162741]">
-      Emprender no es ver el partido.<br class="hidden sm:block" />
-      <span class="text-[#E1C875]  text-7xl [text-shadow:0_0_20px_rgba(0,0,0,0.80)]">
-Es jugarlo.</span>
+    <!-- H1 grande -->
+    <h1 class="text-4xl font-extrabold leading-16 text-[#162741] md:text-7xl">
+      Emprender no es ver el partido.<br />
+      <span class="text-[#E1C875] [text-shadow:0_0_12px_rgba(0,0,0,0.40)]">Es jugarlo.</span>
     </h1>
 
-    <p class="mt-4 max-w-2xl text-lg md:text-xl text-[#162741]/85">
-      Liga Emprendedora es la escuela digital que usa el fútbol para llevarte de una idea suelta a un MVP en 90 días,
-      con un método claro, una comunidad que te acompaña y recursos simples que funcionan en la vida real.
+    <!-- Párrafo -->
+    <p class="mt-5 max-w-2xl  font-semibold text-base text-[#162741] md:text-3xl">
+      Aquí entrenas, armas tu equipo y sales a la cancha para ganar.
     </p>
 
-    <!-- Formulario estilo “playbook” -->
-    <form
-      class="mt-8 flex w-full max-w-xl flex-col gap-3 rounded-full border border-[#162741]/30 bg-white/70 p-1.5 backdrop-blur-sm sm:flex-row"
-    >
-      <div class="flex flex-1 items-center gap-2 rounded-full bg-transparent px-4 py-2 text-left">
-        <span class="text-[#162741] text-sm">✉️</span>
-        <input
-          type="email"
-          required
-          placeholder="Ingresa tu correo"
-          class="w-full bg-transparent text-sm text-[#162741] placeholder:text-[#162741]/40 outline-none"
-        />
-      </div>
-
-      <button
-        type="submit"
-        class="rounded-full bg-[#E1C875] px-6 py-2 text-sm font-semibold text-[#162741] shadow-md transition hover:bg-[#d9b769]"
+    <!-- Botones centrados -->
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+      <a
+        href="/unete"
+        class="inline-flex items-center justify-center rounded-full bg-[#E1C875] px-8 py-3 text-sm font-semibold text-[#162741] shadow-md transition hover:bg-[#d6b66a]"
       >
         Únete gratis a la Liga
-      </button>
-    </form>
+      </a>
 
-    <p class="mt-3 text-xs text-[#162741]/70">
-      Contenido semanal, recursos accionables y comunidad online. Sin humo, sin tecnicismos innecesarios.
+      <a
+        href="#como-funciona"
+        class="inline-flex items-center justify-center rounded-full border border-[#162741]/40 bg-white/60 backdrop-blur px-8 py-3 text-sm font-semibold text-[#162741] transition hover:bg-white/80"
+      >
+        Ver cómo funciona
+      </a>
+    </div>
+
+    <!-- Microcopy -->
+    <p class="mt-4 text-sm font-bold text-[#162741]/70">
+      Acceso inmediato y gratuito. Sin tarjeta de crédito.
     </p>
-
   </div>
 </section>
