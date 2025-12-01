@@ -38,42 +38,42 @@ const resources: Resource[] = [
     description: "Define tu estrategia en una sola hoja.",
     icon: "doc",
     category: "Plantillas",
-    href: "#",
+    href: "/recursos/plan-negocio-one-page",
   },
   {
     title: "Análisis DAFO Interactivo",
     description: "Identifica fortalezas y debilidades clave.",
     icon: "sliders",
     category: "Frameworks",
-    href: "#",
+    href: "/recursos/dafo-interactivo",
   },
   {
     title: "Guía de Pitch para Inversores",
     description: "Estructura tu presentación para convencer.",
     icon: "user",
     category: "Guías prácticas",
-    href: "#",
+    href: "/recursos/guia-pitch-inversores",
   },
   {
     title: "Canvas de Modelo de Negocio",
     description: "Visualiza y valida tu idea de negocio.",
     icon: "grid",
     category: "Plantillas",
-    href: "#",
+    href: "/recursos/canvas-modelo-negocio",
   },
   {
     title: "Calculadora de CAC y LTV",
     description: "Mide la rentabilidad de tus clientes.",
     icon: "calc",
     category: "Herramientas",
-    href: "#",
+    href: "/recursos/calculadora-cac-ltv",
   },
   {
     title: "Framework de OKRs para Startups",
     description: "Establece y sigue objetivos ambiciosos.",
     icon: "target",
     category: "Frameworks",
-    href: "#",
+    href: "/recursos/framework-okrs-startups",
   },
 ];
 ---
@@ -89,7 +89,7 @@ const resources: Resource[] = [
       <!-- HERO -->
       <section class="w-full px-4 pt-16 md:pt-20 pb-10 md:px-6">
         <div class="mx-auto max-w-5xl text-center">
-          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#020617]">
+          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#162741]">
             Tu Playbook para el Éxito
           </h1>
           <p class="mt-4 max-w-2xl mx-auto text-sm md:text-base text-[#6b7280]">
@@ -100,7 +100,7 @@ const resources: Resource[] = [
           <button
             type="button"
             data-explore
-            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#020617] px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg transition hover:bg-black hover:-translate-y-0.5"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#162741] px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg transition hover:bg-black hover:-translate-y-0.5"
           >
             Explorar Recursos
           </button>
@@ -135,7 +135,7 @@ const resources: Resource[] = [
                 data-resource-category={res.category}
               >
                 <div
-                  class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8fafc] text-[#020617] border border-[#f1f5f9]"
+                  class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8fafc] text-[#162741] border border-[#f1f5f9]"
                 >
                   {res.icon === "doc" && (
                     <svg
@@ -246,7 +246,7 @@ const resources: Resource[] = [
                   )}
                 </div>
 
-                <h3 class="text-base font-bold text-[#020617] tracking-tight">
+                <h3 class="text-base font-bold text-[#162741] tracking-tight">
                   {res.title}
                 </h3>
                 <p class="mt-2 text-sm text-[#64748b] leading-relaxed mb-8 flex-1">
@@ -268,7 +268,7 @@ const resources: Resource[] = [
             class="mt-14 rounded-3xl bg-white px-8 py-8 shadow-sm border border-[#e5e7eb] flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
           >
             <div class="text-left">
-              <h4 class="text-lg font-bold text-[#020617]">
+              <h4 class="text-lg font-bold text-[#162741]">
                 Recursos PRO: Próximamente
               </h4>
               <p class="mt-2 text-sm text-[#64748b] max-w-xl leading-relaxed">
@@ -279,7 +279,7 @@ const resources: Resource[] = [
             <div class="flex justify-start md:justify-end">
               <button
                 type="button"
-                class="inline-flex items-center justify-center rounded-full bg-[#020617] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-black hover:shadow-lg"
+                class="inline-flex items-center justify-center rounded-full bg-[#162741] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-black hover:shadow-lg"
               >
                 Notifícame...
               </button>
@@ -315,11 +315,11 @@ const resources: Resource[] = [
           const isActive = btn.dataset.tab === category;
 
           if (isActive) {
-            btn.classList.add("bg-[#020617]", "text-white", "shadow-sm");
+            btn.classList.add("bg-[#162741]", "text-white", "shadow-sm");
             btn.classList.remove("text-[#64748b]", "hover:bg-gray-100");
           } else {
             btn.classList.add("text-[#64748b]", "hover:bg-gray-100");
-            btn.classList.remove("bg-[#020617]", "text-white", "shadow-sm");
+            btn.classList.remove("bg-[#162741]", "text-white", "shadow-sm");
           }
         });
 

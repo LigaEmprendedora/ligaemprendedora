@@ -1,0 +1,197 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const pageTitle = "Framework de OKRs para Startups | Liga Emprendedora";
+const pageDescription =
+  "Plantilla y guía de OKRs adaptada a startups y emprendedores de LATAM. Define objetivos claros y resultados clave accionables.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="flex min-h-screen flex-col bg-[#f4f6fa]">
+    <Header />
+
+    <main class="flex-1">
+      <section class="w-full px-4 py-16 md:px-6 md:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
+            Recursos · Framework
+          </p>
+          <h1 class="mt-3 text-3xl md:text-4xl font-extrabold text-[#162741]">
+            Framework de OKRs para Startups
+          </h1>
+          <p class="mt-3 text-base md:text-lg text-[#162741]">
+            Establece y sigue objetivos ambiciosos. Esta plantilla de OKRs está adaptada
+            a startups y emprendedores que necesitan foco, claridad y seguimiento semanal,
+            sin burocracia.
+          </p>
+
+          <div class="mt-10 grid gap-8 md:grid-cols-[2fr,1.4fr]">
+            <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
+              <h2 class="text-lg md:text-xl font-semibold text-[#162741]">
+                ¿Qué incluye el framework?
+              </h2>
+              <ul class="mt-4 space-y-2 text-sm text-[#162741]">
+                <li>• Plantilla de OKRs trimestrales.</li>
+                <li>• Ejemplos de OKRs para producto, crecimiento, ventas y equipo.</li>
+                <li>• Sistema simple de seguimiento semanal.</li>
+                <li>• Espacio para aprendizajes y ajustes por ciclo.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
+              <h3 class="text-base font-semibold text-[#162741]">
+                🎟️ Accede al recurso gratis
+              </h3>
+              <p class="mt-2 text-xs md:text-sm text-[#4b5563]">
+                Completa tus datos y te daremos acceso a la plantilla de OKRs.
+              </p>
+
+              <form
+                class="mt-5 space-y-3"
+                name="framework-okrs-startups"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="framework-okrs-startups" />
+                <p class="hidden">
+                  <label>
+                    No llenar:
+                    <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Nombre completo*
+                  </label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    required
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Email*
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Nombre de la empresa
+                  </label>
+                  <input
+                    type="text"
+                    name="empresa"
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Teléfono
+                  </label>
+                  <input
+                    type="tel"
+                    name="telefono"
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#162741] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
+                >
+                  Quiero descargar este recurso
+                </button>
+              </form>
+
+             
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto mt-12 max-w-4xl">
+            <section class="mt-12 w-full rounded-3xl bg-white border border-[#e5e7eb] p-8 shadow-sm">
+  <h2 class="text-xl md:text-2xl font-extrabold text-[#162741]">
+    📘 ¿Cómo usar este Framework de OKRs?
+  </h2>
+
+  <p class="mt-2 text-sm text-[#4b5563]">
+    Antes de descargar la plantilla, revisa este tutorial rápido para sacarle el máximo provecho.
+  </p>
+
+  <div class="mt-6 space-y-6 text-sm text-[#162741]">
+    <div>
+      <h3 class="font-semibold text-[#162741]">1️⃣ Define un Objetivo (O)</h3>
+      <p class="mt-1 text-[#4b5563]">
+        Es la meta cualitativa más importante del trimestre. Debe ser clara, inspiradora y enfocada.
+        <br /><strong>Ejemplos:</strong> “Escalar adquisición de clientes”, “Mejorar retención”.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-[#162741]">2️⃣ Crea de 2 a 4 Resultados Clave (KR)</h3>
+      <p class="mt-1 text-[#4b5563]">
+        Son métricas cuantitativas que indican si realmente lograste el Objetivo.
+        <br /><strong>Ejemplos:</strong> “Aumentar leads de 120 → 300”, “Reducir CAC a 25 USD”.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-[#162741]">3️⃣ Asigna un responsable por KR</h3>
+      <p class="mt-1 text-[#4b5563]">
+        Cada KR debe tener una sola persona responsable. Esto aumenta la ejecución.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-[#162741]">4️⃣ Usa la hoja de Seguimiento Semanal</h3>
+      <p class="mt-1 text-[#4b5563]">
+        Cada semana registra avance, bloqueos y el plan para los próximos 7 días.
+        <br />Esto es lo que garantiza que el OKR avance.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-[#162741]">5️⃣ Evalúa al final del trimestre</h3>
+      <p class="mt-1 text-[#4b5563]">
+        No es un examen, es un espacio para aprender, ajustar y mejorar el siguiente ciclo.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-[#c23a26]">❌ Errores comunes (evítalos)</h3>
+      <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
+        <li>Escribir tareas como KRs (Ej: “Hacer campaña”).</li>
+        <li>No definir métricas numéricas.</li>
+        <li>Asignar varios responsables por KR.</li>
+        <li>No hacer seguimiento semanal.</li>
+      </ul>
+    </div>
+
+    <p class="mt-6 text-xs text-[#6b7280]">
+      Este mismo tutorial viene incluido dentro del archivo Excel para que siempre tengas la guía a la mano.
+    </p>
+  </div>
+            </section>
+        </div>
+        
+      </section>
+      
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

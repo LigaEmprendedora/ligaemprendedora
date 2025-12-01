@@ -1,0 +1,480 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const pageTitle = "Canvas de Modelo de Negocio | Liga Emprendedora";
+const pageDescription =
+  "Visualiza y valida tu idea de negocio con un Canvas claro y simple. Incluye plantilla y guía rápida para emprendedores de LATAM.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="flex min-h-screen flex-col bg-[#f4f6fa]">
+    <Header />
+
+    <main class="flex-1">
+      {/* HERO + DESCRIPCIÓN */}
+      <section class="w-full px-4 py-16 md:px-6 md:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
+            Recursos · Plantilla visual
+          </p>
+          <h1 class="mt-3 text-3xl md:text-4xl font-extrabold text-[#162741]">
+            Canvas de Modelo de Negocio
+          </h1>
+          <p class="mt-3 text-base md:text-lg text-[#162741]">
+            Usa este Canvas para bajar tu idea a tierra: quién es tu cliente, qué le ofreces,
+            cómo llegas a él, cuánto ingresas y cuánto te cuesta. Sin teoría complicada, solo
+            los bloques clave de tu modelo de negocio.
+          </p>
+
+          <div class="mt-10 grid gap-8 md:grid-cols-[2fr,1.4fr]">
+            {/* ¿PARA QUÉ SIRVE? */}
+            <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
+              <h2 class="text-lg md:text-xl font-semibold text-[#162741]">
+                ¿Para qué te sirve este Canvas?
+              </h2>
+              <ul class="mt-4 space-y-2 text-sm text-[#162741]">
+                <li>• Tener una vista clara de tu modelo de negocio en una sola página.</li>
+                <li>• Ver rápidamente qué partes están claras y cuáles aún son borrosas.</li>
+                <li>• Alinear a tu equipo: que todos entiendan el mismo “plan de juego”.</li>
+                <li>• Iterar tu modelo a medida que hablas con clientes y tienes aprendizajes.</li>
+              </ul>
+              <p class="mt-4 text-xs text-[#4b5563]">
+                Tip: haz una primera versión en 20–30 minutos. No busques que sea perfecta;
+                busca que sea honesta. Luego la vas ajustando.
+              </p>
+            </div>
+
+            {/* DESCARGA PLANTILLA EXCEL (OPCIONAL) */}
+           
+          </div>
+        </div>
+      </section>
+
+      {/* CANVAS PARA RELLENAR + DIAGNÓSTICO + DESCARGA */}
+      <section class="w-full  px-4 pb-16 md:px-6 md:pb-20">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="text-xl md:text-2xl font-extrabold text-[#162741]">
+            Completa tu Canvas directamente aquí
+          </h2>
+          <p class="mt-2 text-sm md:text-base text-[#4b5563]">
+            Escribe lo que hoy tienes claro en cada bloque. Luego podrás ver un diagnóstico
+            rápido y descargar todo lo que escribiste.
+          </p>
+
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            {/* 1. Segmentos de Cliente */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Segmentos de Cliente"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 1
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Segmentos de Cliente
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                ¿Para quién creas valor? Describe tus principales clientes o usuarios.
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Emprendedores de servicios en LATAM en sus primeros 2–3 años..."
+              ></textarea>
+            </div>
+
+            {/* 2. Propuesta de Valor */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Propuesta de Valor"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 2
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Propuesta de Valor
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                ¿Qué problema resuelves y qué resultado concreto entregas?
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Ayudamos a X a lograr Y mediante Z..."
+              ></textarea>
+            </div>
+
+            {/* 3. Canales */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Canales"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 3
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Canales
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                ¿Cómo te encuentran, cómo te compran y cómo entregas tu solución?
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Instagram, referidos, llamadas 1:1, sesiones por Zoom..."
+              ></textarea>
+            </div>
+
+            {/* 4. Relaciones con Clientes */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Relaciones con Clientes"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 4
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Relaciones con Clientes
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                ¿Cómo cuidas, retienes y acompañas a tus clientes?
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Comunidad privada, soporte por WhatsApp, reuniones mensuales..."
+              ></textarea>
+            </div>
+
+            {/* 5. Fuentes de Ingreso */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Fuentes de Ingreso"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 5
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Fuentes de Ingreso
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                ¿Cómo ganas dinero? ¿Venta única, suscripción, comisión, upsell...?
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Suscripción mensual + talleres puntuales..."
+              ></textarea>
+            </div>
+
+            {/* 6. Recursos Clave */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Recursos Clave"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 6
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Recursos Clave
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                Personas, tecnología, marca, capital, licencias que necesitas sí o sí.
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Equipo de contenido, plataforma, comunidad, marca..."
+              ></textarea>
+            </div>
+
+            {/* 7. Actividades Clave */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Actividades Clave"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 7
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Actividades Clave
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                Lo que tu negocio tiene que hacer muy bien para que el modelo funcione.
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Crear contenido, captar leads, vender, acompañar..."
+              ></textarea>
+            </div>
+
+            {/* 8. Socios Clave */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Socios Clave"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 8
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Socios Clave
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                Aliados, proveedores, plataformas o distribuidores que te ayudan a jugar mejor.
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Pasarela de pagos, aliados de difusión, mentores..."
+              ></textarea>
+            </div>
+
+            {/* 9. Estructura de Costos */}
+            <div
+              class="rounded-3xl border border-[#e5e7eb] bg-white p-4 shadow-sm"
+              data-canvas-block="Estructura de Costos"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6b7280]">
+                Bloque 9
+              </p>
+              <h3 class="mt-1 text-sm font-semibold text-[#111827]">
+                Estructura de Costos
+              </h3>
+              <p class="mt-1 text-xs text-[#6b7280]">
+                Costos fijos y variables más importantes de tu modelo.
+              </p>
+              <textarea
+                class="mt-2 h-28 w-full rounded-2xl border border-[#e5e7eb] px-2 py-1 text-xs outline-none focus:border-[#162741]"
+                placeholder="Ej: Nómina, marketing, herramientas, alquiler, comisiones..."
+              ></textarea>
+            </div>
+          </div>
+
+          {/* BOTONES: DIAGNÓSTICO + DESCARGA */}
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              id="diagnostico-btn"
+              class="inline-flex items-center justify-center rounded-full bg-[#162741] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
+            >
+              Ver diagnóstico de mi Canvas
+            </button>
+
+            <button
+              type="button"
+              id="descarga-btn"
+              class="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[#162741] shadow-sm ring-1 ring-[#d1d5db] transition hover:bg-[#f3f4f6]"
+            >
+              Descargar mi Canvas (.xlsx)
+            </button>
+          </div>
+
+          {/* CAJA DE DIAGNÓSTICO */}
+          <div
+            id="diagnostico-box"
+            class="mt-6 hidden rounded-3xl border border-[#bbf7d0] bg-[#ecfdf5] p-4 text-sm text-[#064e3b]"
+          >
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#047857]">
+              Diagnóstico rápido
+            </p>
+            <p id="diagnostico-resumen" class="mt-2 text-sm"></p>
+            <ul id="diagnostico-lista" class="mt-3 list-disc space-y-1 pl-4 text-xs text-[#065f46]"></ul>
+          </div>
+
+          <p class="mt-6 text-[11px] text-[#6b7280]">
+            Tip: después de descargar tu archivo, puedes adjuntarlo en un correo, subirlo a tu
+            carpeta de equipo o usarlo como base para una sesión de mentoría.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+   <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const blocks = document.querySelectorAll("[data-canvas-block]");
+      const diagnosticoBtn = document.getElementById("diagnostico-btn");
+      const descargaBtn = document.getElementById("descarga-btn");
+      const box = document.getElementById("diagnostico-box");
+      const resumenEl = document.getElementById("diagnostico-resumen");
+      const listaEl = document.getElementById("diagnostico-lista");
+
+      function getBloques() {
+        const result = [];
+        blocks.forEach((card) => {
+          const name = card.getAttribute("data-canvas-block") || "";
+          const textarea = card.querySelector("textarea");
+          const value = (textarea?.value || "").trim();
+          result.push({ name, value, length: value.length });
+        });
+        return result;
+      }
+
+      function evaluarCanvas() {
+        const bloques = getBloques();
+        const evaluados = [];
+        let totalScore = 0;
+
+        bloques.forEach((b) => {
+          let score = 0;
+          let comment = "";
+
+          // Puntuación base por longitud
+          if (b.length === 0) {
+            score = 0;
+            comment = "Vacío. Empieza por escribir al menos una frase.";
+          } else if (b.length < 40) {
+            score = 0;
+            comment = "Muy corto. Intenta explicar un poco más.";
+          } else if (b.length < 120) {
+            score = 1;
+            comment = "Muy general. Añade ejemplos o detalles concretos.";
+          } else if (b.length < 220) {
+            score = 2;
+            comment = "En buena dirección. Puedes afinar con datos o ejemplos.";
+          } else {
+            score = 3;
+            comment = "Bloque sólido. Mantén este nivel de claridad.";
+          }
+
+          // Ajuste por números en ingresos / costos
+          const needsNumbers =
+            b.name === "Fuentes de Ingreso" || b.name === "Estructura de Costos";
+          const hasNumber = /\d/.test(b.value);
+
+          if (needsNumbers && b.length > 0 && !hasNumber) {
+            score = Math.max(score - 1, 0);
+            comment +=
+              " Falta añadir números (precios, montos, %). Un modelo sin números aquí queda cojo.";
+          }
+
+          evaluados.push({
+            name: b.name,
+            value: b.value,
+            length: b.length,
+            score,
+            comment,
+          });
+
+          totalScore += score;
+        });
+
+        return { bloques: evaluados, totalScore };
+      }
+
+      function nivelGlobal(totalScore) {
+        if (totalScore <= 8) {
+          return {
+            label: "Borrador inicial",
+            mensaje:
+              "Estás en fase de borrador. Lo clave ahora es que todos los bloques tengan al menos una frase clara.",
+          };
+        } else if (totalScore <= 17) {
+          return {
+            label: "Modelo en construcción",
+            mensaje:
+              "Tienes varias piezas en marcha. Enfócate en profundizar 2–3 bloques clave para que el modelo sea más accionable.",
+          };
+        } else if (totalScore <= 23) {
+          return {
+            label: "Modelo bastante claro",
+            mensaje:
+              "Tu modelo está relativamente claro. El siguiente paso es añadir más números, ejemplos y validación con clientes.",
+          };
+        } else {
+          return {
+            label: "Modelo muy maduro",
+            mensaje:
+              "Tu modelo de negocio está muy bien definido sobre el papel. Ahora la prioridad es ejecutarlo y validarlo con datos reales.",
+          };
+        }
+      }
+
+      function renderDiagnostico(resultado) {
+        const { bloques, totalScore } = resultado;
+        const nivel = nivelGlobal(totalScore);
+
+        resumenEl.textContent =
+          "Puntaje total: " +
+          totalScore +
+          " / 27 · Nivel: " +
+          nivel.label +
+          ". " +
+          nivel.mensaje;
+
+        listaEl.innerHTML = "";
+
+        const fuertes = bloques.filter((b) => b.score >= 2);
+        const flojos = bloques.filter((b) => b.score <= 1);
+
+        if (fuertes.length) {
+          const li = document.createElement("li");
+          li.textContent =
+            "Bloques más fuertes: " +
+            fuertes.map((b) => b.name).join(", ") +
+            ". Usa estos bloques como base para contar tu historia.";
+          listaEl.appendChild(li);
+        }
+
+        if (flojos.length) {
+          const li = document.createElement("li");
+          li.textContent =
+            "Bloques a reforzar: " +
+            flojos.map((b) => b.name).join(", ") +
+            ". Te recomendamos revisarlos primero en tu próxima sesión de trabajo.";
+          listaEl.appendChild(li);
+        }
+
+        // Detalle por bloque (opcional)
+        bloques.forEach((b) => {
+          const li = document.createElement("li");
+          li.textContent = `${b.name}: ${b.comment}`;
+          listaEl.appendChild(li);
+        });
+
+        box?.classList.remove("hidden");
+        box?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      function descargarExcel(resultado) {
+        const { bloques, totalScore } = resultado;
+        const nivel = nivelGlobal(totalScore);
+
+        // Hoja 1: Canvas
+        const sheetCanvas = [
+          ["Bloque", "Contenido"],
+          ...bloques.map((b) => [b.name, b.value || ""]),
+        ];
+
+        // Hoja 2: Diagnóstico
+        const sheetDiag = [
+          ["Resumen"],
+          [
+            `Puntaje total: ${totalScore} / 27 · Nivel: ${nivel.label}. ${nivel.mensaje}`,
+          ],
+          [],
+          ["Bloque", "Puntaje (0–3)", "Comentario"],
+          ...bloques.map((b) => [b.name, b.score, b.comment]),
+        ];
+
+        const wb = XLSX.utils.book_new();
+        const wsCanvas = XLSX.utils.aoa_to_sheet(sheetCanvas);
+        const wsDiag = XLSX.utils.aoa_to_sheet(sheetDiag);
+
+        XLSX.utils.book_append_sheet(wb, wsCanvas, "Canvas");
+        XLSX.utils.book_append_sheet(wb, wsDiag, "Diagnóstico");
+
+        XLSX.writeFile(wb, "Mi_Canvas_Liga_Emprendedora.xlsx");
+      }
+
+      diagnosticoBtn?.addEventListener("click", () => {
+        const resultado = evaluarCanvas();
+        renderDiagnostico(resultado);
+      });
+
+      descargaBtn?.addEventListener("click", () => {
+        const resultado = evaluarCanvas();
+        descargarExcel(resultado);
+      });
+    });
+  </script>
+
+</BaseLayout>

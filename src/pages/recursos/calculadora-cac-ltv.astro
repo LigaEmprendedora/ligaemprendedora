@@ -1,0 +1,198 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const pageTitle = "Calculadora de CAC y LTV | Liga Emprendedora";
+const pageDescription =
+  "Plantilla en Excel/Sheets para calcular el CAC y LTV de tus clientes y entender si tu adquisición es rentable.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="flex min-h-screen flex-col bg-[#f4f6fa]">
+    <Header />
+
+    <main class="flex-1">
+      <section class="w-full px-4 py-16 md:px-6 md:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
+            Recursos · Herramienta financiera
+          </p>
+          <h1 class="mt-3 text-3xl md:text-4xl font-extrabold text-[#162741]">
+            Calculadora de CAC y LTV
+          </h1>
+          <p class="mt-3 text-base md:text-lg text-[#162741]">
+            Mide la rentabilidad de tus clientes. Esta calculadora te permite estimar cuánto
+            te cuesta adquirir un cliente (CAC) y cuánto valor genera en el tiempo (LTV),
+            para saber si tu estrategia de adquisición tiene sentido.
+          </p>
+
+          <div class="mt-10 grid gap-8 md:grid-cols-[2fr,1.4fr]">
+            <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
+              <h2 class="text-lg md:text-xl font-semibold text-[#162741]">
+                ¿Qué podrás analizar?
+              </h2>
+              <ul class="mt-4 space-y-2 text-sm text-[#162741]">
+                <li>• CAC por canal de adquisición.</li>
+                <li>• LTV estimado por cliente o segmento.</li>
+                <li>• Relación LTV/CAC para evaluar sostenibilidad.</li>
+                <li>• Impacto de mejorar retención o ticket promedio.</li>
+              </ul>
+              <p class="mt-4 text-sm text-[#6b7280]">
+                Incluye instrucciones dentro del archivo para que no necesites ser financiero
+                para usarla.
+              </p>
+            </div>
+
+            <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
+              <h3 class="text-base font-semibold text-[#162741]">
+                🎟️ Accede al recurso gratis
+              </h3>
+              <p class="mt-2 text-xs md:text-sm text-[#4b5563]">
+                Déjanos tus datos y obtendrás la calculadora en formato Excel/Sheets.
+              </p>
+
+              <form
+                class="mt-5 space-y-3"
+                name="calculadora-cac-ltv"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="calculadora-cac-ltv" />
+                <p class="hidden">
+                  <label>
+                    No llenar:
+                    <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Nombre completo*
+                  </label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    required
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Email*
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Nombre de la empresa
+                  </label>
+                  <input
+                    type="text"
+                    name="empresa"
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">
+                    Teléfono
+                  </label>
+                  <input
+                    type="tel"
+                    name="telefono"
+                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#162741] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
+                >
+                  Quiero descargar este recurso
+                </button>
+              </form>
+
+            
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto max-w-4xl" >
+        <!-- TUTORIAL CAC & LTV EN LA PÁGINA -->
+<section class="mt-12 w-full rounded-3xl bg-white border border-[#e5e7eb] p-8 shadow-sm">
+
+  <h2 class="text-xl md:text-2xl font-extrabold text-[#162741]">
+    📘 ¿Qué es CAC y qué es LTV?
+  </h2>
+
+  <p class="mt-2 text-sm text-[#4b5563]">
+    Estos dos indicadores te permiten saber si tu negocio es rentable o si estás quemando caja. 
+    Aquí te explicamos cómo funcionan y por qué son fundamentales para cualquier startup.
+  </p>
+
+  <div class="mt-6 space-y-8 text-sm text-[#162741]">
+
+    <div>
+      <h3 class="font-semibold">1️⃣ CAC — Costo de Adquisición de Cliente</h3>
+      <p class="mt-1 text-[#4b5563]">
+        Es cuánto te cuesta conseguir un cliente nuevo.
+        <br /><strong>Fórmula:</strong> (Inversión en marketing + ventas) / clientes nuevos.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">2️⃣ LTV — Valor de Vida del Cliente</h3>
+      <p class="mt-1 text-[#4b5563]">
+        Es cuánto dinero te deja un cliente desde que compra por primera vez hasta que deja de comprar.
+        <br /><strong>Fórmula:</strong> Ticket × Frecuencia × Años × Margen.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">3️⃣ La métrica más importante: LTV / CAC</h3>
+      <p class="mt-1 text-[#4b5563]">
+        Este ratio indica si tu modelo es sostenible:
+        <br />• <strong>≥ 3</strong> → modelo saludable<br />
+        • <strong>1–3</strong> → necesita ajustes<br />
+        • <strong>&lt; 1</strong> → pierdes dinero por cliente
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">4️⃣ Cómo usar esta calculadora</h3>
+      <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
+        <li>Ingresa tus costos por canal en la hoja de CAC.</li>
+        <li>Ingresa tus tickets y comportamiento de compra en la hoja de LTV.</li>
+        <li>La tercera hoja te mostrará el diagnóstico automáticamente.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-[#c23a26]">❌ Errores comunes</h3>
+      <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
+        <li>Medir CAC con leads en vez de clientes.</li>
+        <li>Calcular LTV sin margen (%).</li>
+        <li>Trabajar con periodos muy cortos (menos de 1 mes).</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+      </div>
+      </section>
+      
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>
