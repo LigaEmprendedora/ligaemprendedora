@@ -2,77 +2,104 @@
 // ComunidadHero.astro
 ---
 
-<section class="w-full bg-[#faf7f7] py-16 px-4 md:px-6">
-  <div class="mx-auto max-w-5xl rounded-[36px] overflow-hidden shadow-xl relative">
-    <!-- Fondo del estadio -->
-    <div
-      class="relative w-full h-full bg-[#0c1c1a]"
-      style="
-        background-image: url('/fondo001.webp');
-        background-size: cover;
-        background-position: center;
-      "
-    >
-      <!-- Capa oscura -->
-      <div class="absolute inset-0 bg-black/55"></div>
+<section class="w-full bg-[#f4f6fa] py-16 px-4 md:px-6">
+  <div class="mx-auto max-w-5xl">
+    <!-- Breadcrumb / línea superior -->
+    <p class="mb-4 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#162741]/70">
+      🏟 Comunidad · Pretemporada 2026 · Aquí todos juegan
+    </p>
 
-      <!-- Líneas de cancha (centro del campo) -->
-      <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <!-- círculo central -->
-        <div class="relative h-64 w-64 rounded-full border border-white/15">
-          <!-- línea media -->
-          <div class="absolute inset-y-6 left-1/2 w-px bg-white/15 -translate-x-1/2"></div>
-        </div>
-      </div>
+    <div class="rounded-[36px] overflow-hidden shadow-xl relative">
+      <!-- Fondo del estadio -->
+      <div
+        class="relative w-full h-full bg-[#0c1c1a]"
+        style="
+          background-image: url('/okfutbol.webp');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <!-- Capa oscura -->
+        <div class="absolute inset-0 bg-black/60"></div>
 
-      <!-- Focos de estadio (luces sutiles) -->
-      <div class="pointer-events-none absolute -top-10 left-10 h-40 w-32 rotate-20 bg-white/5 blur-3xl"></div>
-      <div class="pointer-events-none absolute -top-10 right-10 h-40 w-32 rotate-20 bg-white/5 blur-3xl"></div>
-
-      <!-- Contenido Hero -->
-      <div class="relative flex flex-col items-center text-center px-6 py-16 md:py-20">
-        <!-- Marcador -->
-        <div
-          class="mb-5 inline-flex items-center gap-3 rounded-full bg-black/40 px-4 py-1 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.25em] text-white/80"
-        >
-          <span class="hidden sm:inline">Comunidad Liga Emprendedora</span>
-          <span class="inline sm:hidden">Comunidad Liga</span>
-          <span class="h-1 w-1 rounded-full bg-white/50"></span>
-          <span>Pretemporada</span>
+        <!-- Líneas de cancha (centro del campo) -->
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div class="relative h-64 w-64 rounded-full border border-white/15">
+            <div class="absolute inset-y-6 left-1/2 w-px bg-white/15 -translate-x-1/2"></div>
+          </div>
         </div>
 
-        <!-- Título -->
-        <h1
-          class="text-white font-extrabold leading-tight
-                 text-3xl md:text-4xl lg:text-5xl
-                 [text-shadow:0_3px_8px_rgba(0,0,0,0.45)]"
-        >
-          La comunidad donde<br />
-          los emprendedores entrenan<br />
-          para ganar en equipo
-        </h1>
+        <!-- Focos de estadio -->
+        <div class="pointer-events-none absolute -top-10 left-10 h-40 w-32 rotate-20 bg-white/5 blur-3xl"></div>
+        <div class="pointer-events-none absolute -top-10 right-10 h-40 w-32 -rotate-20 bg-white/5 blur-3xl"></div>
 
-        <!-- Subtítulo -->
-        <p
-          class="mt-5 max-w-2xl text-white/85 text-sm md:text-base leading-relaxed
-                 [text-shadow:0_2px_5px_rgba(0,0,0,0.35)]"
-        >
-          Entrena tu negocio como un deporte de alto rendimiento: retos semanales, feedback,
-          acompañamiento y un vestuario lleno de otros fundadores que también juegan para ganar.
-        </p>
+        <!-- Contenido Hero -->
+        <div class="relative flex flex-col items-center text-center px-6 py-16 md:py-20">
+          <!-- Marcador -->
+          <div
+            class="mb-5 inline-flex items-center gap-3 rounded-full bg-white/10 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-white/80"
+          >
+            <span class="hidden sm:inline">Comunidad Liga Emprendedora</span>
+            <span class="inline-block sm:hidden">Comunidad Liga</span>
+            <span class="h-1 w-1 rounded-full bg-white/50"></span>
+            <span>Pretemporada 2026</span>
+          </div>
 
-        <!-- Botón -->
-        <a
-          href="/unete"
-          class="mt-8 inline-flex items-center justify-center gap-2 rounded-full
-                 bg-[#e3412b] px-8 py-3 text-sm md:text-base font-semibold
-                 text-white shadow-md transition hover:bg-[#c83825]"
-        >
-          <span class="flex h-5 w-5 items-center justify-center rounded-full border border-white/50 text-xs">
-            ⚽
-          </span>
-          <span>Únete Gratis a la Pretemporada</span>
-        </a>
+          <!-- Título principal -->
+          <h1 class="max-w-3xl text-2xl md:text-4xl font-extrabold leading-snug text-white">
+            Construye tu negocio rodeado de gente que está jugando el mismo partido.
+          </h1>
+
+          <!-- Subtítulo -->
+          <p class="mt-4 max-w-2xl text-sm md:text-base text-white/80">
+            Aquí no vienes a ser espectador. Aquí entrenas, preguntas, cometes errores, compartes victorias
+            y te mantienes en movimiento.
+          </p>
+
+          <!-- Mini avatares / social proof -->
+          <div class="mt-5 flex flex-col items-center gap-2 md:flex-row">
+            <div class="flex -space-x-2">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-xs font-semibold text-[#162741] border border-white/80">
+                A
+              </span>
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#E1C875] text-xs font-semibold text-[#162741] border border-white/80">
+                O
+              </span>
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#e3412b] text-xs font-semibold text-white border border-white/80">
+                M
+              </span>
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-[10px] font-semibold text-white border border-white/40">
+                +50
+              </span>
+            </div>
+            <p class="text-xs md:text-sm text-white/80 md:ml-2">
+              Ya hay emprendedores de Colombia en la banda para la Pretemporada 2026.
+            </p>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8 flex flex-col items-center gap-3">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#E1C875]">
+              🎟 Cupos limitados para la Pretemporada 2026
+            </p>
+
+            <a
+              href="/unete"
+              class="inline-flex items-center justify-center gap-2 rounded-full
+                     bg-[#E1C875] px-8 py-3 text-sm md:text-base font-semibold
+                     text-[#162741] shadow-md transition hover:bg-[#c83825]"
+            >
+              <span class="flex h-5 w-5 items-center justify-center rounded-full border border-white/50 text-xs">
+                ⚽
+              </span>
+              <span>Únete Gratis a la Pretemporada 2026</span>
+            </a>
+
+            <p class="mt-1 max-w-md text-xs md:text-sm text-white/80">
+              Acceso a WhatsApp + contenido exclusivo. Sin ruido. Sin teoría eterna. Solo jugadas claras.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

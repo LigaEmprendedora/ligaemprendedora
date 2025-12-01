@@ -1,0 +1,355 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+// Agregamos "Todas" para poder ver el grid completo como en la foto
+type Category =
+  | "Todas"
+  | "Plantillas"
+  | "Frameworks"
+  | "Herramientas"
+  | "Guías prácticas"
+  | "Agentes IA";
+
+type IconType = "doc" | "sliders" | "user" | "grid" | "calc" | "target";
+
+type Resource = {
+  title: string;
+  description: string;
+  icon: IconType;
+  category: Category;
+  href: string;
+};
+
+// "Todas" va primero en la lista
+const categories: Category[] = [
+  "Todas",
+  "Plantillas",
+  "Frameworks",
+  "Herramientas",
+  "Guías prácticas",
+  "Agentes IA",
+];
+
+const resources: Resource[] = [
+  {
+    title: "Plan de Negocio One-Page",
+    description: "Define tu estrategia en una sola hoja.",
+    icon: "doc",
+    category: "Plantillas",
+    href: "#",
+  },
+  {
+    title: "Análisis DAFO Interactivo",
+    description: "Identifica fortalezas y debilidades clave.",
+    icon: "sliders",
+    category: "Frameworks",
+    href: "#",
+  },
+  {
+    title: "Guía de Pitch para Inversores",
+    description: "Estructura tu presentación para convencer.",
+    icon: "user",
+    category: "Guías prácticas",
+    href: "#",
+  },
+  {
+    title: "Canvas de Modelo de Negocio",
+    description: "Visualiza y valida tu idea de negocio.",
+    icon: "grid",
+    category: "Plantillas",
+    href: "#",
+  },
+  {
+    title: "Calculadora de CAC y LTV",
+    description: "Mide la rentabilidad de tus clientes.",
+    icon: "calc",
+    category: "Herramientas",
+    href: "#",
+  },
+  {
+    title: "Framework de OKRs para Startups",
+    description: "Establece y sigue objetivos ambiciosos.",
+    icon: "target",
+    category: "Frameworks",
+    href: "#",
+  },
+];
+---
+
+<BaseLayout
+  title="Recursos | Liga Emprendedora"
+  description="Tu playbook para el éxito: plantillas, frameworks, herramientas y guías prácticas para llevar tu idea al siguiente nivel."
+>
+  <div class="flex min-h-screen flex-col bg-[#f4f6fa]">
+    <Header />
+
+    <main class="flex-1">
+      <!-- HERO -->
+      <section class="w-full px-4 pt-16 md:pt-20 pb-10 md:px-6">
+        <div class="mx-auto max-w-5xl text-center">
+          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#020617]">
+            Tu Playbook para el Éxito
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-sm md:text-base text-[#6b7280]">
+            Herramientas y guías curadas para ayudarte a marcar goles en tu negocio.
+            Todo lo que necesitas para llevar tu idea al siguiente nivel.
+          </p>
+
+          <button
+            type="button"
+            data-explore
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#020617] px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg transition hover:bg-black hover:-translate-y-0.5"
+          >
+            Explorar Recursos
+          </button>
+        </div>
+      </section>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <section class="w-full px-4 pb-20 md:px-6" id="recursos">
+        <div class="mx-auto max-w-5xl">
+          <!-- TABS -->
+          <div class="flex justify-center mb-10 overflow-x-auto py-2">
+            <nav
+              class="flex gap-2 rounded-full p-1 bg-white/50 border border-transparent sm:border-[#e5e7eb] sm:bg-white sm:shadow-sm"
+            >
+              {categories.map((cat) => (
+                <button
+                  type="button"
+                  data-tab={cat}
+                  class="tab-button whitespace-nowrap rounded-full px-4 py-1.5 text-xs md:text-sm font-medium transition-all duration-200"
+                >
+                  {cat}
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          <!-- GRID RECURSOS -->
+          <div class="grid gap-6 md:grid-cols-3">
+            {resources.map((res) => (
+              <article
+                class="resource-card flex flex-col rounded-3xl bg-white px-6 py-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#e5e7eb] transition-all hover:shadow-md"
+                data-resource-category={res.category}
+              >
+                <div
+                  class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8fafc] text-[#020617] border border-[#f1f5f9]"
+                >
+                  {res.icon === "doc" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+                      />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="16" y1="13" x2="8" y2="13" />
+                      <line x1="16" y1="17" x2="8" y2="17" />
+                      <line x1="10" y1="9" x2="8" y2="9" />
+                    </svg>
+                  )}
+                  {res.icon === "sliders" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="4" y1="21" x2="4" y2="14" />
+                      <line x1="4" y1="10" x2="4" y2="3" />
+                      <line x1="12" y1="21" x2="12" y2="12" />
+                      <line x1="12" y1="8" x2="12" y2="3" />
+                      <line x1="20" y1="21" x2="20" y2="16" />
+                      <line x1="20" y1="12" x2="20" y2="3" />
+                      <line x1="1" y1="14" x2="7" y2="14" />
+                      <line x1="9" y1="8" x2="15" y2="8" />
+                      <line x1="17" y1="16" x2="23" y2="16" />
+                    </svg>
+                  )}
+                  {res.icon === "user" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  )}
+                  {res.icon === "grid" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="3" y="3" width="7" height="7" />
+                      <rect x="14" y="3" width="7" height="7" />
+                      <rect x="14" y="14" width="7" height="7" />
+                      <rect x="3" y="14" width="7" height="7" />
+                    </svg>
+                  )}
+                  {res.icon === "calc" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                      <line x1="12" y1="18" x2="12" y2="18.01" />
+                      <line x1="8" y1="18" x2="8" y2="18.01" />
+                      <line x1="16" y1="18" x2="16" y2="18.01" />
+                      <line x1="12" y1="14" x2="12" y2="14.01" />
+                      <line x1="8" y1="14" x2="8" y2="14.01" />
+                      <line x1="16" y1="14" x2="16" y2="14.01" />
+                      <line x1="12" y1="10" x2="12" y2="10.01" />
+                      <line x1="8" y1="10" x2="8" y2="10.01" />
+                      <line x1="16" y1="10" x2="16" y2="10.01" />
+                    </svg>
+                  )}
+                  {res.icon === "target" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <circle cx="12" cy="12" r="6" />
+                      <circle cx="12" cy="12" r="2" />
+                    </svg>
+                  )}
+                </div>
+
+                <h3 class="text-base font-bold text-[#020617] tracking-tight">
+                  {res.title}
+                </h3>
+                <p class="mt-2 text-sm text-[#64748b] leading-relaxed mb-8 flex-1">
+                  {res.description}
+                </p>
+
+                <a
+                  href={res.href}
+                  class="mt-auto inline-flex w-full items-center justify-center rounded-xl bg-[#e2e8f0] px-4 py-2.5 text-xs md:text-sm font-semibold text-[#0f172a] transition hover:bg-[#cbd5e1]"
+                >
+                  Ver Recurso
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <!-- BLOQUE PRO -->
+          <div
+            class="mt-14 rounded-3xl bg-white px-8 py-8 shadow-sm border border-[#e5e7eb] flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+          >
+            <div class="text-left">
+              <h4 class="text-lg font-bold text-[#020617]">
+                Recursos PRO: Próximamente
+              </h4>
+              <p class="mt-2 text-sm text-[#64748b] max-w-xl leading-relaxed">
+                Prepárate para contenido exclusivo como modelos financieros, plantillas de contratos y
+                masterclasses de expertos.
+              </p>
+            </div>
+            <div class="flex justify-start md:justify-end">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center rounded-full bg-[#020617] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-black hover:shadow-lg"
+              >
+                Notifícame...
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+
+  <script>
+    // @ts-nocheck
+    if (typeof window !== "undefined") {
+      // Scroll suave al hacer click en el botón del Hero
+      const exploreBtn = document.querySelector("[data-explore]");
+      const recursosSection = document.getElementById("recursos");
+
+      if (exploreBtn && recursosSection) {
+        exploreBtn.addEventListener("click", () => {
+          recursosSection.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+
+      // Lógica de Tabs
+      const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
+      const cards = Array.from(document.querySelectorAll(".resource-card"));
+
+      function setActiveCategory(category) {
+        // Actualizar estado visual de los botones
+        tabButtons.forEach((btn) => {
+          const isActive = btn.dataset.tab === category;
+
+          if (isActive) {
+            btn.classList.add("bg-[#020617]", "text-white", "shadow-sm");
+            btn.classList.remove("text-[#64748b]", "hover:bg-gray-100");
+          } else {
+            btn.classList.add("text-[#64748b]", "hover:bg-gray-100");
+            btn.classList.remove("bg-[#020617]", "text-white", "shadow-sm");
+          }
+        });
+
+        // Filtrar tarjetas
+        cards.forEach((card) => {
+          const cardCat = card.dataset.resourceCategory;
+          if (category === "Todas" || cardCat === category) {
+            card.classList.remove("hidden");
+            card.style.opacity = "0";
+            card.style.transform = "translateY(10px)";
+            setTimeout(() => {
+              card.style.transition = "all 0.3s ease";
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0)";
+            }, 50);
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      }
+
+      // Inicializar con "Todas"
+      setActiveCategory("Todas");
+
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const cat = btn.dataset.tab;
+          if (cat) setActiveCategory(cat);
+        });
+      });
+    }
+  </script>
+</BaseLayout>
