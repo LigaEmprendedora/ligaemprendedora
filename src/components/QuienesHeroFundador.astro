@@ -1,80 +1,167 @@
----
----
+<section
+  class="w-full bg-[#faf7f7] px-4 py-16 md:px-6 md:py-20 relative overflow-hidden"
+>
+  <!-- NUEVO: Franja de “cancha” en el fondo -->
+  <div
+    class="pointer-events-none absolute inset-y-0 right-[-10%] w-1/2 opacity-70"
+    style="background: linear-gradient(
+      135deg,
+      #e4f0e4 0%,
+      #f6faf6 35%,
+      #f6faf6 65%,
+      #e4f0e4 100%
+    );"
+  ></div>
 
-<section class="w-full bg-[#faf7f7] px-4 py-16 md:px-6 md:py-20">
-  <div class="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-center">
+  <div class="relative mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-center">
     <!-- Texto principal -->
     <div class="flex-1">
-      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#d44638]">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
         Nuestra historia
       </p>
 
-      <h1 class="mt-3 text-3xl md:text-4xl font-extrabold leading-snug text-[#111111]">
+      <h1 class="mt-3 text-3xl md:text-4xl font-extrabold leading-snug text-[#162741]">
         El emprendimiento es un deporte de equipo. Juega para ganar.
       </h1>
 
-      <p class="mt-4 text-sm md:text-base text-[#555555] max-w-md">
+      <!-- NUEVO: Línea de medio campo + círculo central -->
+      <div class="mt-4 flex items-center gap-3">
+        <span class="h-px flex-1 bg-[#c6d9c4]"></span>
+        <span
+          class="flex h-7 w-7 items-center justify-center rounded-full border border-[#c6d9c4]"
+        >
+          <span class="h-2 w-2 rounded-full bg-[#c6d9c4]"></span>
+        </span>
+        <span class="h-px flex-1 bg-[#c6d9c4]"></span>
+      </div>
+
+      <p class="mt-4 text-sm md:text-base text-[#162741] max-w-md">
         Te presentamos a la mente detrás de la estrategia, nuestro fundador Oswaldo Vega.
       </p>
     </div>
 
     <!-- Foto retrato -->
     <div class="flex-1">
-      <div class="mx-auto h-64 w-64 overflow-hidden rounded-4xl bg-gray-100 shadow-sm md:h-72 md:w-72">
+      <!-- NUEVO: Contenedor con fondo tipo área de cancha -->
+      <div
+        class="relative mx-auto h-64 w-64 overflow-hidden rounded-4xl md:h-72 md:w-72"
+      >
+        <!-- NUEVO: Líneas de área dentro del fondo -->
+        <div class="pointer-events-none absolute inset-0">
+          <!-- línea vertical del área -->
+          <div class="absolute inset-y-6 left-8 w-px bg-white/60"></div>
+          <!-- semicírculo del área -->
+          <div
+            class="absolute inset-y-10 left-8 w-16 rounded-full border border-white/60 border-l-0"
+          ></div>
+        </div>
+
         <img
-          src="/oswaldo-retrato.jpg"
+          src="/Oswa_Vega.webp"
           alt="Foto de Oswaldo Vega, fundador de Liga Emprendedora"
-          class="h-full w-full object-cover"
+          class="relative h-full w-full object-cover"
         />
       </div>
     </div>
   </div>
 
   <!-- Sección fundador + dos bloques -->
-  <div class="mx-auto mt-12 max-w-5xl">
-    <h2 class="mb-6 text-xl md:text-2xl font-semibold text-[#111111]">
-      Nuestro Fundador: Oswaldo Vega
-    </h2>
+  <div class="relative mx-auto mt-12 max-w-5xl">
+    <!-- NUEVO: Iconito de camiseta al lado del título -->
+    <div class="mb-6 flex items-center gap-2">
+      <div
+        class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#162741] text-[10px] font-bold text-white"
+      >
+        10
+      </div>
+      <h2 class="text-xl md:text-2xl font-semibold text-[#162741]">
+       Fundador: Oswaldo Vega
+      </h2>
+    </div>
 
     <div class="grid gap-8 md:grid-cols-2">
       <!-- Card 1: El Porqué -->
       <div>
-        <div class="mb-4 overflow-hidden rounded-4xl bg-gray-100">
+        <div class="mb-4 overflow-hidden rounded-4xl relative">
           <img
-            src="/oswaldo-pizarra.jpg"
+            src="/arquero.webp"
             alt="Oswaldo Vega trabajando en una pizarra"
-            class="h-64 w-full object-cover"
+            class="h-full w-full object-cover"
           />
+
+          <!-- NUEVO: Mini cancha táctica sobre la imagen -->
+          <div
+            class="pointer-events-none absolute left-4 top-4 h-12 w-20 rounded-xl border border-white/80 bg-black/10 backdrop-blur-[1px]"
+          >
+            <div class="absolute inset-1 rounded-lg border border-white/70"></div>
+            <!-- línea media -->
+            <div class="absolute inset-y-1 left-1/2 w-px bg-white/70"></div>
+            <!-- “fichas” de jugadores -->
+            <span class="absolute left-3 top-2 h-1.5 w-1.5 rounded-full bg-[#f4c542]"></span>
+            <span class="absolute right-4 top-4 h-1.5 w-1.5 rounded-full bg-[#f4c542]"></span>
+            <span class="absolute left-5 bottom-3 h-1.5 w-1.5 rounded-full bg-[#f4c542]"></span>
+            <span class="absolute right-3 bottom-2 h-1.5 w-1.5 rounded-full bg-white/80"></span>
+          </div>
         </div>
-        <h3 class="text-base md:text-lg font-semibold text-[#111111]">
+
+        <h3 class="text-base md:text-lg font-semibold text-[#162741]">
           El “Porqué” de la Liga Emprendedora
         </h3>
-        <p class="mt-2 text-sm text-[#555555] leading-relaxed">
-          Oswaldo Vega, un apasionado del fútbol y el emprendimiento, experimentó de primera mano la soledad y los
-          desafíos de lanzar un negocio. Se dio cuenta de que los emprendedores, al igual que los jugadores de fútbol,
-          necesitan estrategia, un equipo y un entrenador para alcanzar la victoria. Cansado de ver ideas brillantes
-          fallar por falta de apoyo, fundó Liga Emprendedora para crear un campo de juego donde cada emprendedor tiene
-          la oportunidad de competir y triunfar.
+        <p class="mt-2 text-sm text-[#162741] leading-relaxed">
+          El camino de Oswaldo comenzó con <strong>Render Medios Audiovisuales</strong>, la
+          productora que fundó y dirige durante más de 25 años. Allí aprendió lo que ningún libro
+          enseña: vender, producir, competir, construir equipos y sostener un proyecto en el tiempo.
+          Render fue su primer campo de entrenamiento empresarial, un lugar donde entendió que
+          <em>emprender es método, no improvisación</em>.
+          <br /><br />
+          Un ejemplo claro de su estilo ejecutor es <strong>Pixel Living</strong>, el edificio de
+          coliving que decidió construir cuando otros profesionales —incluidos arquitectos— decían
+          que siempre habían querido hacer algo así. Oswaldo fue quien convirtió la idea en un
+          proyecto real, demostrando que <em>las ideas no construyen edificios, la ejecución sí</em>.
+          <br /><br />
+          Su visión también se nutrió del modelo de empresas como <strong>Quala</strong>, una
+          multilatina conocida por su disciplina estratégica, su obsesión por entender al consumidor
+          y su ejecución impecable. De allí tomó una lección clave: un negocio crece con método,
+          claridad y acción constante.
+          <br /><br />
+          Esa combinación —experiencia real, mentalidad ejecutora y aprendizaje de grandes
+          empresas— es lo que dio origen a <strong>Liga Emprendedora</strong>: un espacio para que
+          otros emprendedores pasen de la idea a la cancha con estrategia, acompañamiento y un
+          equipo que impulsa a ganar.
         </p>
       </div>
 
       <!-- Card 2: La Solución -->
-      <div>
-        <div class="mb-4 overflow-hidden rounded-4xl bg-gray-100">
+      <div class="relative">
+        <!-- NUEVO: Banda tipo marcador -->
+        <div
+          class="mb-3 inline-flex items-center gap-3 rounded-full bg-[#162741] px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white"
+        >
+          <span>Marcador</span>
+          <span class="h-1 w-1 rounded-full bg-white/60"></span>
+          <span>De idea a la cancha</span>
+        </div>
+
+        <!-- NUEVO: Línea lateral estilo poste de arco -->
+        <div class="absolute -left-3 top-7 h-16 w-1 rounded-full bg-[#e3412b]/80"></div>
+
+        <div class="mb-4 overflow-hidden rounded-4xl">
           <img
-            src="/jugador-cancha.jpg"
+            src="/dashboardokok.webp"
             alt="Jugador de fútbol preparado para iniciar el partido"
-            class="h-64 w-full object-cover"
+            class="h-full w-full object-cover"
           />
         </div>
-        <h3 class="text-base md:text-lg font-semibold text-[#111111]">
+
+        <h3 class="text-base md:text-lg font-semibold text-[#162741]">
           La Solución: Un Equipo para Ganar
         </h3>
-        <p class="mt-2 text-sm text-[#555555] leading-relaxed">
-          Liga Emprendedora es más que una escuela; es un club. Ofrecemos la formación táctica (cursos), el apoyo del
-          vestuario (comunidad) y la dirección técnica (mentoría) para que los emprendedores no jueguen solos. Nuestra
-          misión es equipar a cada miembro con las herramientas y la confianza para convertir su visión en un negocio
-          campeón, celebrando cada gol en el camino.
+        <p class="mt-2 text-sm text-[#162741] leading-relaxed">
+          Liga Emprendedora es más que una escuela; es un club. Ofrecemos la formación táctica
+          (cursos), el apoyo del vestuario (comunidad) y la dirección técnica (mentoría) para que
+          los emprendedores no jueguen solos. Nuestra misión es equipar a cada miembro con las
+          herramientas y la confianza para convertir su visión en un negocio campeón, celebrando
+          cada gol en el camino.
         </p>
       </div>
     </div>

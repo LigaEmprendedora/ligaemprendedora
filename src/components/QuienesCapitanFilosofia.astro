@@ -1,19 +1,35 @@
----
----
-
 <section class="w-full bg-[#faf7f7] px-4 py-16 md:px-6 md:py-20">
+  <!-- Contenedor Zórix -->
   <div
-    class="mx-auto flex max-w-5xl flex-col gap-8 rounded-4xl border border-[#f0eaea] bg-white px-6 py-8 shadow-sm md:flex-row md:items-center md:justify-between md:px-10 md:py-10"
+    class="mx-auto flex max-w-5xl flex-col gap-8 rounded-4xl border border-[#f0eaea] bg-white/90 px-6 py-8 shadow-sm md:flex-row md:items-center md:justify-between md:px-10 md:py-10 relative overflow-hidden"
   >
+    <!-- Fondo sutil tipo césped -->
+    <div
+      class="pointer-events-none absolute inset-0 opacity-50"
+      style="background-image: linear-gradient(135deg, #f4f7f4 0%, #ffffff 40%, #f4f7f4 80%);"
+    ></div>
+
+    <!-- Líneas suaves de cancha -->
+    <div class="pointer-events-none absolute inset-y-4 left-1/2 w-px bg-[#d6e2d6]/70"></div>
+
     <!-- Texto Zórix -->
-    <div class="max-w-xl">
-      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#d44638]">
+    <div class="relative max-w-xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
         El capitán
       </p>
-      <h2 class="mt-3 text-2xl md:text-3xl font-extrabold text-[#111111]">
+
+      <!-- Badge capitán -->
+      <div class="mt-3 inline-flex items-center gap-2 rounded-full bg-[#162741] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white">
+        <span class="flex h-4 w-4 items-center justify-center rounded-full bg-white text-[9px] font-bold text-[#c23a26]">
+          C
+        </span>
+        <span>Capitán de la Liga</span>
+      </div>
+
+      <h2 class="mt-3 text-2xl md:text-3xl font-extrabold text-[#162741]">
         Conoce a Zórix, el Capitán del Equipo
       </h2>
-      <p class="mt-3 text-sm md:text-base text-[#555555] leading-relaxed">
+      <p class="mt-3 text-sm md:text-base text-[#162741] leading-relaxed">
         Zórix, nuestro zorro capitán, no es solo una mascota; es el símbolo de la Liga. Representa la astucia para ver
         oportunidades, la agilidad para adaptarse a los cambios del mercado y el liderazgo necesario para guiar a tu
         equipo hacia el éxito. Con Zórix a tu lado, siempre recordarás jugar con estrategia y visión.
@@ -21,12 +37,18 @@
     </div>
 
     <!-- Ilustración Zórix -->
-    <div class="flex w-full justify-center md:w-auto">
-      <div class="flex h-40 w-40 items-center justify-center rounded-4xl bg-[#1f2933]">
+    <div class="relative flex w-full justify-center md:w-auto">
+      <div
+        class="relative flex h-40 w-40 items-center justify-center rounded-full bg-[#dfe9dc] shadow-sm md:h-44 md:w-44"
+      >
+        <!-- Líneas del círculo central -->
+        <div class="pointer-events-none absolute inset-3 rounded-full border border-white/70"></div>
+        <div class="pointer-events-none absolute inset-y-3 left-1/2 w-px bg-white/70"></div>
+
         <img
-          src="/zorix.png"
+          src="/zoris.webp"
           alt="Zórix, el zorro capitán de Liga Emprendedora"
-          class="h-28 w-28 object-contain"
+          class="relative h-24 w-24 object-contain md:h-28 md:w-28"
         />
       </div>
     </div>
@@ -34,65 +56,107 @@
 
   <!-- Filosofía de juego -->
   <div class="mx-auto mt-16 max-w-4xl text-center">
-    <h3 class="text-2xl md:text-3xl font-extrabold text-[#111111]">
+    <h3 class="text-2xl md:text-3xl font-extrabold text-[#162741]">
       Nuestra Filosofía de Juego
     </h3>
-    <p class="mt-3 text-sm md:text-base text-[#555555]">
+
+    <!-- Línea de medio campo + balón -->
+    <div class="mt-4 flex items-center justify-center gap-3">
+      <span class="h-px w-16 bg-[#cad8c9] md:w-24"></span>
+      <span class="flex h-7 w-7 items-center justify-center rounded-full border border-[#cad8c9]">
+        <span class="h-2 w-2 rounded-full bg-[#cad8c9]"></span>
+      </span>
+      <span class="h-px w-16 bg-[#cad8c9] md:w-24"></span>
+    </div>
+
+    <p class="mt-3 text-sm md:text-base text-[#162741]">
       Estos son los valores que nos guían en cada partido, dentro y fuera del campo de juego.
     </p>
   </div>
 
+  <!-- Valores -->
   <div class="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
     <!-- Valor 1 -->
-    <div class="rounded-3xl bg-white p-6 shadow-sm">
-      <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#fde7e7] text-[#d14b4b] text-xl">
+    <div class="relative rounded-3xl bg-white p-6 shadow-sm overflow-hidden">
+      <!-- Línea superior tipo cancha -->
+      <div class="pointer-events-none absolute left-4 right-10 top-4 h-px bg-[#d5e1d5]"></div>
+
+      <div
+        class="relative mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#f4c9c9] bg-[#fde7e7] text-[#d14b4b] text-xl"
+      >
         🤝
       </div>
-      <h4 class="text-base font-semibold text-[#111111]">Colaboración Estratégica</h4>
-      <p class="mt-2 text-sm text-[#555555]">
+      <h4 class="text-base font-semibold text-[#162741]">Colaboración Estratégica</h4>
+      <p class="mt-2 text-sm text-[#162741]">
         Creemos que los mejores goles se marcan en equipo. Fomentamos la colaboración y el networking.
       </p>
     </div>
 
     <!-- Valor 2 -->
-    <div class="rounded-3xl bg-white p-6 shadow-sm">
-      <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#fde7e7] text-[#d14b4b] text-xl">
+    <div class="relative rounded-3xl bg-white p-6 shadow-sm overflow-hidden">
+      <!-- Mini área defensiva -->
+      <div class="pointer-events-none absolute right-4 top-4 h-7 w-10 rounded-b-full border border-[#d5e1d5] border-t-0"></div>
+
+      <div
+        class="relative mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#f4c9c9] bg-[#fde7e7] text-[#d14b4b] text-xl"
+      >
         🛡️
       </div>
-      <h4 class="text-base font-semibold text-[#111111]">Resiliencia Defensiva</h4>
-      <p class="mt-2 text-sm text-[#555555]">
+      <h4 class="text-base font-semibold text-[#162741]">Resiliencia Defensiva</h4>
+      <p class="mt-2 text-sm text-[#162741]">
         Cada error es una lección. Nos levantamos más fuertes después de cada caída.
       </p>
     </div>
 
     <!-- Valor 3 -->
-    <div class="rounded-3xl bg-white p-6 shadow-sm">
-      <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#fde7e7] text-[#d14b4b] text-xl">
+    <div class="relative rounded-3xl bg-white p-6 shadow-sm overflow-hidden">
+      <!-- Mini área ofensiva -->
+      <div class="pointer-events-none absolute bottom-4 left-4 h-7 w-10 rounded-t-full border border-[#d5e1d5] border-b-0"></div>
+
+      <div
+        class="relative mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#f4c9c9] bg-[#fde7e7] text-[#d14b4b] text-xl"
+      >
         🏆
       </div>
-      <h4 class="text-base font-semibold text-[#111111]">Mentalidad Ganadora</h4>
-      <p class="mt-2 text-sm text-[#555555]">
+      <h4 class="text-base font-semibold text-[#162741]">Mentalidad Ganadora</h4>
+      <p class="mt-2 text-sm text-[#162741]">
         Celebramos las victorias, grandes y pequeñas, para construir una cultura de éxito.
       </p>
     </div>
   </div>
 
   <!-- CTA final -->
-  <div class="mx-auto mt-16 max-w-3xl text-center">
-    <h3 class="text-2xl md:text-3xl font-extrabold text-[#111111]">
+  <div class="mx-auto mt-16 max-w-3xl text-center relative">
+    <!-- Círculo de saque inicial -->
+    <div class="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e4efe3]/60 blur-[2px]"></div>
+
+    <h3 class="relative text-2xl md:text-3xl font-extrabold text-[#162741]">
       ¿Listo para saltar al campo?
     </h3>
-    <p class="mt-3 text-sm md:text-base text-[#555555]">
+
+    <!-- Línea de cancha encima del botón -->
+    <div class="relative mt-4 flex items-center justify-center gap-2">
+      <span class="h-px w-24 bg-[#cad8c9] md:w-32"></span>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#475569]">
+        Próximo partido: Pretemporada
+      </span>
+      <span class="h-px w-24 bg-[#cad8c9] md:w-32"></span>
+    </div>
+
+    <p class="relative mt-3 text-sm md:text-base text-[#162741]">
       Forma parte de un equipo que juega para ganar. Descubre nuestros cursos y únete a la comunidad de emprendedores
       que está cambiando las reglas del juego.
     </p>
 
-    <div class="mt-8">
+    <div class="relative mt-8">
       <a
         href="/unete"
-        class="inline-flex items-center justify-center rounded-full bg-[#d7422b] px-10 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
+        class="inline-flex items-center justify-center gap-2 rounded-full bg-[#162741] px-10 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
       >
-        Únete a la Liga
+        <span class="flex h-5 w-5 items-center justify-center rounded-full border border-white/40 text-xs">
+          ⚽
+        </span>
+        <span>Únete a la Liga</span>
       </a>
     </div>
   </div>
