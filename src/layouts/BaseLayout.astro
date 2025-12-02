@@ -22,5 +22,32 @@ const {
   </head>
   <body class="bg-white text-gray-900 antialiased">
     <slot />
+    <script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4BZPlvEa1-78yTjp6nBdGH9-UCP02lK2VRrFUA7iSX4It2ODw6nR0_TsMmxabTD52tg/exec"; // tu URL aquí
+
+    // Selecciona todos los formularios que quieras enviar a Google Sheets
+    const forms = document.querySelectorAll("form[name]");
+
+    forms.forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        // NO bloqueamos el envío a Netlify, solo mandamos una copia
+        try {
+          const formData = new FormData(form);
+
+          // Enviar a Google Apps Script (modo no-cors para evitar líos)
+          fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          });
+        } catch (err) {
+          console.error("Error enviando a Google Sheets:", err);
+        }
+        // Importante: no hacemos preventDefault, así Netlify sigue recibiendo el formulario
+      });
+    });
+  });
+</script>
   </body>
 </html>

@@ -28,6 +28,7 @@ const pageDescription =
           </p>
 
           <div class="mt-10 grid gap-8 md:grid-cols-[2fr,1.4fr]">
+            <!-- Columna izquierda: descripción -->
             <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
               <h2 class="text-lg md:text-xl font-semibold text-[#162741]">
                 ¿Qué podrás analizar?
@@ -44,6 +45,7 @@ const pageDescription =
               </p>
             </div>
 
+            <!-- Columna derecha: formulario -->
             <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
               <h3 class="text-base font-semibold text-[#162741]">
                 🎟️ Accede al recurso gratis
@@ -58,8 +60,10 @@ const pageDescription =
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
+                data-download-link="https://docs.google.com/spreadsheets/d/18iVVoT1VRVgQg4dTg-HBdsUyu6UAl9AY/edit?usp=sharing"
               >
                 <input type="hidden" name="form-name" value="calculadora-cac-ltv" />
+
                 <p class="hidden">
                   <label>
                     No llenar:
@@ -119,78 +123,151 @@ const pageDescription =
                 >
                   Quiero descargar este recurso
                 </button>
-              </form>
 
-            
+                <p class="mt-2 text-[11px] text-[#6b7280]">
+                  Después de enviar el formulario verás el enlace de descarga.
+                </p>
+
+                <!-- Mensaje de descarga (lo rellena el script global en BaseLayout) -->
+                <div
+                  class="mt-4 hidden rounded-2xl bg-[#ecfdf3] px-4 py-3 text-xs text-[#14532d]"
+                  data-download-message
+                >
+                  <script is:inline>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            // TU URL completa de Google Apps Script /exec
+                            const SCRIPT_URL = "Thttps://script.google.com/macros/s/AKfycbz4BZPlvEa1-78yTjp6nBdGH9-UCP02lK2VRrFUA7iSX4It2ODw6nR0_TsMmxabTD52tg/exec";
+
+                            // Selecciona todos los formularios con atributo name
+                            const forms = document.querySelectorAll("form[name]");
+
+                            forms.forEach((form) => {
+                            form.addEventListener("submit", async (event) => {
+                                event.preventDefault(); // evitamos el reload automático
+
+                                const formData = new FormData(form);
+
+                                // -----------------------------------------
+                                // 1) Enviar a Netlify
+                                // -----------------------------------------
+                                const netlifyBody = new URLSearchParams(formData).toString();
+
+                                fetch("/", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                                body: netlifyBody,
+                                }).catch((err) =>
+                                console.error("Error enviando a Netlify:", err)
+                                );
+
+                                // -----------------------------------------
+                                // 2) Enviar a Google Sheets (Apps Script)
+                                // -----------------------------------------
+                                if (SCRIPT_URL) {
+                                fetch(SCRIPT_URL, {
+                                    method: "POST",
+                                    mode: "no-cors",
+                                    body: formData,
+                                }).catch((err) =>
+                                    console.error("Error enviando a Sheets:", err)
+                                );
+                                }
+
+                                // -----------------------------------------
+                                // 3) Mostrar mensaje de descarga
+                                // -----------------------------------------
+                                const downloadLink = form.dataset.downloadLink;
+                                const messageEl = form.querySelector("[data-download-message]");
+
+                                if (downloadLink && messageEl) {
+                                messageEl.innerHTML = `
+                                    🎁 <strong>¡Listo! Tu recurso está disponible.</strong><br/><br/>
+                                    <a 
+                                    href="${downloadLink}" 
+                                    target="_blank" 
+                                    rel="noopener" 
+                                    class="underline font-semibold text-[#0a6a30]"
+                                    >👉 Haz clic aquí para descargarlo</a>
+                                `;
+
+                                messageEl.classList.remove("hidden");
+                                }
+
+                                // -----------------------------------------
+                                // 4) Limpiar el formulario (opcional)
+                                // -----------------------------------------
+                                form.reset();
+                            });
+                            });
+                        });
+                        </script>
+
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="mx-auto max-w-4xl" >
+
         <!-- TUTORIAL CAC & LTV EN LA PÁGINA -->
-<section class="mt-12 w-full rounded-3xl bg-white border border-[#e5e7eb] p-8 shadow-sm">
+        <div class="mx-auto max-w-4xl">
+          <section class="mt-12 w-full rounded-3xl bg-white border border-[#e5e7eb] p-8 shadow-sm">
+            <h2 class="text-xl md:text-2xl font-extrabold text-[#162741]">
+              📘 ¿Qué es CAC y qué es LTV?
+            </h2>
 
-  <h2 class="text-xl md:text-2xl font-extrabold text-[#162741]">
-    📘 ¿Qué es CAC y qué es LTV?
-  </h2>
+            <p class="mt-2 text-sm text-[#4b5563]">
+              Estos dos indicadores te permiten saber si tu negocio es rentable o si estás quemando caja. 
+              Aquí te explicamos cómo funcionan y por qué son fundamentales para cualquier startup.
+            </p>
 
-  <p class="mt-2 text-sm text-[#4b5563]">
-    Estos dos indicadores te permiten saber si tu negocio es rentable o si estás quemando caja. 
-    Aquí te explicamos cómo funcionan y por qué son fundamentales para cualquier startup.
-  </p>
+            <div class="mt-6 space-y-8 text-sm text-[#162741]">
+              <div>
+                <h3 class="font-semibold">1️⃣ CAC — Costo de Adquisición de Cliente</h3>
+                <p class="mt-1 text-[#4b5563]">
+                  Es cuánto te cuesta conseguir un cliente nuevo.
+                  <br /><strong>Fórmula:</strong> (Inversión en marketing + ventas) / clientes nuevos.
+                </p>
+              </div>
 
-  <div class="mt-6 space-y-8 text-sm text-[#162741]">
+              <div>
+                <h3 class="font-semibold">2️⃣ LTV — Valor de Vida del Cliente</h3>
+                <p class="mt-1 text-[#4b5563]">
+                  Es cuánto dinero te deja un cliente desde que compra por primera vez hasta que deja de comprar.
+                  <br /><strong>Fórmula:</strong> Ticket × Frecuencia × Años × Margen.
+                </p>
+              </div>
 
-    <div>
-      <h3 class="font-semibold">1️⃣ CAC — Costo de Adquisición de Cliente</h3>
-      <p class="mt-1 text-[#4b5563]">
-        Es cuánto te cuesta conseguir un cliente nuevo.
-        <br /><strong>Fórmula:</strong> (Inversión en marketing + ventas) / clientes nuevos.
-      </p>
-    </div>
+              <div>
+                <h3 class="font-semibold">3️⃣ La métrica más importante: LTV / CAC</h3>
+                <p class="mt-1 text-[#4b5563]">
+                  Este ratio indica si tu modelo es sostenible:
+                  <br />• <strong>≥ 3</strong> → modelo saludable<br />
+                  • <strong>1–3</strong> → necesita ajustes<br />
+                  • <strong>&lt; 1</strong> → pierdes dinero por cliente
+                </p>
+              </div>
 
-    <div>
-      <h3 class="font-semibold">2️⃣ LTV — Valor de Vida del Cliente</h3>
-      <p class="mt-1 text-[#4b5563]">
-        Es cuánto dinero te deja un cliente desde que compra por primera vez hasta que deja de comprar.
-        <br /><strong>Fórmula:</strong> Ticket × Frecuencia × Años × Margen.
-      </p>
-    </div>
+              <div>
+                <h3 class="font-semibold">4️⃣ Cómo usar esta calculadora</h3>
+                <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
+                  <li>Ingresa tus costos por canal en la hoja de CAC.</li>
+                  <li>Ingresa tus tickets y comportamiento de compra en la hoja de LTV.</li>
+                  <li>La tercera hoja te mostrará el diagnóstico automáticamente.</li>
+                </ul>
+              </div>
 
-    <div>
-      <h3 class="font-semibold">3️⃣ La métrica más importante: LTV / CAC</h3>
-      <p class="mt-1 text-[#4b5563]">
-        Este ratio indica si tu modelo es sostenible:
-        <br />• <strong>≥ 3</strong> → modelo saludable<br />
-        • <strong>1–3</strong> → necesita ajustes<br />
-        • <strong>&lt; 1</strong> → pierdes dinero por cliente
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold">4️⃣ Cómo usar esta calculadora</h3>
-      <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
-        <li>Ingresa tus costos por canal en la hoja de CAC.</li>
-        <li>Ingresa tus tickets y comportamiento de compra en la hoja de LTV.</li>
-        <li>La tercera hoja te mostrará el diagnóstico automáticamente.</li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-[#c23a26]">❌ Errores comunes</h3>
-      <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
-        <li>Medir CAC con leads en vez de clientes.</li>
-        <li>Calcular LTV sin margen (%).</li>
-        <li>Trabajar con periodos muy cortos (menos de 1 mes).</li>
-      </ul>
-    </div>
-
-  </div>
-
-</section>
-
-      </div>
+              <div>
+                <h3 class="font-semibold text-[#c23a26]">❌ Errores comunes</h3>
+                <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
+                  <li>Medir CAC con leads en vez de clientes.</li>
+                  <li>Calcular LTV sin margen (%).</li>
+                  <li>Trabajar con periodos muy cortos (menos de 1 mes).</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
-      
     </main>
 
     <Footer />

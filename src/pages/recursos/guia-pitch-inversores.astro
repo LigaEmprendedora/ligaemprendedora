@@ -49,19 +49,20 @@ const pageDescription =
                 Déjanos tus datos para recibir la guía descargable.
               </p>
 
-              <form
+               <form
                 class="mt-5 space-y-3"
-                name="guia-pitch-inversores"
+                name="plan-negocio-one-page"
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
-              >
-                <input type="hidden" name="form-name" value="guia-pitch-inversores" />
+                data-download-link="https://docs.google.com/spreadsheets/d/15rGW4_qT589XpPr6FhJ98K0F8QaZ9rJ6-xhIRWYugU0/edit?usp=sharing"
+                >
+                                <input type="hidden" name="form-name" value="plan-negocio-one-page" />
                 <p class="hidden">
-                  <label>
+                    <label>
                     No llenar:
                     <input name="bot-field" />
-                  </label>
+                    </label>
                 </p>
 
                 <div>
@@ -111,16 +112,24 @@ const pageDescription =
                 </div>
 
                 <button
-                  type="submit"
-                  class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#162741] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
+                    type="submit"
+                    class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#162741] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
                 >
-                  Quiero descargar este recurso
+                    Quiero descargar este recurso
                 </button>
 
                 <p class="mt-2 text-[11px] text-[#6b7280]">
-                  Recibirás la guía y futuras novedades de la Liga.
+                    Después de enviar el formulario verás el enlace de descarga.
                 </p>
-              </form>
+
+                <!-- Mensaje de descarga (lo rellenaremos por JS) -->
+                <div
+                    class="mt-4 hidden rounded-2xl bg-[#ecfdf3] px-4 py-3 text-xs text-[#14532d]"
+                    data-download-message
+                >
+                    <!-- aquí el script pondrá el mensaje + link -->
+                </div>
+                </form>
 
             </div>
           </div>

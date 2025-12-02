@@ -54,13 +54,14 @@ const pageDescription =
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
-              >
-                <input type="hidden" name="form-name" value="framework-okrs-startups" />
+                data-download-link="https://docs.google.com/spreadsheets/d/1uFFQqFSm2qvE73Hrr4PuxJbgrRNdLOUI7fbfWzzKYkI/edit?usp=sharing"
+                >
+                                <input type="hidden" name="form-name" value="plan-negocio-one-page" />
                 <p class="hidden">
-                  <label>
+                    <label>
                     No llenar:
                     <input name="bot-field" />
-                  </label>
+                    </label>
                 </p>
 
                 <div>
@@ -110,12 +111,92 @@ const pageDescription =
                 </div>
 
                 <button
-                  type="submit"
-                  class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#162741] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
+                    type="submit"
+                    class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#162741] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
                 >
-                  Quiero descargar este recurso
+                    Quiero descargar este recurso
                 </button>
-              </form>
+
+                <p class="mt-2 text-[11px] text-[#6b7280]">
+                    Después de enviar el formulario verás el enlace de descarga.
+                </p>
+
+                <!-- Mensaje de descarga (lo rellenaremos por JS) -->
+                <div
+                    class="mt-4 hidden rounded-2xl bg-[#ecfdf3] px-4 py-3 text-xs text-[#14532d]"
+                    data-download-message
+                >
+                    <script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    // TU URL completa de Google Apps Script /exec
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4BZPlvEa1-78yTjp6nBdGH9-UCP02lK2VRrFUA7iSX4It2ODw6nR0_TsMmxabTD52tg/exec";
+
+    // Selecciona todos los formularios con atributo name
+    const forms = document.querySelectorAll("form[name]");
+
+    forms.forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // evitamos el reload automático
+
+        const formData = new FormData(form);
+
+        // -----------------------------------------
+        // 1) Enviar a Netlify
+        // -----------------------------------------
+        const netlifyBody = new URLSearchParams(formData).toString();
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: netlifyBody,
+        }).catch((err) =>
+          console.error("Error enviando a Netlify:", err)
+        );
+
+        // -----------------------------------------
+        // 2) Enviar a Google Sheets (Apps Script)
+        // -----------------------------------------
+        if (SCRIPT_URL) {
+          fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          }).catch((err) =>
+            console.error("Error enviando a Sheets:", err)
+          );
+        }
+
+        // -----------------------------------------
+        // 3) Mostrar mensaje de descarga
+        // -----------------------------------------
+        const downloadLink = form.dataset.downloadLink;
+        const messageEl = form.querySelector("[data-download-message]");
+
+        if (downloadLink && messageEl) {
+          messageEl.innerHTML = `
+            🎁 <strong>¡Listo! Tu recurso está disponible.</strong><br/><br/>
+            <a 
+              href="${downloadLink}" 
+              target="_blank" 
+              rel="noopener" 
+              class="underline font-semibold text-[#0a6a30]"
+            >👉 Haz clic aquí para descargarlo</a>
+          `;
+
+          messageEl.classList.remove("hidden");
+        }
+
+        // -----------------------------------------
+        // 4) Limpiar el formulario (opcional)
+        // -----------------------------------------
+        form.reset();
+      });
+    });
+  });
+</script>
+
+                </div>
+                </form>
 
              
             </div>
