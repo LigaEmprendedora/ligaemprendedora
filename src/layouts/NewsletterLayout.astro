@@ -1,0 +1,64 @@
+---
+interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+    date?: string;
+    category?: string;
+    image?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<div>
+  <!-- Badge + fecha -->
+  <div class="mb-4 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em]">
+    {frontmatter.category && (
+      <span class="rounded-full bg-[#fff2ec] px-3 py-1 text-[#e3412b]">
+        {frontmatter.category}
+      </span>
+    )}
+    {frontmatter.date && (
+      <span class="text-[10px] text-[#6b7280] normal-case">
+        {new Date(frontmatter.date).toLocaleDateString("es-CO")}
+      </span>
+    )}
+  </div>
+
+  <!-- Título -->
+  <h1 class="text-3xl md:text-4xl font-extrabold leading-tight text-[#111827]">
+    {frontmatter.title}
+  </h1>
+
+  <!-- Descripción -->
+  {frontmatter.description && (
+    <p class="mt-3 text-sm md:text-base text-[#4b5563] max-w-2xl">
+      {frontmatter.description}
+    </p>
+  )}
+
+  <!-- Imagen hero -->
+  {frontmatter.image && (
+    <div class="mt-8 overflow-hidden rounded-3xl">
+      <img
+        src={frontmatter.image}
+        alt={frontmatter.title}
+        class="h-64 w-full object-cover md:h-80"
+        loading="lazy"
+      />
+    </div>
+  )}
+
+  <!-- Contenido -->
+  <article
+    class="prose prose-sm md:prose-base max-w-none mt-10
+           prose-headings:font-semibold prose-h2:text-[#111827] prose-h3:text-[#111827]
+           prose-p:text-[#374151] prose-strong:text-[#111827]
+           prose-a:text-[#e3412b] hover:prose-a:text-[#c23a26]
+           prose-li:marker:text-[#e3412b]"
+  >
+    <slot />
+  </article>
+</div>
