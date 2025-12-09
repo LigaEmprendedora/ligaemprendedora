@@ -31,7 +31,7 @@ Los sectores más activos fueron:
 - Alojamiento y servicios de comida  
 - Actividades administrativas y de apoyo  
 
-![Vista urbana de Colombia con actividad económica](/images/newsletter/TU-IMAGEN-CIUDAD-EMPRENDE.webp)  
+![Vista urbana de una ciudad colombiana con comercio y tráfico, representando la actividad empresarial](/images/newsletter/colombia-emprende-ciudad.webp)  
 *Un país donde emprender es casi un reflejo automático frente a la falta de oportunidades formales.*
 
 ---
@@ -50,7 +50,7 @@ Las razones no sorprenden, pero sí duelen:
 **Emprender es relativamente fácil.  
 Sostener la empresa en el tiempo es el verdadero deporte extremo.**
 
-![Negocio cerrado en Colombia](/images/newsletter/TU-IMAGEN-CIERRE-NEGOCIO.webp)  
+![Fachada de un local comercial con reja abajo y aviso de cerrado, simbolizando el cierre de negocios](/images/newsletter/colombia-emprende-cierre-negocio.webp)  
 *El lado B de las cifras: la mortalidad empresarial se lleva a buena parte de las nuevas iniciativas.*
 
 ---
@@ -66,7 +66,7 @@ La **Estrategia Nacional de Transformación Digital 2023–2026** reconoce que b
 Programas como **PotencIA Digital** buscan cerrar esta brecha.  
 Pero el reto es enorme: la mayoría de las pequeñas empresas aún no ha dado el salto a un modelo más productivo apoyado en tecnología.
 
-![Empresario usando herramientas digitales](/images/newsletter/TU-IMAGEN-DIGITALIZACION.webp)  
+![Dueño de una pequeña empresa trabajando en su computador portátil y celular, usando herramientas digitales para gestionar su negocio](/images/newsletter/colombia-emprende-digitalizacion.webp)  
 *Sin datos ni herramientas, las decisiones se toman a ciegas y la productividad se estanca.*
 
 ---
@@ -83,7 +83,7 @@ Nuevos productos de Google —como **Stitch**, **NotebookLM** y los modelos **Ge
 
 **La diferencia ya no es quién tiene más capital, sino quién aprovecha mejor la infraestructura digital disponible.**
 
-![Pequeño equipo usando herramientas de IA](/images/newsletter/TU-IMAGEN-EQUIPO-IA.webp)  
+![Pequeño equipo de emprendedores en una oficina colaborativa, mirando una pantalla con gráficos y elementos de IA](/images/newsletter/colombia-emprende-equipo-ia.webp)  
 *Tecnología bien usada: el equivalente a tener un cuerpo técnico completo, incluso si juegas con un equipo reducido.*
 
 ---
@@ -103,4 +103,4 @@ Entonces Colombia puede dejar de ser *“el país donde se abren muchas empresas
 
 - crecen,  
 - exportan,  
-- y se sostienen en el tiempo.  
+- y se sostienen en el tiempo.

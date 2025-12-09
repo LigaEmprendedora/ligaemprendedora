@@ -2,200 +2,109 @@
 title: "Tu PYME con Superpoderes: La Nueva Era de IA con Stitch, NotebookLM y Gemini"
 description: "Cómo las nuevas herramientas de Google están reescribiendo las reglas del crecimiento para pequeñas empresas en Colombia."
 category: "IA para negocios"
-date: "2025-12-03"
-image: "/images/newsletter/google-pymes-hero.webp"
+date: "2025-12-02"
+image: "/newsletter/google-pymes/hero.webp"
 ---
 
-# Tu PYME con Superpoderes
+> La inteligencia artificial dejó de ser un lujo corporativo. Hoy es una ventaja competitiva accesible para cualquier emprendedor que tenga claridad, urgencia… y un smartphone.
 
-La inteligencia artificial dejó de ser un lujo corporativo. Hoy es una ventaja competitiva accesible para cualquier emprendedor que tenga claridad, urgencia… y un smartphone.
-
-En Colombia, donde la mayoría de empresas son micro y pequeñas, el impacto es aún más profundo: **la IA es la primera tecnología que permite a un negocio de dos personas competir con empresas de veinte**.
-
----
-
-## 1. Del miedo a la IA al “equipo invisible”
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-10">
-  
-  <!-- FOTO AQUI: IA general o Google AI Suite -->
-  <div>
-    <img src="/images/newsletter/TU-IMAGEN-IA.webp" 
-         alt="Ecosistema Google AI"
-         class="rounded-xl shadow-sm">
-    <p class="text-xs text-gray-500 mt-2 italic">
-      La IA ya no es futurismo: es ventaja operativa diaria para PYMEs.
-    </p>
-  </div>
-
-  <div>
-    <p>
-      Durante años, los emprendedores escucharon dos extremos: “la IA va a reemplazarte” o “la IA lo hará todo por ti”.  
-      La realidad es menos dramática y más útil: <strong>la IA es un equipo invisible que no duerme, no se cansa y no improvisa</strong>.
-    </p>
-
-    <p class="mt-3">
-      En 2025, ese equipo toma forma con tres herramientas de Google que redefinen cómo trabaja una PYME:
-      <strong>Stitch, NotebookLM y los modelos Gemini.</strong>
-    </p>
-  </div>
-
-</div>
+En Colombia, donde la mayoría de empresas son micro y pequeñas, el impacto es aún más profundo: la IA es la primera tecnología que permite a un negocio de dos personas competir con empresas de veinte.
 
 ---
 
-## 2. Stitch: del cuaderno al prototipo en minutos
+## **1. Del miedo a la IA al “equipo invisible”**
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-12">
+Durante años, los emprendedores escucharon dos extremos:
 
-  <div>
-    <h3 class="text-xl font-semibold">¿Qué hace Stitch?</h3>
-    <p class="mt-3">
-      Stitch es el puente más veloz entre una idea y una interfaz real. Tomas tu cuaderno y escribes algo tan simple como:
-    </p>
+1. “La IA va a reemplazarte”.
+2. “La IA lo hará todo por ti”.
 
-    <blockquote class="mt-4 border-l-4 border-gray-300 pl-4 italic text-gray-600">
-      “Landing page para una escuela de inglés en Bogotá. Hero grande, sección de precios, botón de registro.”
-    </blockquote>
+La realidad es menos dramática y más útil: la IA es un **equipo invisible** que no duerme, no se cansa y no improvisa.
 
-    <p class="mt-4">
-      Y Stitch devuelve:
-    </p>
+En 2025, ese equipo toma forma con tres herramientas de Google que redefinen cómo trabaja una PYME:
 
-    <ul class="mt-2 list-disc list-inside">
-      <li>Un diseño profesional.</li>
-      <li>Código HTML/CSS/JS funcional.</li>
-      <li>Variantes visuales listas para probar.</li>
-    </ul>
-
-    <p class="mt-4 font-semibold">
-      Para una PYME, esto no es diseño: es velocidad de mercado.
-    </p>
-  </div>
-
-  <!-- FOTO AQUI: interfaz o ejemplo de Stitch -->
-  <div>
-    <img src="/images/newsletter/TU-IMAGEN-STITCH.webp"
-         alt="Interfaz generada con Stitch"
-         class="rounded-xl shadow-sm">
-    <p class="text-xs text-gray-500 mt-2 italic">
-      Stitch convierte descripciones en interfaces listas para llevar a producción.
-    </p>
-  </div>
-
-</div>
+- **Stitch**
+- **NotebookLM**
+- **Gemini**
 
 ---
 
-## 3. NotebookLM: el cerebro que ordena todo lo que tu empresa ya sabe
+## **2. Stitch: del cuaderno al prototipo en minutos**
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-12">
+![Interfaz de una landing page generada automáticamente con Stitch en una laptop](/newsletter/google-pymes/stitch-ui.webp)
 
-  <!-- FOTO AQUI: NotebookLM dashboard -->
-  <div>
-    <img src="/images/newsletter/TU-IMAGEN-NOTEBOOKLM.webp"
-         alt="NotebookLM ejemplo"
-         class="rounded-xl shadow-sm">
-    <p class="text-xs text-gray-500 mt-2 italic">
-      NotebookLM transforma caos documental en claridad operativa.
-    </p>
-  </div>
+**¿Qué hace Stitch?**  
+Stitch es el puente más veloz entre una idea y una interfaz real.
 
-  <div>
-    <p>
-      Si tienes una empresa en Colombia, sabes cómo funciona:
-    </p>
+Imagina que escribes algo tan simple como:
 
-    <ul class="mt-2 list-disc list-inside">
-      <li>Los procesos viven en WhatsApp.</li>
-      <li>Las propuestas en PDFs olvidados.</li>
-      <li>La estrategia en notas dispersas.</li>
-    </ul>
+> “Landing page para una escuela de inglés en Bogotá. Hero grande, sección de precios, botón de registro.”
 
-    <p class="mt-3">
-      <strong>NotebookLM conecta todo eso</strong> y genera resúmenes, manuales, planes de trabajo y análisis sobre tus propios documentos.
-    </p>
+Stitch devuelve:
 
-    <p class="mt-3">
-      Es como contratar un consultor de estrategia, pero disponible 24/7 y sin facturas por hora.
-    </p>
-  </div>
+- Un diseño profesional.
+- Código HTML/CSS/JS funcional.
+- Variantes visuales listas para probar.
 
-</div>
+Para una PYME, esto no es solo diseño: **es velocidad de mercado**.
 
 ---
 
-## 4. Gemini: contenido, análisis y automatización en un solo modelo
+## **3. NotebookLM: el cerebro que ordena todo lo que tu empresa ya sabe**
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-12">
+![Panel con documentos, notas y PDFs conectados dentro de NotebookLM](/newsletter/google-pymes/notebooklm-docs.webp)
 
-  <div>
-    <h3 class="text-xl font-semibold">¿Qué puede hacer Gemini por tu negocio?</h3>
+Si tienes una empresa en Colombia, sabes cómo funciona:
 
-    <p class="mt-3">
-      <strong>Marketing 10x más rápido:</strong> copies, anuncios, guiones, newsletters y piezas para redes listas para ajustar y publicar.
-    </p>
-    <p class="mt-2">
-      <strong>Ventas:</strong> scripts mejorados, respuestas a objeciones, asistentes entrenados con tus productos, precios y políticas.
-    </p>
-    <p class="mt-2">
-      <strong>Operación:</strong> informes semanales, correos internos, presentaciones para tu equipo o para inversionistas.
-    </p>
+- Los procesos viven en WhatsApp.
+- Las propuestas en PDFs olvidados.
+- La estrategia en notas dispersas.
 
-    <p class="mt-4">
-      Tus herramientas no cambian. Tu velocidad sí.
-    </p>
-  </div>
+**NotebookLM conecta todo eso** y genera:
 
-  <!-- FOTO AQUI: flujos de Gemini -->
-  <div>
-    <img src="/images/newsletter/TU-IMAGEN-GEMINI.webp"
-         alt="Flujos de trabajo con Gemini"
-         class="rounded-xl shadow-sm">
-    <p class="text-xs text-gray-500 mt-2 italic">
-      Gemini automatiza contenido, análisis y tareas rutinarias de tu día a día.
-    </p>
-  </div>
+- Resúmenes claros.
+- Manuales y playbooks internos.
+- Planes de trabajo y análisis sobre tus propios documentos.
 
-</div>
+Es como contratar un consultor de estrategia, pero disponible 24/7 y sin facturas por hora.
 
 ---
 
-## 5. El nuevo flujo: de idea → análisis → prototipo → ventas
+## **4. Gemini: contenido, análisis y automatización en un solo modelo**
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-12">
+![Pantallas de celular y computador con contenido generado por Gemini para redes sociales](/newsletter/google-pymes/gemini-content.webp)
 
-  <div>
-    <p>
-      Una PYME puede hoy lanzar un producto digital completo en semanas, no en meses:
-    </p>
+**¿Qué puede hacer Gemini por tu negocio?**
 
-    <ol class="mt-4 space-y-2 list-decimal list-inside">
-      <li><strong>NotebookLM:</strong> analiza la información de clientes, ventas y feedback para definir una oportunidad clara.</li>
-      <li><strong>Stitch:</strong> convierte esa idea en un prototipo, landing o app para probar en el mercado.</li>
-      <li><strong>Gemini:</strong> crea el contenido de ventas: anuncios, correos, guiones y piezas para redes.</li>
-    </ol>
+**Marketing 10x más rápido**
 
-    <p class="mt-4 font-semibold">
-      No es teoría futurista. Es una ventaja injusta que ya existe y que pocas PYMEs están aprovechando.
-    </p>
-  </div>
+- Copies, anuncios, guiones, newsletters y piezas para redes listas para ajustar y publicar.
 
-  <!-- FOTO AQUI: combinación de las tres herramientas -->
-  <div>
-    <img src="/images/newsletter/TU-IMAGEN-COMBINADA.webp"
-         alt="Stitch, NotebookLM y Gemini juntos"
-         class="rounded-xl shadow-sm">
-    <p class="text-xs text-gray-500 mt-2 italic">
-      Tres herramientas, un flujo: claridad → diseño → ventas.
-    </p>
-  </div>
+**Ventas**
 
-</div>
+- Scripts mejorados, respuestas a objeciones, asistentes entrenados con tus productos, precios y políticas.
+
+**Operación**
+
+- Informes semanales, correos internos, presentaciones para tu equipo o para inversionistas.
+
+Tus herramientas no cambian. **Tu velocidad sí.**
 
 ---
 
-## 6. La oportunidad para las PYMEs en Colombia
+## *5. El nuevo flujo: de idea → análisis → prototipo → ventas**
+
+Hoy una PYME puede lanzar un producto digital completo en semanas, no en meses:
+
+1. **NotebookLM** analiza información de clientes, ventas y feedback para definir una oportunidad clara.
+2. **Stitch** convierte esa idea en un prototipo, landing o app para probar en el mercado.
+3. **Gemini** crea el contenido de ventas: anuncios, correos, guiones y piezas para redes.
+
+No es teoría futurista. Es una **ventaja injusta** que ya existe y que pocas PYMEs están aprovechando.
+
+---
+
+## **6. La oportunidad para las PYMEs en Colombia**
 
 > “Por primera vez, una microempresa puede operar con las capacidades de una empresa mediana.”
 
@@ -208,7 +117,7 @@ Las empresas que entiendan que estas herramientas no son “juguetes de moda”,
 
 ### Fuentes
 
-Google Labs – Stitch  
-Google – NotebookLM  
-Google AI Studio – modelos Gemini  
-Cobertura en medios especializados sobre IA aplicada a negocios  
+- Google Labs – Stitch  
+- Google – NotebookLM  
+- Google AI Studio – modelos Gemini  
+- Cobertura en medios especializados sobre IA aplicada a negocios.

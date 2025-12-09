@@ -12,7 +12,7 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<div>
+<div class="mx-auto max-w-3xl px-4 py-12 md:px-0 md:py-16">
   <!-- Badge + fecha -->
   <div class="mb-4 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em]">
     {frontmatter.category && (
@@ -39,7 +39,7 @@ const { frontmatter } = Astro.props;
     </p>
   )}
 
-  <!-- Imagen hero -->
+  <!-- Imagen hero (arriba del contenido) -->
   {frontmatter.image && (
     <div class="mt-8 overflow-hidden rounded-3xl">
       <img
@@ -51,13 +51,9 @@ const { frontmatter } = Astro.props;
     </div>
   )}
 
-  <!-- Contenido -->
+  <!-- Contenido markdown -->
   <article
-    class="prose prose-sm md:prose-base max-w-none mt-10
-           prose-headings:font-semibold prose-h2:text-[#111827] prose-h3:text-[#111827]
-           prose-p:text-[#374151] prose-strong:text-[#111827]
-           prose-a:text-[#e3412b] hover:prose-a:text-[#c23a26]
-           prose-li:marker:text-[#e3412b]"
+    class="mt-10 space-y-5 text-sm md:text-base leading-relaxed text-[#374151]"
   >
     <slot />
   </article>
