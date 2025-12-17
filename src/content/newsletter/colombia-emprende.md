@@ -18,7 +18,6 @@ Pero cuando miramos más allá del registro en la cámara de comercio, aparece o
 
 Este texto es para ti si estás pensando en emprender, o ya empezaste y quieres entender **qué hay realmente detrás de esos números**.
 
----
 <h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
   1. El boom en los registros
 </h2>
@@ -45,7 +44,6 @@ Cuando el trabajo formal no alcanza, muchos deciden intentarlo por su cuenta.
 ![Vista urbana de una ciudad colombiana con comercio y tráfico, representando la actividad empresarial](/newsletter/colombia-emprende/colombia-emprende-ciudad.webp)  
 *Emprender, muchas veces, es la respuesta directa a la falta de oportunidades formales.*
 
----
 <h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
 2. El dato incómodo
 </h2>
@@ -70,7 +68,6 @@ Si estás pensando en emprender, esto es clave:
 ![Fachada de un local comercial con reja abajo y aviso de cerrado, simbolizando el cierre de negocios](/newsletter/colombia-emprende/colombia-emprende-cierre-negocio.webp)  
 *El lado B del “boom emprendedor” es la alta mortalidad de empresas.*
 
----
 <h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
 3. La brecha digital
 </h2>
@@ -95,7 +92,6 @@ Pero el reto es enorme: gran parte de las pequeñas empresas todavía no ha dado
 ![Dueño de una pequeña empresa trabajando en su computador portátil y celular, usando herramientas digitales para gestionar su negocio](/newsletter/colombia-emprende/colombia-emprende-digitalizacion.webp)  
 *Sin datos ni herramientas, muchas decisiones se toman a ciegas y la productividad se queda estancada.*
 
----
 <h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
 4. La oportunidad
 </h2>
@@ -124,11 +120,9 @@ La clave no es saber programar ni ser “tech”. La clave es entender esto:
 ![Pequeño equipo de emprendedores en una oficina colaborativa, mirando una pantalla con gráficos y elementos de IA](/newsletter/colombia-emprende/colombia-emprende-equipo-ia.webp)  
 *Tener un buen “equipo digital” puede marcar la diferencia entre sobrevivir y rendirse antes de tiempo.*
 
----
 
-Al final, el verdadero reto para la Colombia que emprende no es llenar las estadísticas de empresas nuevas,  
-sino construir negocios que:
+Al final, el verdadero reto para la Colombia que emprende no es llenar las estadísticas de empresas nuevas, sino construir negocios que:
 
-- se vuelvan más productivos,  
-- se apoyen en la tecnología,  
-- y sobrevivan lo suficiente para cambiar la vida de quienes los crean… y de quienes trabajan en ellos.
+- Se vuelvan más productivos,  
+- Se apoyen en la tecnología,  
+- Y sobrevivan lo suficiente para cambiar la vida de quienes los crean… y de quienes trabajan en ellos.

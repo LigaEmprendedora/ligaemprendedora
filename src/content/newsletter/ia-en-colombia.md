@@ -3,16 +3,21 @@ title: "Inteligencia Artificial en Colombia: Mucho Hype, Poco Plan"
 description: "Qué está pasando de verdad con la adopción de IA en las empresas colombianas y por qué la conversación debe pasar del miedo al retorno de inversión."
 category: "Tecnología"
 date: "2025-12-03"
-image: "/images/newsletter/ia-colombia-hero.webp"
+image: "/newsletter/ia-colombia/ia-colombia-hero.webp"
 ---
 
-## 1. El ruido: IA en todas partes
+<h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
+ 1. El ruido: IA en todas partes</h2>
+
 
 Eventos, paneles, artículos de opinión, conferencias. En Colombia se habla de inteligencia artificial en casi todos los espacios empresariales.
 
 La **política nacional de IA** y los documentos de planeación recientes reconocen la IA como tecnología de propósito general, con potencial para transformar industria, salud, educación, agro y servicios financieros. El lenguaje es ambicioso, pero la pregunta clave es otra: **¿qué están haciendo realmente las empresas?**
 
-## 2. La adopción real: entre la curiosidad y el piloto eterno
+<h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
+ 2. La adopción real: entre la curiosidad y el piloto eterno</h2>
+
+![Interfaz de una landing page generada automáticamente con Stitch en una laptop](/newsletter/ia-colombia/adopcion-1a.webp)
 
 Diferentes diagnósticos coinciden en que la adopción de IA en Colombia está creciendo, pero de forma desigual:
 
@@ -28,7 +33,11 @@ Las razones habituales:
 - Desconocimiento de casos de uso claros para su sector.  
 - Preocupaciones sobre regulación, ética y manejo de datos.
 
-## 3. Lo que sí está pasando: programas públicos y apuestas privadas
+<h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
+ 3. Lo que sí está pasando: programas públicos y apuestas privadas</h2>
+
+![Interfaz de una landing page generada automáticamente con Stitch en una laptop](/newsletter/ia-colombia/ia-piloto-aislado.webp)
+
 
 Por el lado público, el Ministerio TIC y el Ministerio de Ciencia han publicado lineamientos y convocatorias para fomentar el uso responsable de IA, y han impulsado iniciativas como **PotencIA Digital** para acompañar a empresas en procesos de transformación digital.
 
@@ -39,7 +48,11 @@ Por el lado privado:
 
 La sensación general es clara: **la conversación ya no es si usar IA, sino cómo y para qué**.
 
-## 4. El cambio de enfoque: de “te va a quitar el trabajo” a “te ayuda a vender más”
+<h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
+ 4. El cambio de enfoque: de “te va a quitar el trabajo</h2>
+
+![Interfaz de una landing page generada automáticamente con Stitch en una laptop](/newsletter/ia-colombia/ia-vende-mas.jpg)
+
 
 Cuando las empresas hablan de IA solo en términos de riesgo laboral, el debate se estanca. El giro necesario es empezar a hablar en términos de:
 
@@ -53,7 +66,11 @@ Para una PYME colombiana, la pregunta útil no es “¿la IA me va a reemplazar?
 - ¿Qué uso de IA me ayudaría a vender más o a gastar menos?  
 - ¿Qué herramientas puedo probar en las próximas dos semanas?
 
-## 5. El rol de los nuevos productos de Google
+<h2 class="mt-10 text-2xl md:text-3xl font-extrabold text-[#111827]">
+ 5. El rol de los nuevos productos de Google</h2>
+
+![Interfaz de una landing page generada automáticamente con Stitch en una laptop](/newsletter/ia-colombia/nuevos-google.webp)
+
 
 Los últimos lanzamientos de Google han reducido la barrera de entrada para muchas empresas:
 
