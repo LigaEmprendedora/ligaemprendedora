@@ -1,69 +1,225 @@
 ---
+const stats = [
+  { label: "Membresía", value: "2.4k+" },
+  { label: "Mentorías", value: "500+" },
+  { label: "Proyectos", value: "1.2k" },
+];
+
+const mediaLogos = ["FORBES", "WIRED", "ENTREPRENEUR", "FASTCOMPANY", "VANGUARD"];
+
+// Cambia esta ruta por la de tu carátula real.
+// Si el archivo está en /public/caratula-libro.webp, aquí dejas "/caratula-libro.webp"
+const bookCover = "/portada.webp";
 ---
 
-<section class="relative overflow-hidden bg-[#f4f6fa]">
+<section id="hero"  class="relative  hero-premium overflow-hidden bg-[#162741] pt-15 text-white md:pt-6 lg:pt-10">  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(224,244,89,0.12),transparent_22%),radial-gradient(circle_at_84%_18%,rgba(224,244,89,0.08),transparent_18%),radial-gradient(circle_at_78%_55%,rgba(255,255,255,0.05),transparent_24%),linear-gradient(135deg,#162741_0%,#13233a_52%,#0f1c30_100%)]"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-white/8"></div>
+    <div class="absolute inset-y-0 left-1/2 hidden w-px bg-white/5 lg:block"></div>
+    <div class="absolute inset-x-0 bottom-0 h-px bg-white/8"></div>
+    <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#e0f459]/10 blur-3xl"></div>
+    <div class="absolute -right-24 top-8 h-80 w-80 rounded-full bg-[#e0f459]/8 blur-3xl"></div>
+    <div class="absolute -bottom-28 left-[34%] h-72 w-72 rounded-full bg-white/3 blur-3xl"></div>
+  </div>
 
-  <!-- Fondo estadio (sin overlays, sin cambios de color) -->
-  <div
-    class="pointer-events-none absolute inset-0 opacity-70"
-    style="
-      background-image: url('/estadium.webp');
-      background-size: cover;
-      background-position: center;
-      -webkit-mask-image: linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 20%,
-        black 80%,
-        transparent 100%
-      );
-      mask-image: linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 20%,
-        black 80%,
-        transparent 100%
-      );
-    "
-  ></div>
+  <div class="relative mx-auto max-w-7xl px-4 pb-14 pt-12 md:px-6 md:pb-20 md:pt-16 lg:pt-20">
+    <div class="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-10 xl:gap-16">
+      <div class="max-w-3xl">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#d8c37a] md:text-xs">
+          Únete a la Liga Emprendedora
+        </p>
 
-  <!-- Contenido centrado -->
-  <div class="relative mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center px-4 py-20 text-center md:px-6">
+        <h1 class="mt-5 max-w-3xl text-[2.6rem] font-extrabold leading-[0.98] tracking-[-0.05em] text-white sm:text-5xl md:text-6xl lg:text-[4.7rem] xl:text-[4.2rem]">
+          El emprendimiento no se aprende mirando desde la tribuna. Se entrena en la cancha.
+        </h1>
 
-    <!-- Línea superior -->
-    <p class="mb-4 text-[16px] font-semibold uppercase tracking-[0.22em] text-[#162741]">
-      LIGA EMPRENDEDORA: ESCUELA DE EMPRENDIMIENTO ONLINE PARA LANZAR TU NEGOCIO COMO UN PARTIDO DE FÚTBOL
-    </p>
+        <p class="mt-7 max-w-2xl text-base leading-relaxed text-[#c7d1e0] md:text-[1.22rem] md:leading-relaxed">
+          Deja de acumular ideas en el cajón por miedo a fracasar. <strong class="font-semibold text-white">Emprende Futbolero</strong> es tu manual práctico: 11 lecciones tácticas y herramientas descargables para estructurar tus números y lanzar tu negocio en <span class="font-semibold text-white">90 días exactos</span>.
+        </p>
 
-    <!-- H1 grande -->
-    <h1 class="text-4xl font-extrabold leading-16 text-[#162741] md:text-7xl">
-      Emprender no es ver el partido.<br />
-      <span class="text-[#E1C875] [text-shadow:0_0_12px_rgba(0,0,0,0.40)]">Es jugarlo.</span>
-    </h1>
+        <div class="mt-9">
+          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#d8c37a] md:text-xs">
+            Piensa como DT. Ejecuta como 9.
+          </p>
 
-    <!-- Párrafo -->
-    <p class="mt-5 max-w-2xl  font-semibold text-base text-[#162741] md:text-3xl">
-      Aquí entrenas, armas tu equipo y sales a la cancha para ganar.
-    </p>
+          <div class="mt-4 flex flex-col items-start gap-4">
+            <a
+              href="#pitazo-final"
+              class="inline-flex min-h-[62px] items-center justify-center rounded-none bg-[#e0f459] px-7 py-4 text-center text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_0_1px_rgba(224,244,89,0.1),0_0_30px_rgba(224,244,89,0.28),0_0_90px_rgba(224,244,89,0.14)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(224,244,89,0.14),0_0_42px_rgba(224,244,89,0.36),0_0_110px_rgba(224,244,89,0.18)]"
+            >
+              ENTRAR A LA CANCHA AHORA
+            </a>
 
-    <!-- Botones centrados -->
-    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-      <a
-        href="/unete"
-        class="inline-flex items-center justify-center rounded-full bg-[#E1C875] px-8 py-3 text-sm font-semibold text-[#162741] shadow-md transition hover:bg-[#d6b66a]"
-      >
-        Únete gratis a la Liga
-      </a>
+            <p class="max-w-xl text-sm leading-relaxed text-[#aebbd0] md:text-[15px]">
+              Incluye acceso gratuito a "El Búnker": 18 plantillas gerenciales para aplicar hoy mismo. Pago 100% seguro.
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <a
-        href="#como-funciona"
-        class="inline-flex items-center justify-center rounded-full border border-[#162741]/40 bg-white/60 backdrop-blur px-8 py-3 text-sm font-semibold text-[#162741] transition hover:bg-white/80"
-      >
-        Ver cómo funciona
-      </a>
+      <div class="relative flex items-center justify-center lg:justify-end">
+        <div class="floating-card absolute right-12 top-4 hidden w-[220px] rotate-[-8deg] rounded-[22px] border border-white/10 bg-white/5 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-md lg:block">
+          <div class="grid grid-cols-5 gap-1.5">
+            {Array.from({ length: 25 }).map(() => (
+              <span class="h-3 rounded-[3px] bg-[#e0f459]/16"></span>
+            ))}
+          </div>
+          <div class="mt-3 h-px w-full bg-white/8"></div>
+          <div class="mt-3 flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-white/60">
+            <span>Excel</span>
+            <span>Cashflow</span>
+          </div>
+        </div>
+
+        <div class="floating-clock absolute left-4 top-20 hidden h-24 w-24 rounded-full border border-white/10 bg-white/5 shadow-[0_18px_40px_rgba(0,0,0,0.15)] backdrop-blur-md lg:flex lg:items-center lg:justify-center">
+          <div class="relative h-11 w-11 rounded-full border border-[#e0f459]/45">
+            <span class="absolute left-1/2 top-2 h-3.5 w-px -translate-x-1/2 bg-[#e0f459]"></span>
+            <span class="absolute left-5 top-1/2 h-px w-3.5 -translate-y-1/2 bg-[#e0f459]"></span>
+          </div>
+        </div>
+
+        <div class="floating-notes absolute bottom-8 left-0 hidden w-[190px] rotate-[8deg] rounded-[22px] border border-white/10 bg-white/5 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-md lg:block">
+          <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#d8c37a]">
+            Apuntes tácticos
+          </p>
+          <div class="mt-3 space-y-2">
+            <div class="h-px w-full bg-white/10"></div>
+            <div class="h-px w-5/6 bg-white/10"></div>
+            <div class="h-px w-4/6 bg-[#e0f459]/55"></div>
+            <div class="h-px w-full bg-white/10"></div>
+          </div>
+        </div>
+
+        <div class="relative w-full max-w-[470px] xl:max-w-[520px]">
+          <div class="absolute -right-3 top-2 z-30 rounded-tr-[22px] rounded-bl-[22px] border border-white/10 bg-[#22324f]/95 px-4 py-3 shadow-[0_18px_50px_rgba(0,0,0,0.24)] backdrop-blur-sm">
+            <p class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">
+              Arsenal Digital
+            </p>
+            <p class="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/60">
+              Libro + plantillas + framework
+            </p>
+          </div>
+
+          <div class="book-stage relative mx-auto mt-8 flex min-h-[520px] items-center justify-center sm:min-h-[560px] lg:mt-0">
+            <div class="book-glow absolute inset-x-14 bottom-12 h-20 rounded-[999px] bg-[#e0f459]/20 blur-3xl"></div>
+            <div class="book-shadow absolute inset-x-16 bottom-10 h-16 rounded-[999px] bg-black/55 blur-2xl"></div>
+
+            <div class="book-3d relative z-20 w-[280px] sm:w-[330px] md:w-[370px] xl:w-[410px]">
+              <div class="book-spine absolute -left-4 top-3.5 bottom-0 w-[22px] rounded-l-lg border border-white/5 bg-[linear-gradient(180deg,#162741_0%,#0f1c31_100%)] shadow-[inset_-8px_0_12px_rgba(0,0,0,0.28)]"></div>
+
+              <div class="book-cover relative overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(180deg,#223455_0%,#1a2943_100%)] shadow-[0_36px_120px_rgba(0,0,0,0.46)]">
+                <img
+                  src={bookCover}
+                  alt="Carátula del libro Emprende Futbolero"
+                  class="block aspect-[0.72] w-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
+                <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),transparent_20%,transparent_75%,rgba(0,0,0,0.12)_100%)]"></div>
+                <div class="pointer-events-none absolute inset-y-0 left-0 w-8 bg-[linear-gradient(90deg,rgba(255,255,255,0.08),transparent)]"></div>
+                <div class="pointer-events-none absolute right-4 top-4 h-44 w-44 rounded-full border-10 border-white/5"></div>
+                <div class="pointer-events-none absolute right-[72px] top-4 h-44 w-px bg-white/5"></div>
+                <div class="pointer-events-none absolute right-4 top-[78px] h-px w-44 bg-white/5"></div>
+              </div>
+
+              <div class="book-pages absolute bottom-2.5 -right-2.5 top-6 -z-10 w-[18px] rounded-r-[10px] bg-[linear-gradient(180deg,#eef2d3_0%,#c9ceaa_100%)] opacity-95 shadow-[0_10px_24px_rgba(0,0,0,0.2)]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Microcopy -->
-   
   </div>
 </section>
+
+<style>
+  .hero-premium .book-stage {
+    perspective: 1800px;
+  }
+
+  .hero-premium .book-3d {
+    transform: rotateY(-19deg) rotateX(5deg) rotateZ(-2deg);
+    transform-style: preserve-3d;
+    animation: heroBookFloat 7s ease-in-out infinite;
+  }
+
+  .hero-premium .book-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 18%, rgba(255,255,255,0.09) 30%, transparent 44%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  .hero-premium .floating-card,
+  .hero-premium .floating-clock,
+  .hero-premium .floating-notes {
+    animation: heroFloat 8s ease-in-out infinite;
+  }
+
+  .hero-premium .floating-clock {
+    animation-delay: -2s;
+  }
+
+  .hero-premium .floating-notes {
+    animation-delay: -4s;
+  }
+
+  .hero-premium .book-glow {
+    animation: glowPulse 4.6s ease-in-out infinite;
+  }
+
+  @keyframes heroBookFloat {
+    0%, 100% {
+      transform: rotateY(-19deg) rotateX(5deg) rotateZ(-2deg) translateY(0px);
+    }
+    50% {
+      transform: rotateY(-17deg) rotateX(6deg) rotateZ(-1deg) translateY(-10px);
+    }
+  }
+
+  @keyframes heroFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      opacity: 0.55;
+      transform: scaleX(0.94);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scaleX(1.02);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .hero-premium .book-3d {
+      transform: rotateY(-14deg) rotateX(4deg) rotateZ(-1deg);
+    }
+
+    @keyframes heroBookFloat {
+      0%, 100% {
+        transform: rotateY(-14deg) rotateX(4deg) rotateZ(-1deg) translateY(0px);
+      }
+      50% {
+        transform: rotateY(-12deg) rotateX(5deg) rotateZ(0deg) translateY(-8px);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-premium .book-3d,
+    .hero-premium .floating-card,
+    .hero-premium .floating-clock,
+    .hero-premium .floating-notes,
+    .hero-premium .book-glow {
+      animation: none;
+    }
+  }
+</style>

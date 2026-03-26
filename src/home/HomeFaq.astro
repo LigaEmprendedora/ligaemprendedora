@@ -1,0 +1,112 @@
+---
+const faqs = [
+  {
+    question: "¿Necesito tener una empresa ya formada para leerlo?",
+    answer:
+      "No. Este manual es para arrancar. Si tienes una idea bloqueada por el miedo o el desorden, el método CANCHA te dará los números para validarla antes de que gastes un centavo.",
+  },
+  {
+    question: "Yo ya tengo mi negocio facturando, ¿me sirve?",
+    answer:
+      'Totalmente. Si estás asfixiado operativamente siendo el "hombre orquesta", las tácticas de Habilidades y Cultura te entregarán las matrices para empezar a delegar y dejar de ser el cuello de botella.',
+  },
+  {
+    question: "¿No sé nada de finanzas, es muy técnico?",
+    answer:
+      "Cero tecnicismos. Tradujimos los números a reglas de asfalto. Matemáticas claras para saber cuánto te cuesta abrir y a cuánto vender para no quebrar.",
+  },
+  {
+    question: "No tengo tiempo para leer libros largos.",
+    answer:
+      "Por eso esto no es una novela. Es un manual de combate. Lees la táctica en minutos y te vas directo al descargable del Búnker a aplicarlo en 15 minutos. Acción inmediata.",
+  },
+  {
+    question: "¿Esto es solo para negocios de deportes?",
+    answer:
+      "No. Es para cualquier emprendedor que quiera lanzar un producto o servicio real. Usamos el fútbol únicamente como metáfora táctica para explicar los negocios sin aburrirte.",
+  },
+];
+---
+
+<section id="faq-var" class="relative isolate bg-white px-4 py-20 text-[#162741] md:px-6 md:py-28">
+  <div class="absolute inset-x-0 top-0 h-px bg-[#162741]/8"></div>
+  <div class="relative mx-auto max-w-5xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a8954] md:text-xs">
+        El VAR · Preguntas frecuentes
+      </p>
+      <h2 class="mt-5 text-[2.2rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-[#162741] sm:text-5xl md:text-6xl">
+        Antes del pitazo final, resuelve aquí tus últimas dudas.
+      </h2>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-4xl overflow-hidden rounded-[28px] border border-[#162741]/10 bg-white shadow-[0_24px_70px_rgba(22,39,65,0.08)]">
+      {faqs.map((item, index) => (
+        <details class="faq-item group border-b border-[#162741]/10 last:border-b-0" data-faq-item>
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-5 text-left text-base font-bold leading-7 tracking-[-0.02em] text-[#162741] transition hover:bg-[#162741]/2.5 md:px-8 md:py-6 md:text-[1.08rem]"
+          >
+            <span>{item.question}</span>
+            <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#162741]/10 bg-[#162741]/4 text-[#162741] transition duration-300 group-open:rotate-45 group-open:bg-[#e0f459] group-open:text-[#162741]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" d="M12 5v14M5 12h14" />
+              </svg>
+            </span>
+          </summary>
+
+          <div class="px-6 pb-6 md:px-8 md:pb-7">
+            <div class="max-w-3xl text-[15px] leading-8 text-[#425674] md:text-[1rem] md:leading-8">
+              {item.answer}
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+
+  <div
+    id="faq-sticky-cta"
+    class="pointer-events-none fixed inset-x-0 bottom-4 z-50 mx-auto hidden w-full max-w-[calc(100%-1.5rem)] md:max-w-[520px]"
+    aria-hidden="true"
+  >
+    <a
+      href="/unete"
+      class="pointer-events-auto flex min-h-[58px] items-center justify-center rounded-full bg-[#e0f459] px-6 text-center text-sm font-extrabold uppercase tracking-[0.12em] text-[#162741] shadow-[0_16px_40px_rgba(22,39,65,0.18),0_0_28px_rgba(224,244,89,0.32)] transition hover:-translate-y-px hover:shadow-[0_18px_52px_rgba(22,39,65,0.24),0_0_36px_rgba(224,244,89,0.42)]"
+    >
+      Quiero entrar a la cancha ahora
+    </a>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.getElementById("faq-var");
+    const stickyCta = document.getElementById("faq-sticky-cta");
+    const faqItems = Array.from(document.querySelectorAll("[data-faq-item]"));
+
+    if (!section || !stickyCta) return;
+
+    faqItems.forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        faqItems.forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isVisible = entry.isIntersecting;
+        stickyCta.classList.toggle("hidden", !isVisible);
+        stickyCta.classList.toggle("block", isVisible);
+        stickyCta.setAttribute("aria-hidden", String(!isVisible));
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    observer.observe(section);
+  });
+</script>

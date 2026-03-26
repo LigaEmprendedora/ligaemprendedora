@@ -1,52 +1,55 @@
 ---
+const oswaldoCutout = "/Oswa_Vega.webp";
 ---
 
-<section class="w-full bg-[#f4f6fa] py-16 px-4 md:px-6">
-  <div class="mx-auto max-w-5xl">
-    <!-- Título -->
-    <h2 class="text-3xl md:text-4xl font-extrabold text-[#162741]">
-      ¿Para quién es la Liga?
-    </h2>
+<section class="relative isolate overflow-hidden bg-[#f6f5f2] px-4 py-20 text-[#162741] md:px-6 md:py-28">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.82)_0%,rgba(246,245,242,0.96)_100%)]"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-[#162741]/8"></div>
+    <div class="absolute inset-x-0 bottom-0 h-px bg-[#162741]/8"></div>
+    <div class="absolute left-[-8%] top-10 h-64 w-64 rounded-full bg-[#162741]/[0.035] blur-3xl"></div>
+    <div class="absolute right-[-10%] bottom-0 h-72 w-72 rounded-full bg-[#162741]/4 blur-3xl"></div>
+  </div>
 
-    <!-- Grid de bullets -->
-    <div class="mt-6 grid gap-8 md:grid-cols-2">
-      <!-- Bullet 1 -->
-      <div class="flex items-start gap-3">
-        <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-[#162741] text-[#162741] text-xs">
-          ✓
-        </div>
-        <p class="text-sm md:text-base text-[#162741]">
-          <span class="font-semibold">Para el que tiene una idea</span> y no sabe por dónde empezar, pero le sobran ganas.
-        </p>
+  <div id="dt" class="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:gap-16">
+    <div class="relative flex justify-center lg:justify-start">
+      <div class="relative">
+        <div class="absolute -left-8 top-10 hidden h-40 w-40 rounded-full border border-[#162741]/10 lg:block"></div>
+        <div class="absolute -right-8 bottom-8 hidden h-24 w-24 rounded-full border border-[#162741]/10 lg:block"></div>
+
+        <img
+          src={oswaldoCutout}
+          alt="Oswaldo Vega Moreno"
+          class="relative z-10 h-auto w-full max-w-[420px] object-contain drop-shadow-[0_24px_48px_rgba(22,39,65,0.18)]"
+          loading="lazy"
+        />
       </div>
+    </div>
 
-      <!-- Bullet 2 -->
-      <div class="flex items-start gap-3">
-        <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-[#162741] text-[#162741] text-xs">
-          ✓
-        </div>
-        <p class="text-sm md:text-base text-[#162741]">
-          <span class="font-semibold">Para el que ya empezó</span> pero se siente estancado, solo y necesita una nueva estrategia.
+    <div class="max-w-3xl">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a8954] md:text-xs">
+        El DT del juego real
+      </p>
+
+      <h2 class="mt-5 text-[2.35rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-[#162741] sm:text-5xl md:text-6xl">
+        Para ganar, necesitas un DT que haya sudado la camiseta, no un teórico de escritorio.
+      </h2>
+
+      <div class="mt-8 space-y-6 text-base leading-8 text-[#334865] md:text-[1.12rem] md:leading-9">
+        <p>
+          Soy Oswaldo Vega. A mis 49 años, no te hablo desde las diapositivas de una maestría aburrida,
+          enseño desde las cicatrices. Desde vender chocolatinas en el colegio, hasta fundar la productora
+          audiovisual <span class="font-semibold text-[#162741]">Render</span> operando en toda Latinoamérica
+          por más de 26 años.
         </p>
-      </div>
 
-      <!-- Bullet 3 -->
-      <div class="flex items-start gap-3">
-        <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-[#162741] text-[#162741] text-xs">
-          ✓
-        </div>
-        <p class="text-sm md:text-base text-[#162741]">
-          <span class="font-semibold">Para el que busca un equipo</span>, una comunidad que hable su mismo idioma y entienda la pasión de crear algo propio.
+        <p>
+          Sin ser arquitecto ni ingeniero, estructuré, construí y vendí <span class="font-semibold text-[#162741]">Pixel</span>,
+          un desarrollo de 50 apartaestudios en Bogotá valorado en más de 2 millones de dólares.
         </p>
-      </div>
 
-      <!-- Bullet 4 -->
-      <div class="flex items-start gap-3">
-        <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-[#162741] text-[#162741] text-xs">
-          ✓
-        </div>
-        <p class="text-sm md:text-base text-[#162741]">
-          <span class="font-semibold">Para el que está cansado de la teoría</span> y quiere un plan de juego claro para pasar a la acción y ver resultados.
+        <p class="font-medium text-[#162741]">
+          He ganado finales y he apagado máquinas en silencio. Te voy a entregar el sistema exacto que uso para ejecutar proyectos reales y ahorrarte las lesiones financieras y emocionales que yo sufrí.
         </p>
       </div>
     </div>

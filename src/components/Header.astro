@@ -1,68 +1,61 @@
 ---
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/quienes-somos", label: "Quiénes Somos" },
-  { href: "/comunidad", label: "Comunidad" },
-  { href: "/recursos", label: "Recursos" },
-  { href: "/newsletter", label: " Newsletter" },
+  { href: '/#hero', label: 'Inicio' },
+  { href: '/#vestuario', label: 'El Vestuario' },
+  { href: '/#doble-motor', label: 'Método' },
+  { href: '/#fichajes', label: 'Fichajes' },
+  { href: '/#faq-var', label: 'FAQ' },
+  { href: '/newsletter', label: 'Newsletter' },
 ];
 ---
 
-<header class="border-b border-gray-100 bg-[#f4f6fa] sticky top-0 z-40">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
-    <!-- Logo -->
-    <a href="/" class="flex items-center gap-2">
-      <img 
-        src="/Logo_liga.png" 
+<header id="site-header" class="site-header fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+    <a href="/#hero" class="flex items-center gap-2" aria-label="Ir al inicio de Liga Emprendedora">
+      <img
+        src="/Logo_liga2.webp"
         alt="Logo Liga Emprendedora"
-        class="h-20 w-auto"
+        class="h-12 w-auto"
       />
     </a>
 
-    <!-- Navegación desktop -->
-    <nav class="hidden items-center gap-6 text-sm font-medium text-gray-700 md:flex">
+    <nav class="hidden items-center gap-6 text-sm font-medium text-white/80 md:flex">
       {navItems.map((item) => (
-        <a
-          href={item.href}
-          class="transition hover:text-gray-900"
-        >
+        <a href={item.href} class="transition hover:text-white">
           {item.label}
         </a>
       ))}
 
       <a
-        href="/unete"
-        class="rounded-full bg-yellow-400 px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-yellow-300"
+        href="/#pitazo-final"
+        class="rounded-full bg-[#e0f459] px-4 py-2 text-sm font-semibold text-[#162741] shadow-[0_0_22px_rgba(224,244,89,0.18)] transition hover:shadow-[0_0_30px_rgba(224,244,89,0.28)]"
       >
         Únete
       </a>
     </nav>
 
-    <!-- Botón menú móvil -->
     <button
       type="button"
       id="mobile-menu-button"
-      class="flex h-9 w-9 items-center justify-center rounded-full  bg-[#f4f6fa]  md:hidden"
+      class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 md:hidden"
       aria-label="Abrir menú"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
     >
       <div class="space-y-1.5">
-        <span class="block h-0.5 w-4 rounded-full bg-[#111827]"></span>
-        <span class="block h-0.5 w-4 rounded-full bg-[#111827]"></span>
-        <span class="block h-0.5 w-4 rounded-full bg-[#111827]"></span>
+        <span class="block h-0.5 w-4 rounded-full bg-white"></span>
+        <span class="block h-0.5 w-4 rounded-full bg-white"></span>
+        <span class="block h-0.5 w-4 rounded-full bg-white"></span>
       </div>
     </button>
   </div>
 
-  <!-- Menú móvil que EMPUJA el contenido -->
-  <div
-    id="mobile-menu"
-    class="hidden border-t border-gray-200 bg-[#f4f6fa] md:hidden"
-  >
-    <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 md:px-6">
+  <div id="mobile-menu" class="hidden border-t border-white/8 bg-[#162741]/95 backdrop-blur-md md:hidden">
+    <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 md:px-6">
       {navItems.map((item) => (
         <a
           href={item.href}
-          class="rounded-xl px-3 py-2 text-sm font-medium text-[#111827] transition hover:bg-[#f3f4f6] hover:text-[#c23a26]"
+          class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white"
           data-mobile-link
         >
           {item.label}
@@ -70,8 +63,8 @@ const navItems = [
       ))}
 
       <a
-        href="/unete"
-        class="mt-2 inline-flex items-center justify-center rounded-full bg-yellow-400 px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-yellow-300"
+        href="/#pitazo-final"
+        class="mt-2 inline-flex items-center justify-center rounded-full bg-[#e0f459] px-4 py-2.5 text-sm font-semibold text-[#162741] shadow-[0_0_22px_rgba(224,244,89,0.18)] transition hover:shadow-[0_0_30px_rgba(224,244,89,0.28)]"
         data-mobile-link
       >
         Únete
@@ -80,22 +73,54 @@ const navItems = [
   </div>
 </header>
 
+<style>
+  .site-header {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  .site-header.is-scrolled {
+    background: rgba(22, 39, 65, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+</style>
+
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const openBtn = document.getElementById("mobile-menu-button");
-    const menu = document.getElementById("mobile-menu");
-    const links = document.querySelectorAll("[data-mobile-link]");
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('site-header');
+    const openBtn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('[data-mobile-link]');
+
+    if (!header) return;
+
+    const updateHeaderOnScroll = () => {
+      if (window.scrollY > 24) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    };
+
+    updateHeaderOnScroll();
+    window.addEventListener('scroll', updateHeaderOnScroll);
 
     if (!openBtn || !menu) return;
 
     const toggleMenu = () => {
-      menu.classList.toggle("hidden");
+      menu.classList.toggle('hidden');
+      const expanded = openBtn.getAttribute('aria-expanded') === 'true';
+      openBtn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
     };
 
-    openBtn.addEventListener("click", toggleMenu);
+    openBtn.addEventListener('click', toggleMenu);
+
     links.forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.classList.add("hidden");
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        openBtn.setAttribute('aria-expanded', 'false');
       });
     });
   });

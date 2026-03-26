@@ -9,6 +9,9 @@ import HomeParaQuien from "../home/HomeParaQuien.astro";
 import HomeDiferenciales from "../home/HomeDiferenciales.astro";
 import HomeLibro from "../home/HomeLibro.astro";
 import HomeCtaFinal from "../home/HomeCtaFinal.astro";
+import HomeFaq from "../home/HomeFaq.astro";
+import HomeUltimoCta from "../home/HomeUltimoCta.astro";
+
 ---
 
 <BaseLayout
@@ -16,15 +19,17 @@ import HomeCtaFinal from "../home/HomeCtaFinal.astro";
   description="Liga Emprendedora es una escuela de emprendimiento online que conecta el fútbol con los negocios para ayudarte a lanzar tu proyecto en 90 días. Comunidad de emprendedores, recursos gratuitos, newsletter y un libro en camino."
 >
   <div class="flex min-h-screen flex-col">
-    <Header />
+    <Header dark />
 
     <main class="flex-1">
       <HomeHero />
       <HomeQueEsLaLiga />
       <HomeParaQuien />
-      <HomeDiferenciales />
       <HomeLibro />
       <HomeCtaFinal />
+      <HomeDiferenciales />
+      <HomeFaq />
+      <HomeUltimoCta />
     </main>
 
     <Footer />

@@ -1,84 +1,179 @@
 ---
+const plans = [
+  {
+    name: "Pack Canterano",
+    kicker: "Para los que quieren la táctica",
+    priceLabel: "Digital",
+    featured: false,
+    premium: false,
+    items: [
+      "Libro Emprende Futbolero (Formato 100% Digital).",
+      'Acceso al "Búnker Digital": 15 plantillas y 3 checklists.',
+    ],
+    cta: "Entrar a la Cantera",
+    microcopy: "🌎 Disponible para todo el mundo. Acceso inmediato.",
+  },
+  {
+    name: "Pack Capitán",
+    kicker: "El más elegido · Para los que entran a ganar",
+    priceLabel: "Físico + Digital",
+    featured: true,
+    premium: false,
+    items: [
+      "Libro Emprende Futbolero (Edición Física).",
+      "Libro Digital de entrega inmediata.",
+      'Acceso al "Búnker Digital" (18 Herramientas descargables).',
+      "Pase directo al Club MVP90 (Comunidad de WhatsApp, retos y lives).",
+      "Suscripción al Newsletter Táctico Semanal.",
+      'Masterclass grabada: "Cómo financiarte con cero presupuesto".',
+    ],
+    cta: "Ponerme la Cinta de Capitán",
+    microcopy: "🇨🇴 Envío de la edición física exclusivo para Colombia.",
+  },
+  {
+    name: "Pack DT",
+    kicker: "Solo 50 cupos · La experiencia de las grandes ligas",
+    priceLabel: "VIP",
+    featured: false,
+    premium: true,
+    items: [
+      "Todo lo del Pack Capitán (Libro, Búnker, Comunidad, Newsletter, Masterclass).",
+      "Libro Físico firmado por el autor.",
+      "Consultoría 1:1: Una sesión táctica privada online de 45 min directamente con Oswaldo Vega.",
+      "Encuentro de Vestuario: Una sesión grupal de Q&A en vivo con los 50 Directores Técnicos.",
+    ],
+    cta: "Fichar como DT hoy",
+    microcopy:
+      "🇨🇴 Envío del libro físico exclusivo para Colombia. Las mentorías virtuales aplican para todo el mundo.",
+  },
+];
+
+const distributors = [
+  { label: "Amazon", href: "#" },
+  { label: "Buscalibre", href: "#" },
+  { label: "Mercado Libre", href: "#" },
+  { label: "Gonvill", href: "#" },
+];
 ---
-<section class="w-full bg-[#ffffff] py-20 px-4 md:px-6">
-  
-  <!-- Título -->
-  <div class="mx-auto max-w-4xl text-center">
-    <h2 class="text-3xl md:text-4xl font-extrabold text-[#111111]">
-      ¿Por qué somos distintos?
-    </h2>
 
-    <p class="mt-3 text-base md:text-lg text-[#444444]">
-      En un mundo de cursos online, nosotros montamos un club.
-    </p>
+<section id="fichajes"  class="relative isolate overflow-hidden bg-[#162741] px-4 py-20 text-white md:px-6 md:py-28">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,#162741_0%,#132238_100%)]"></div>
+    <div class="absolute left-[-6%] top-12 h-72 w-72 rounded-full bg-[#e0f459]/8 blur-3xl"></div>
+    <div class="absolute right-[-8%] top-0 h-96 w-96 rounded-full bg-[#E1C875]/10 blur-3xl"></div>
+    <div class="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-white/4 blur-3xl"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-white/8"></div>
+    <div class="absolute inset-x-0 bottom-0 h-px bg-white/8"></div>
   </div>
 
-  <!-- Tarjetas de diferenciales -->
-  <div class="mx-auto mt-14 grid max-w-6xl gap-10 md:grid-cols-3">
-
-    <!-- Card 1 -->
-    <div class="flex flex-col items-start text-left">
-      <!-- ICONO CARD 1 -->
-      <div class="flex h-14 w-14 items-center justify-center rounded-full border border-[#162741] bg-[#fff5d4]">
-        <img
-          src="/Iconos/adn.svg"
-          alt="icono adn futbolero"
-          class="h-11 w-11"
-        />
-      </div>
-
-      <h3 class="mt-4 text-lg font-semibold text-[#111111]">
-        ADN Futbolero
-      </h3>
-
-      <p class="mt-2 text-sm text-[#555555] leading-relaxed">
-        Hablamos de MVPs, no de KPIs. De táctica, no de frameworks. 
-        Usamos la pasión del fútbol para que emprender sea emocionante.
+  <div class="relative mx-auto max-w-7xl">
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
+        Los fichajes · Pricing
       </p>
+      <h2 class="mt-5 text-[2.35rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
+        El pitazo está por sonar. ¿Desde dónde vas a jugar este torneo?
+      </h2>
     </div>
 
-    <!-- Card 2 -->
-    <div class="flex flex-col items-start text-left">
-      <!-- ICONO CARD 2 -->
-      <div class="flex h-14 w-14 items-center justify-center rounded-full border border-[#162741] bg-[#fff5d4]">
-        <img
-          src="/Iconos/mentalidad.svg"
-          alt="icono mentalidad de cancha"
-          class="h-10 w-10"
-        />
-      </div>
+    <div class="mt-14 grid gap-6 lg:grid-cols-3 lg:items-stretch">
+      {plans.map((plan) => {
+        const cardClass = plan.featured
+          ? "relative flex h-full flex-col rounded-[30px] border border-white/14 bg-white p-7 text-[#162741] shadow-[0_28px_90px_rgba(0,0,0,0.24)] lg:scale-[1.035]"
+          : plan.premium
+            ? "relative flex h-full flex-col rounded-[30px] border-2 border-[#E1C875] bg-[#0b1220] p-7 text-white shadow-[0_30px_100px_rgba(0,0,0,0.34)]"
+            : "relative flex h-full flex-col rounded-[30px] border border-white/12 bg-white/5 p-7 text-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm";
 
-      <h3 class="mt-4 text-lg font-semibold text-[#111111]">
-        Mentalidad de Cancha, no de oficina
-      </h3>
+        const kickerClass = plan.featured || plan.premium ? "text-[#9a8954]" : "text-[#E1C875]";
+        const titleClass = plan.featured ? "text-[#162741]" : "text-white";
+        const bodyClass = plan.featured ? "text-[#334865]" : "text-white/78";
+        const chipClass = plan.featured
+          ? "border border-[#162741]/10 bg-[#162741]/5 text-[#162741]"
+          : plan.premium
+            ? "border border-[#E1C875]/30 bg-[#E1C875]/10 text-[#E1C875]"
+            : "border border-white/10 bg-white/6 text-white";
+        const bulletWrapClass = plan.featured
+          ? "border border-[#162741]/10 bg-[#162741]/4"
+          : plan.premium
+            ? "border border-white/8 bg-white/4"
+            : "border border-white/8 bg-black/10";
+        const bulletTextClass = plan.featured ? "text-[#334865]" : "text-white/82";
 
-      <p class="mt-2 text-sm text-[#555555] leading-relaxed">
-        Fomentamos la resiliencia, el trabajo en equipo y la garra para superar cualquier obstáculo. 
-        Como en un partido de 90 minutos.
-      </p>
+        return (
+          <article class={cardClass}>
+            {plan.featured && (
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#e0f459] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#162741] shadow-[0_0_18px_rgba(224,244,89,0.28)]">
+                Opción recomendada
+              </div>
+            )}
+
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class={`text-[11px] font-semibold uppercase tracking-[0.28em] md:text-xs ${kickerClass}`}>
+                  {plan.kicker}
+                </p>
+                <h3 class={`mt-4 text-3xl font-extrabold tracking-[-0.04em] ${titleClass}`}>
+                  {plan.name}
+                </h3>
+              </div>
+
+              <span class={`rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] ${chipClass}`}>
+                {plan.priceLabel}
+              </span>
+            </div>
+
+            <div class="mt-8 space-y-3">
+              {plan.items.map((item) => (
+                <div class={`flex items-start gap-3 rounded-2xl px-4 py-4 ${bulletWrapClass}`}>
+                  <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#e0f459] text-[#162741] shadow-[0_0_14px_rgba(224,244,89,0.16)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 9.2 17 19 7.5" />
+                    </svg>
+                  </span>
+                  <p class={`text-sm leading-7 md:text-[0.98rem] md:leading-7 ${bulletTextClass}`}>
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div class="mt-8 flex-1"></div>
+
+            <a
+              href="/unete"
+              class="inline-flex min-h-[58px] items-center justify-center rounded-full bg-[#e0f459] px-6 text-center text-sm font-extrabold uppercase tracking-[0.12em] text-[#162741] shadow-[0_0_24px_rgba(224,244,89,0.22)] transition hover:-translate-y-px hover:shadow-[0_0_36px_rgba(224,244,89,0.34)]"
+            >
+              {plan.cta}
+            </a>
+
+            <p class={`mt-4 text-sm leading-6 ${bodyClass}`}>
+              {plan.microcopy}
+            </p>
+          </article>
+        );
+      })}
     </div>
 
-    <!-- Card 3 -->
-    <div class="flex flex-col items-start text-left">
-      <!-- ICONO CARD 3 -->
-      <div class="flex h-14 w-14 items-center justify-center rounded-full border border-[#162741] bg-[#fff5d4]">
-        <img
-          src="/Iconos/victoria.svg"
-          alt="icono victoria"
-          class="h-12 w-12"
-        />
-      </div>
-
-      <h3 class="mt-4 text-lg font-semibold text-[#111111]">
-        Enfoque en la Victoria (Tuya)
-      </h3>
-
-      <p class="mt-2 text-sm text-[#555555] leading-relaxed">
-        Nuestro único objetivo es que ganes tu partido: lanzar tu negocio, conseguir tus
-        primeros clientes, vivir de tu proyecto. Tu éxito es nuestro campeonato.
+    <div class="mt-10 rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:p-8">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
+        Aviso táctico internacional
       </p>
-    </div>
+      <p class="mt-4 max-w-5xl text-base leading-8 text-white/80 md:text-[1.02rem] md:leading-8">
+        ¿Vives fuera de Colombia y necesitas el libro en papel para rayarlo? El acceso a mis mentorías,
+        al Newsletter y al Club MVP90 se adquiere únicamente en esta página. Asegura tu cupo en el
+        Pack Digital o Pack DT aquí mismo, y luego pide tu copia física a través de nuestros distribuidores aliados:
+      </p>
 
+      <div class="mt-5 flex flex-wrap gap-3">
+        {distributors.map((item) => (
+          <a
+            href={item.href}
+            class="inline-flex items-center rounded-full border border-[#E1C875]/32 bg-[#E1C875]/10 px-4 py-2 text-sm font-semibold text-[#E1C875] transition hover:bg-[#E1C875]/16"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
   </div>
-
 </section>
