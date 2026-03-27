@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Política de Privacidad | Liga Emprendedora"
+  description="Tratamiento de datos personales, finalidad, derechos del titular y política de privacidad de Liga Emprendedora."
+>
+  <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
+    <Header dark />
+
+    <main class="flex-1">
+      <section class="relative overflow-hidden bg-[#162741] px-4 pb-16 pt-20 text-white md:px-6 md:pb-20 md:pt-28">
+        <div class="pointer-events-none absolute inset-0">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(225,200,117,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(22,39,65,0)_42%)]"></div>
+          <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div>
+        </div>
+
+        <div class="relative mx-auto max-w-5xl">
+          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
+            Legal · Liga Emprendedora
+          </p>
+          <h1 class="mt-4 max-w-4xl text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
+            Política de Privacidad
+          </h1>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
+            Así tratamos tus datos personales cuando te registras, compras o participas en los productos y comunidades de Liga Emprendedora.
+          </p>
+        </div>
+      </section>
+
+      <section class="px-4 py-10 md:px-6 md:py-14">
+        <article class="mx-auto max-w-4xl rounded-[32px] border border-[#162741]/8 bg-white px-6 py-8 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:px-10 md:py-10">
+          <div class="prose prose-lg max-w-none text-[#334865] prose-headings:text-[#162741] prose-headings:tracking-[-0.03em] prose-p:my-5 prose-p:leading-8 prose-li:my-1.5 prose-strong:text-[#162741]">
+            <h2>1. Responsable del tratamiento</h2>
+            <p>
+              El responsable del tratamiento de los datos personales es <strong>Oswaldo Vega</strong> y el equipo de <strong>Liga Emprendedora</strong>, operando desde Colombia.
+            </p>
+
+            <h2>2. Datos que recolectamos</h2>
+            <p>Recolectamos únicamente la información necesaria para operar nuestros productos y servicios, incluyendo:</p>
+            <ul>
+              <li><strong>Nombre completo y correo electrónico</strong>, para crear accesos, entregar contenidos y enviar el newsletter.</li>
+              <li><strong>Número de teléfono o WhatsApp</strong>, cuando sea necesario para integrar a la persona al <strong>Club MVP90</strong> u otras comunidades incluidas en su compra.</li>
+              <li><strong>Dirección física</strong>, únicamente cuando el cliente compra un producto físico con envío dentro de Colombia.</li>
+            </ul>
+
+            <h2>3. Información de pagos</h2>
+            <p>
+              <strong>Liga Emprendedora no almacena ni tiene acceso a los datos completos de tarjetas débito o crédito.</strong>
+            </p>
+            <p>
+              Los pagos son procesados por pasarelas seguras de terceros, como por ejemplo <strong>Hotmart, Stripe o PayU</strong>, las cuales operan bajo sus propias políticas y estándares de seguridad.
+            </p>
+
+            <h2>4. Finalidades del tratamiento</h2>
+            <p>Usamos la información personal para:</p>
+            <ul>
+              <li>Entregar los productos y servicios adquiridos.</li>
+              <li>Habilitar accesos a contenidos y comunidades.</li>
+              <li>Enviar notificaciones operativas, lives, retos y actualizaciones.</li>
+              <li>Enviar comunicaciones tácticas, educativas y comerciales.</li>
+              <li>Cumplir obligaciones contables, tributarias y administrativas.</li>
+            </ul>
+
+            <h2>5. Compartición de datos</h2>
+            <p>
+              No vendemos, alquilamos ni cedemos bases de datos a terceros con fines publicitarios externos.
+            </p>
+            <p>
+              Solo compartimos información estrictamente necesaria con aliados operativos, como plataformas de email marketing, pasarelas de pago, operadores logísticos o empresas de mensajería.
+            </p>
+
+            <h2>6. Derechos del titular</h2>
+            <p>
+              Como titular de los datos, puedes solicitar en cualquier momento conocer la información que tenemos sobre ti, actualizarla, corregirla o solicitar su eliminación escribiendo a: <strong>[TU CORREO DE SOPORTE]</strong>.
+            </p>
+
+            <h2>7. Vigencia y cambios</h2>
+            <p>
+              Liga Emprendedora podrá actualizar esta Política de Privacidad cuando sea necesario para reflejar cambios operativos, legales o comerciales. La versión vigente será siempre la publicada en este sitio web.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

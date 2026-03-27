@@ -4,275 +4,86 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
 const pageTitle = "Framework de OKRs para Startups | Liga Emprendedora";
-const pageDescription =
-  "Plantilla y guía de OKRs adaptada a startups y emprendedores de LATAM. Define objetivos claros y resultados clave accionables.";
+const pageDescription = "Plantilla y guía de OKRs adaptada a startups y emprendedores de LATAM.";
+const downloadLink = "https://docs.google.com/spreadsheets/d/1uFFQqFSm2qvE73Hrr4PuxJbgrRNdLOUI7fbfWzzKYkI/edit?usp=sharing";
+const scriptUrl = "https://script.google.com/macros/s/AKfycbz4BZPlvEa1-78yTjp6nBdGH9-UCP02lK2VRrFUA7iSX4It2ODw6nR0_TsMmxabTD52tg/exec";
+const items = [
+  "Plantilla de OKRs trimestrales lista para operar.",
+  "Ejemplos para producto, crecimiento, ventas y equipo.",
+  "Seguimiento semanal sin burocracia corporativa.",
+  "Espacio de aprendizajes para ajustar el siguiente ciclo.",
+];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <div class="flex min-h-screen flex-col bg-[#f4f6fa]">
-    <Header />
-
+  <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
+    <Header dark />
     <main class="flex-1">
-      <section class="w-full px-4 py-16 md:px-6 md:py-20">
-        <div class="mx-auto max-w-4xl">
-          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#162741]">
-            Recursos · Framework
-          </p>
-          <h1 class="mt-3 text-3xl md:text-4xl font-extrabold text-[#162741]">
-            Framework de OKRs para Startups
-          </h1>
-          <p class="mt-3 text-base md:text-lg text-[#162741]">
-            Establece y sigue objetivos ambiciosos. Esta plantilla de OKRs está adaptada
-            a startups y emprendedores que necesitan foco, claridad y seguimiento semanal,
-            sin burocracia.
-          </p>
-
-          <div class="mt-10 grid gap-8 md:grid-cols-[2fr,1.4fr]">
-            <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
-              <h2 class="text-lg md:text-xl font-semibold text-[#162741]">
-                ¿Qué incluye el framework?
-              </h2>
-              <ul class="mt-4 space-y-2 text-sm text-[#162741]">
-                <li>• Plantilla de OKRs trimestrales.</li>
-                <li>• Ejemplos de OKRs para producto, crecimiento, ventas y equipo.</li>
-                <li>• Sistema simple de seguimiento semanal.</li>
-                <li>• Espacio para aprendizajes y ajustes por ciclo.</li>
-              </ul>
-            </div>
-
-            <div class="rounded-3xl border border-[#f0eaea] bg-white p-6 shadow-sm">
-              <h3 class="text-base font-semibold text-[#162741]">
-                🎟️ Accede al recurso gratis
-              </h3>
-              <p class="mt-2 text-xs md:text-sm text-[#4b5563]">
-                Completa tus datos y te daremos acceso a la plantilla de OKRs.
-              </p>
-
-              <form
-                class="mt-5 space-y-3"
-                name="framework-okrs-startups"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                data-download-link="https://docs.google.com/spreadsheets/d/1uFFQqFSm2qvE73Hrr4PuxJbgrRNdLOUI7fbfWzzKYkI/edit?usp=sharing"
-                >
-                                <input type="hidden" name="form-name" value="plan-negocio-one-page" />
-                <p class="hidden">
-                    <label>
-                    No llenar:
-                    <input name="bot-field" />
-                    </label>
-                </p>
-
-                <div>
-                  <label class="block text-xs font-semibold text-[#4b5563]">
-                    Nombre completo*
-                  </label>
-                  <input
-                    type="text"
-                    name="nombre"
-                    required
-                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-xs font-semibold text-[#4b5563]">
-                    Email*
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-xs font-semibold text-[#4b5563]">
-                    Nombre de la empresa
-                  </label>
-                  <input
-                    type="text"
-                    name="empresa"
-                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-xs font-semibold text-[#4b5563]">
-                    Teléfono
-                  </label>
-                  <input
-                    type="tel"
-                    name="telefono"
-                    class="mt-1 w-full rounded-2xl border border-[#e5e7eb] px-3 py-2 text-sm outline-none focus:border-[#162741]"
-                  />
-                </div>
-
-                <button
-                    type="submit"
-                    class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#162741] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#c23a26]"
-                >
-                    Quiero descargar este recurso
-                </button>
-
-                <p class="mt-2 text-[11px] text-[#6b7280]">
-                    Después de enviar el formulario verás el enlace de descarga.
-                </p>
-
-                <!-- Mensaje de descarga (lo rellenaremos por JS) -->
-                <div
-                    class="mt-4 hidden rounded-2xl bg-[#ecfdf3] px-4 py-3 text-xs text-[#14532d]"
-                    data-download-message
-                >
-                    <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    // TU URL completa de Google Apps Script /exec
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4BZPlvEa1-78yTjp6nBdGH9-UCP02lK2VRrFUA7iSX4It2ODw6nR0_TsMmxabTD52tg/exec";
-
-    // Selecciona todos los formularios con atributo name
-    const forms = document.querySelectorAll("form[name]");
-
-    forms.forEach((form) => {
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault(); // evitamos el reload automático
-
-        const formData = new FormData(form);
-
-        // -----------------------------------------
-        // 1) Enviar a Netlify
-        // -----------------------------------------
-        const netlifyBody = new URLSearchParams(formData).toString();
-
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: netlifyBody,
-        }).catch((err) =>
-          console.error("Error enviando a Netlify:", err)
-        );
-
-        // -----------------------------------------
-        // 2) Enviar a Google Sheets (Apps Script)
-        // -----------------------------------------
-        if (SCRIPT_URL) {
-          fetch(SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            body: formData,
-          }).catch((err) =>
-            console.error("Error enviando a Sheets:", err)
-          );
-        }
-
-        // -----------------------------------------
-        // 3) Mostrar mensaje de descarga
-        // -----------------------------------------
-        const downloadLink = form.dataset.downloadLink;
-        const messageEl = form.querySelector("[data-download-message]");
-
-        if (downloadLink && messageEl) {
-          messageEl.innerHTML = `
-            🎁 <strong>¡Listo! Tu recurso está disponible.</strong><br/><br/>
-            <a 
-              href="${downloadLink}" 
-              target="_blank" 
-              rel="noopener" 
-              class="underline font-semibold text-[#0a6a30]"
-            >👉 Haz clic aquí para descargarlo</a>
-          `;
-
-          messageEl.classList.remove("hidden");
-        }
-
-        // -----------------------------------------
-        // 4) Limpiar el formulario (opcional)
-        // -----------------------------------------
-        form.reset();
-      });
-    });
-  });
-</script>
-
-                </div>
-                </form>
-
-             
-            </div>
+      <section class="relative overflow-hidden bg-[#162741] px-4 pb-14 pt-28 text-white md:px-6 md:pb-20 md:pt-32">
+        <div class="pointer-events-none absolute inset-0">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(225,200,117,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(224,244,89,0.09),transparent_22%)]"></div>
+          <div class="absolute right-10 top-4 h-64 w-64 rounded-full bg-white/5 blur-3xl"></div>
+          <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div>
+        </div>
+        <div class="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1.1fr)_380px] lg:items-end">
+          <div class="max-w-3xl">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">Recursos · Foco y ejecución</p>
+            <h1 class="mt-5 text-4xl font-extrabold leading-[0.95] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">OKRs para startups que necesitan foco, no burocracia.</h1>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-white/76 md:text-[1.08rem]">Define una dirección ambiciosa, conviértela en resultados medibles y revisa el marcador cada semana sin ahogarte en procesos corporativos.</p>
           </div>
+          <aside class="rounded-[30px] border border-white/12 bg-white/6 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur-md">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E1C875]">Qué incluye</p>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-white/78">{items.map((item) => <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#e0f459]"></span><span>{item}</span></li>)}</ul>
+            <a href="#descarga-okrs" class="mt-6 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-[#e0f459] px-5 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] transition hover:-translate-y-px">Quiero el framework</a>
+          </aside>
         </div>
-
-        <div class="mx-auto mt-12 max-w-4xl">
-            <section class="mt-12 w-full rounded-3xl bg-white border border-[#e5e7eb] p-8 shadow-sm">
-  <h2 class="text-xl md:text-2xl font-extrabold text-[#162741]">
-    📘 ¿Cómo usar este Framework de OKRs?
-  </h2>
-
-  <p class="mt-2 text-sm text-[#4b5563]">
-    Antes de descargar la plantilla, revisa este tutorial rápido para sacarle el máximo provecho.
-  </p>
-
-  <div class="mt-6 space-y-6 text-sm text-[#162741]">
-    <div>
-      <h3 class="font-semibold text-[#162741]">1️⃣ Define un Objetivo (O)</h3>
-      <p class="mt-1 text-[#4b5563]">
-        Es la meta cualitativa más importante del trimestre. Debe ser clara, inspiradora y enfocada.
-        <br /><strong>Ejemplos:</strong> “Escalar adquisición de clientes”, “Mejorar retención”.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-[#162741]">2️⃣ Crea de 2 a 4 Resultados Clave (KR)</h3>
-      <p class="mt-1 text-[#4b5563]">
-        Son métricas cuantitativas que indican si realmente lograste el Objetivo.
-        <br /><strong>Ejemplos:</strong> “Aumentar leads de 120 → 300”, “Reducir CAC a 25 USD”.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-[#162741]">3️⃣ Asigna un responsable por KR</h3>
-      <p class="mt-1 text-[#4b5563]">
-        Cada KR debe tener una sola persona responsable. Esto aumenta la ejecución.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-[#162741]">4️⃣ Usa la hoja de Seguimiento Semanal</h3>
-      <p class="mt-1 text-[#4b5563]">
-        Cada semana registra avance, bloqueos y el plan para los próximos 7 días.
-        <br />Esto es lo que garantiza que el OKR avance.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-[#162741]">5️⃣ Evalúa al final del trimestre</h3>
-      <p class="mt-1 text-[#4b5563]">
-        No es un examen, es un espacio para aprender, ajustar y mejorar el siguiente ciclo.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-[#c23a26]">❌ Errores comunes (evítalos)</h3>
-      <ul class="mt-2 list-disc pl-6 text-xs text-[#4b5563] space-y-1">
-        <li>Escribir tareas como KRs (Ej: “Hacer campaña”).</li>
-        <li>No definir métricas numéricas.</li>
-        <li>Asignar varios responsables por KR.</li>
-        <li>No hacer seguimiento semanal.</li>
-      </ul>
-    </div>
-
-    <p class="mt-6 text-xs text-[#6b7280]">
-      Este mismo tutorial viene incluido dentro del archivo Excel para que siempre tengas la guía a la mano.
-    </p>
-  </div>
-            </section>
-        </div>
-        
       </section>
-      
-    </main>
 
+      <section id="descarga-okrs" class="px-4 py-12 md:px-6 md:py-16">
+        <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1.05fr)_420px]">
+          <div class="space-y-6">
+            <article class="rounded-[30px] border border-[#162741]/10 bg-white p-7 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:p-8">
+              <h2 class="text-2xl font-extrabold tracking-[-0.03em] text-[#162741]">Cómo usar los OKRs en una startup</h2>
+              <div class="mt-6 space-y-5 text-sm leading-7 text-[#334865]">
+                <p><span class="font-bold text-[#162741]">1. Define un objetivo inspirador.</span> Debe apuntar a un cambio real del negocio, no a una lista de tareas.</p>
+                <p><span class="font-bold text-[#162741]">2. Limita los resultados clave.</span> Con 2 a 4 métricas bien diseñadas basta para saber si vas ganando el trimestre.</p>
+                <p><span class="font-bold text-[#162741]">3. Revisa cada semana.</span> El valor no está en escribir el OKR, sino en operar el partido con disciplina.</p>
+              </div>
+            </article>
+            <article class="rounded-[30px] border border-[#162741]/10 bg-white p-7 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:p-8">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">Errores comunes</p>
+              <div class="mt-5 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-[#162741]/8 bg-[#162741]/2.5 p-4"><p class="text-sm leading-7 text-[#334865]">Confundir tareas con resultados clave.</p></div>
+                <div class="rounded-2xl border border-[#162741]/8 bg-[#162741]/2.5 p-4"><p class="text-sm leading-7 text-[#334865]">Asignar muchos responsables y diluir la ejecución.</p></div>
+                <div class="rounded-2xl border border-[#162741]/8 bg-[#162741]/2.5 p-4"><p class="text-sm leading-7 text-[#334865]">No revisar semanalmente el avance.</p></div>
+                <div class="rounded-2xl border border-[#162741]/8 bg-[#162741]/2.5 p-4"><p class="text-sm leading-7 text-[#334865]">Poner métricas vanidosas que no cambian decisiones.</p></div>
+              </div>
+            </article>
+          </div>
+          <aside class="rounded-4xl border border-[#162741]/10 bg-white p-7 shadow-[0_24px_80px_rgba(22,39,65,0.08)] md:p-8 lg:sticky lg:top-28">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">Acceso inmediato</p>
+            <h2 class="mt-3 text-2xl font-extrabold tracking-[-0.03em] text-[#162741]">Descarga gratis la plantilla</h2>
+            <form class="mt-6 space-y-4" name="framework-okrs-startups" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-download-link={downloadLink} data-resource-form>
+              <input type="hidden" name="form-name" value="framework-okrs-startups" />
+              <p class="hidden"><label>No llenar: <input name="bot-field" /></label></p>
+              <div><label class="block text-xs font-semibold text-[#4b5563]">Nombre completo*</label><input type="text" name="nombre" required class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" /></div>
+              <div><label class="block text-xs font-semibold text-[#4b5563]">Email*</label><input type="email" name="email" required class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" /></div>
+              <div><label class="block text-xs font-semibold text-[#4b5563]">Nombre de la empresa</label><input type="text" name="empresa" class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" /></div>
+              <div><label class="block text-xs font-semibold text-[#4b5563]">Teléfono</label><input type="tel" name="telefono" class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" /></div>
+              <button type="submit" class="inline-flex min-h-[54px] w-full items-center justify-center rounded-full bg-[#e0f459] px-6 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] transition hover:-translate-y-px">Descargar recurso</button>
+              <p class="text-xs text-[#667085]">
+  Al continuar, aceptas nuestros
+  <a href="/terminos" class="underline">Términos y Condiciones</a>
+  y nuestra
+  <a href="/politica-privacidad" class="underline">Política de Privacidad</a>.
+</p>
+              <div class="hidden rounded-2xl bg-[#ecfdf3] px-4 py-4 text-sm text-[#14532d]" data-download-message></div>
+            </form>
+          </aside>
+        </div>
+      </section>
+    </main>
     <Footer />
   </div>
+  
 </BaseLayout>

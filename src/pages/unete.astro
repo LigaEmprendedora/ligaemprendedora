@@ -29,7 +29,7 @@ const trustPoints = [
         <div class="pointer-events-none absolute inset-0">
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(225,200,117,0.14),transparent_26%),radial-gradient(circle_at_78%_22%,rgba(224,244,89,0.12),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(22,39,65,0)_40%)]"></div>
           <div class="absolute right-[-60px] top-10 h-64 w-64 rounded-full bg-[#e0f459]/10 blur-3xl"></div>
-          <div class="absolute left-[-40px] top-24 h-56 w-56 rounded-full bg-white/6 blur-3xl"></div>
+          <div class="absolute -left-10 top-24 h-56 w-56 rounded-full bg-white/6 blur-3xl"></div>
           <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div>
         </div>
 
@@ -148,7 +148,7 @@ const trustPoints = [
 
                 <button
                   type="submit"
-                  class="mt-2 inline-flex min-h-[56px] w-full items-center justify-center rounded-full bg-[#e0f459] px-6 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.2)] transition hover:-translate-y-px hover:shadow-[0_0_36px_rgba(224,244,89,0.3)] md:text-base"
+                  class="mt-2 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-[#e0f459] px-6 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.2)] transition hover:-translate-y-px hover:shadow-[0_0_36px_rgba(224,244,89,0.3)] md:text-base"
                 >
                   Unirme a la Liga
                 </button>
@@ -156,6 +156,12 @@ const trustPoints = [
                 <p class="text-center text-[11px] leading-6 text-[#6b7280]">
                   Sin spam. Sin ruido. Solo contenido útil para emprendedores.
                 </p>
+                <p class="text-xs text-[#667085]">
+  Al continuar, aceptas nuestros
+  <a href="/terminos" class="underline">Términos y Condiciones</a>
+  y nuestra
+  <a href="/politica-privacidad" class="underline">Política de Privacidad</a>.
+</p>
               </form>
             </div>
           </div>
@@ -176,6 +182,7 @@ const trustPoints = [
               contenido accionable para avanzar cada semana.
             </p>
           </div>
+          
 
           <div class="mt-12 grid gap-5 md:grid-cols-3">
             {benefits.map((item, index) => (
