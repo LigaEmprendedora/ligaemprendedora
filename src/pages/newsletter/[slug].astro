@@ -70,7 +70,7 @@ const latestPosts = (allPosts as NewsletterEntry[])
       <section class="relative overflow-hidden bg-[#162741] px-4 pb-20 pt-28 text-white md:px-6 md:pb-28 md:pt-36 lg:pb-32">
         <div class="pointer-events-none absolute inset-0">
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_12%_12%,rgba(225,200,117,0.14),transparent_20%),radial-gradient(circle_at_86%_18%,rgba(224,244,89,0.08),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0)_26%),linear-gradient(180deg,#162741_0%,#102038_55%,#0d192c_100%)]"></div>
-          <div class="absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-white/4 blur-3xl"></div>
+          <div class="absolute left-1/2 top-0 h-128 w-lg -translate-x-1/2 rounded-full bg-white/4 blur-3xl"></div>
           <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div>
         </div>
 
@@ -128,7 +128,7 @@ const latestPosts = (allPosts as NewsletterEntry[])
 
             <div class="flex lg:justify-end">
               {coverImage ? (
-                <div class="group relative w-full max-w-[34rem] overflow-hidden rounded-[34px] border border-white/10 bg-[#0f1b2f] shadow-[0_28px_100px_rgba(0,0,0,0.3)]">
+                <div class="group relative w-full max-w-136 overflow-hidden rounded-[34px] border border-white/10 bg-[#0f1b2f] shadow-[0_28px_100px_rgba(0,0,0,0.3)]">
                   <div class="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(0,0,0,0.08)_100%)]"></div>
                   <img
                     src={coverImage}
@@ -143,7 +143,7 @@ const latestPosts = (allPosts as NewsletterEntry[])
                   </div>
                 </div>
               ) : (
-                <div class="w-full max-w-[34rem] rounded-[34px] border border-white/10 bg-[linear-gradient(180deg,#1e304f_0%,#101d31_100%)] p-8 shadow-[0_28px_100px_rgba(0,0,0,0.3)] md:p-10">
+                <div class="w-full max-w-136 rounded-[34px] border border-white/10 bg-[linear-gradient(180deg,#1e304f_0%,#101d31_100%)] p-8 shadow-[0_28px_100px_rgba(0,0,0,0.3)] md:p-10">
                   <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E1C875]">
                     Nota táctica
                   </p>
