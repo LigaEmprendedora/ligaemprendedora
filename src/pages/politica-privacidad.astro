@@ -2,6 +2,46 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const supportEmail = "soporte@ligaemprendedora.com";
+
+const cards = [
+  {
+    title: "Responsable del tratamiento",
+    text: "El responsable del tratamiento de los datos personales es Oswaldo Vega y el equipo de Liga Emprendedora, operando desde Colombia.",
+  },
+  {
+    title: "Datos que recolectamos",
+    items: [
+      "Nombre completo y correo electrónico, para crear accesos, entregar contenidos y enviar el newsletter.",
+      "Número de teléfono o WhatsApp, cuando sea necesario para integrar a la persona al Club MVP90 u otras comunidades incluidas en su compra.",
+      "Dirección física, únicamente cuando el cliente compra un producto físico con envío dentro de Colombia.",
+    ],
+  },
+  {
+    title: "Información de pagos",
+    text: "Liga Emprendedora no almacena ni tiene acceso a los datos completos de tarjetas débito o crédito. Los pagos son procesados por pasarelas seguras de terceros, como Hotmart, Stripe o PayU, las cuales operan bajo sus propias políticas y estándares de seguridad.",
+    highlight: true,
+  },
+  {
+    title: "Finalidades del tratamiento",
+    items: [
+      "Entregar los productos y servicios adquiridos.",
+      "Habilitar accesos a contenidos y comunidades.",
+      "Enviar notificaciones operativas, lives, retos y actualizaciones.",
+      "Enviar comunicaciones tácticas, educativas y comerciales.",
+      "Cumplir obligaciones contables, tributarias y administrativas.",
+    ],
+  },
+  {
+    title: "Compartición de datos",
+    text: "No vendemos, alquilamos ni cedemos bases de datos a terceros con fines publicitarios externos. Solo compartimos información estrictamente necesaria con aliados operativos, como plataformas de email marketing, pasarelas de pago, operadores logísticos o empresas de mensajería.",
+  },
+  {
+    title: "Tus derechos",
+    text: "Como titular de los datos, puedes solicitar en cualquier momento conocer la información que tenemos sobre ti, actualizarla, corregirla o solicitar su eliminación.",
+  },
+];
 ---
 
 <BaseLayout
@@ -22,68 +62,98 @@ import Footer from "../components/Footer.astro";
           <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
             Legal · Liga Emprendedora
           </p>
+
           <h1 class="mt-4 max-w-4xl text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
             Política de Privacidad
           </h1>
+
           <p class="mt-6 max-w-3xl text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
-            Así tratamos tus datos personales cuando te registras, compras o participas en los productos y comunidades de Liga Emprendedora.
+            Así tratamos tus datos personales cuando te registras, compras o participas en los productos, recursos y comunidades de Liga Emprendedora.
           </p>
         </div>
       </section>
 
       <section class="px-4 py-10 md:px-6 md:py-14">
-        <article class="mx-auto max-w-4xl rounded-[32px] border border-[#162741]/8 bg-white px-6 py-8 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:px-10 md:py-10">
-          <div class="prose prose-lg max-w-none text-[#334865] prose-headings:text-[#162741] prose-headings:tracking-[-0.03em] prose-p:my-5 prose-p:leading-8 prose-li:my-1.5 prose-strong:text-[#162741]">
-            <h2>1. Responsable del tratamiento</h2>
-            <p>
-              El responsable del tratamiento de los datos personales es <strong>Oswaldo Vega</strong> y el equipo de <strong>Liga Emprendedora</strong>, operando desde Colombia.
+        <div class="mx-auto max-w-5xl space-y-6">
+          <div class="rounded-4xl border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:p-8">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">
+              Resumen rápido
             </p>
-
-            <h2>2. Datos que recolectamos</h2>
-            <p>Recolectamos únicamente la información necesaria para operar nuestros productos y servicios, incluyendo:</p>
-            <ul>
-              <li><strong>Nombre completo y correo electrónico</strong>, para crear accesos, entregar contenidos y enviar el newsletter.</li>
-              <li><strong>Número de teléfono o WhatsApp</strong>, cuando sea necesario para integrar a la persona al <strong>Club MVP90</strong> u otras comunidades incluidas en su compra.</li>
-              <li><strong>Dirección física</strong>, únicamente cuando el cliente compra un producto físico con envío dentro de Colombia.</li>
-            </ul>
-
-            <h2>3. Información de pagos</h2>
-            <p>
-              <strong>Liga Emprendedora no almacena ni tiene acceso a los datos completos de tarjetas débito o crédito.</strong>
-            </p>
-            <p>
-              Los pagos son procesados por pasarelas seguras de terceros, como por ejemplo <strong>Hotmart, Stripe o PayU</strong>, las cuales operan bajo sus propias políticas y estándares de seguridad.
-            </p>
-
-            <h2>4. Finalidades del tratamiento</h2>
-            <p>Usamos la información personal para:</p>
-            <ul>
-              <li>Entregar los productos y servicios adquiridos.</li>
-              <li>Habilitar accesos a contenidos y comunidades.</li>
-              <li>Enviar notificaciones operativas, lives, retos y actualizaciones.</li>
-              <li>Enviar comunicaciones tácticas, educativas y comerciales.</li>
-              <li>Cumplir obligaciones contables, tributarias y administrativas.</li>
-            </ul>
-
-            <h2>5. Compartición de datos</h2>
-            <p>
-              No vendemos, alquilamos ni cedemos bases de datos a terceros con fines publicitarios externos.
-            </p>
-            <p>
-              Solo compartimos información estrictamente necesaria con aliados operativos, como plataformas de email marketing, pasarelas de pago, operadores logísticos o empresas de mensajería.
-            </p>
-
-            <h2>6. Derechos del titular</h2>
-            <p>
-              Como titular de los datos, puedes solicitar en cualquier momento conocer la información que tenemos sobre ti, actualizarla, corregirla o solicitar su eliminación escribiendo a: <strong>[TU CORREO DE SOPORTE]</strong>.
-            </p>
-
-            <h2>7. Vigencia y cambios</h2>
-            <p>
-              Liga Emprendedora podrá actualizar esta Política de Privacidad cuando sea necesario para reflejar cambios operativos, legales o comerciales. La versión vigente será siempre la publicada en este sitio web.
+            <p class="mt-4 max-w-4xl text-base leading-8 text-[#334865] md:text-[1.05rem]">
+              Tus datos están seguros en Liga Emprendedora. Usamos tu información para entregarte accesos, enviarte productos, integrarte a nuestras comunidades y enviarte comunicaciones tácticas y comerciales. No almacenamos datos de tarjetas y no vendemos tu información a terceros.
             </p>
           </div>
-        </article>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            {cards.map((card) => (
+              <article class={`rounded-[30px] border p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7 ${card.highlight ? "border-[#E1C875]/30 bg-[#162741] text-white" : "border-[#162741]/10 bg-white text-[#162741]"}`}>
+                <p class={`text-[11px] font-semibold uppercase tracking-[0.2em] ${card.highlight ? "text-[#E1C875]" : "text-[#9a8954]"}`}>
+                  Política de privacidad
+                </p>
+
+                <h2 class={`mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] ${card.highlight ? "text-white" : "text-[#162741]"}`}>
+                  {card.title}
+                </h2>
+
+                {card.text && (
+                  <p class={`mt-4 text-sm leading-8 md:text-[15px] ${card.highlight ? "text-white/80" : "text-[#425674]"}`}>
+                    {card.text}
+                  </p>
+                )}
+
+                {card.items && (
+                  <ul class={`mt-4 space-y-3 text-sm leading-7 md:text-[15px] ${card.highlight ? "text-white/80" : "text-[#425674]"}`}>
+                    {card.items.map((item) => (
+                      <li class="flex items-start gap-3">
+                        <span class={`mt-2 h-2 w-2 shrink-0 rounded-full ${card.highlight ? "bg-[#e0f459]" : "bg-[#9a8954]"}`}></span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </article>
+            ))}
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
+                Contacto
+              </p>
+
+              <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
+                Cómo ejercer tus derechos
+              </h2>
+
+              <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
+                Para conocer, actualizar, rectificar o solicitar la eliminación de tus datos personales, puedes escribirnos en cualquier momento a:
+              </p>
+
+              <div class="mt-5 rounded-2xl border border-[#162741]/8 bg-[#f8fafc] px-5 py-4">
+                <a
+                  href={`mailto:${supportEmail}`}
+                  class="text-base font-bold text-[#162741] underline underline-offset-4"
+                >
+                  {supportEmail}
+                </a>
+              </div>
+            </article>
+
+            <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
+                Vigencia
+              </p>
+
+              <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
+                Cambios a esta política
+              </h2>
+
+              <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
+                Liga Emprendedora podrá actualizar esta Política de Privacidad cuando sea necesario para reflejar cambios operativos, legales o comerciales. La versión vigente será siempre la publicada en este sitio web.
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
 

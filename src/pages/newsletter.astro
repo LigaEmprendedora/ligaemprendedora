@@ -51,7 +51,7 @@ const getImageSrc = (image: unknown) => {
             const imageSrc = getImageSrc(post.data.image);
 
             return (
-              <article class="overflow-hidden rounded-[24px] border border-[#162741]/8 bg-white shadow-[0_16px_40px_rgba(22,39,65,0.06)]">
+              <article class="overflow-hidden rounded-4xl border border-[#162741]/8 bg-white shadow-[0_16px_40px_rgba(22,39,65,0.06)]">
                 {imageSrc && (
                   <a href={`/newsletter/${post.slug}`}>
                     <img
