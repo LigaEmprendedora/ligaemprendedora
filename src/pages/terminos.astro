@@ -2,149 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
-const summaryCards = [
-  {
-    title: "Venta de libros",
-    text: "La Empresa no vende ni distribuye directamente ejemplares físicos, digitales o audiolibros. Nuestra web actúa como vitrina de redirección hacia Amazon y Buscalibre. Cualquier reclamación debe tramitarse con el distribuidor.",
-  },
-  {
-    title: "Servicios directos",
-    text: "Los paquetes de mentoría y masterclasses se contratan directamente en nuestra plataforma. Los pagos son procesados por pasarelas seguras (Bold o Stripe). Proyecto E Group SAS emite factura electrónica.",
-  },
-  {
-    title: "Garantía de satisfacción",
-    text: "Para servicios directos (mentorías), ofrecemos garantía de 7 días calendario. Para libros y cursos en Hotmart, aplican las políticas de cada plataforma.",
-  },
-  {
-    title: "Propiedad intelectual",
-    text: "Tu compra otorga una licencia de uso personal y no comercial. La piratería, reventa o distribución no autorizada resultará en expulsión inmediata y acciones legales.",
-  },
-];
-
-const termsBlocks = [
-  {
-    title: "1. Glosario Táctico (Definiciones)",
-    text: [
-      '"Jugador Élite", "Capitán" y "DT": Niveles de membresía y paquetes de servicios digitales y mentorías.',
-      '"Distribuidores Externos": Amazon y Buscalibre. Terceros responsables de la venta, impresión y logística de los libros.',
-      '"Ecosistema Digital": Contenido, mentorías, masterclasses y newsletters gestionados directamente por La Empresa.',
-    ],
-  },
-  {
-    title: "2. Venta de Libros (Operación de Terceros)",
-    text: [
-      "La Empresa no vende ni distribuye directamente ejemplares físicos, digitales o audiolibros. Nuestra web actúa exclusivamente como vitrina de redirección hacia Amazon y Buscalibre.",
-      "La transacción financiera, el procesamiento de datos de pago y la logística de entrega son responsabilidad absoluta del distribuidor elegido por el usuario.",
-      "Cualquier reclamación sobre el estado del libro, retrasos o problemas de descarga debe tramitarse directamente con el servicio al cliente de Amazon o Buscalibre.",
-    ],
-  },
-  {
-    title: "3. Servicios Directos (Membresías y Mentorías)",
-    text: [
-      "Los paquetes de mentoría y masterclasses se contratan directamente en nuestra plataforma.",
-    ],
-    sections: [
-      {
-        subtitle: "3.1 Pagos y Facturación",
-        text: [
-          "Los pagos son procesados por pasarelas seguras (Bold o Stripe). Proyecto E Group SAS emite factura electrónica por cada transacción directa, la cual llegará al correo registrado cumpliendo la normativa fiscal de Colombia.",
-        ],
-      },
-      {
-        subtitle: "3.2 Plataformas de terceros (Hotmart)",
-        text: [
-          "Para los cursos alojados en Hotmart, dicha plataforma actúa como vendedor directo (Merchant of Record). El usuario acepta someterse adicionalmente a los términos, condiciones y políticas de procesamiento de pago de Hotmart.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "4. Garantía de Satisfacción y Reembolsos",
-    sections: [
-      {
-        subtitle: "4.1 Para Libros y Cursos en Hotmart",
-        text: [
-          "Aplican exclusivamente las políticas y tiempos de devolución de Amazon, Buscalibre o Hotmart. La Empresa no gestiona estos reembolsos.",
-        ],
-      },
-      {
-        subtitle: "4.2 Para Servicios Directos (Mentorías)",
-        text: [
-          "Ofrecemos una garantía de satisfacción de siete (7) días calendario tras la compra. Si el contenido no cumple, puedes pedir el reembolso total. Tras este periodo, el marcador es definitivo y no hay devoluciones.",
-        ],
-      },
-      {
-        subtitle: "4.3 Tiempos de desembolso",
-        text: [
-          "El dinero puede tardar entre 15 y 30 días hábiles (transferencia), y hasta 60 días (tarjeta de crédito), dependiendo de la lentitud de tu banco.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "5. Derecho de Retracto y Reversión de Pagos",
-    sections: [
-      {
-        subtitle: "5.1 Retracto",
-        text: [
-          "Según la ley colombiana, puedes retractarte de la compra de servicios digitales dentro de los 5 días hábiles siguientes, siempre y cuando no hayas comenzado a consumir el servicio (ej. descargar material, acceder a la plataforma o asistir a una sesión). Si entras a la cancha, el derecho de retracto se extingue.",
-        ],
-      },
-      {
-        subtitle: "5.2 Reversión",
-        text: [
-          "Aplica en casos de fraude, cobro no solicitado o producto defectuoso. Debes notificar a La Empresa y a tu banco en un plazo de 5 días hábiles desde el evento.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "6. Exención de Responsabilidad Comercial",
-    text: [
-      "Entregamos educación no formal y tácticas de ejecución real probadas en el asfalto. No garantizamos resultados económicos ni retornos de inversión.",
-      "El éxito de tu negocio depende de tu disciplina. No somos asesores financieros, legales, ni una entidad captadora vigilada; somos un ecosistema de formación y acción.",
-    ],
-    highlight: true,
-  },
-  {
-    title: "7. Reglas de Vestuario y Propiedad Intelectual",
-    text: [
-      "Todo el contenido (método CANCHA, plantillas, videos, textos y marcas) es propiedad intelectual exclusiva de Oswaldo Vega, licenciada operativamente a La Empresa. Tu compra otorga una licencia de uso estrictamente personal y no comercial.",
-    ],
-    items: [
-      "Credenciales: Tu acceso es intransferible. Prohibido compartir tu cuenta.",
-      "Tarjeta Roja: La piratería, reventa, copia o distribución no autorizada de nuestros materiales resultará en la expulsión inmediata de la Liga sin reembolso, y el inicio de demandas civiles y penales por infracción de derechos de autor.",
-    ],
-  },
-  {
-    title: "8. El VAR de los Datos (Privacidad y Habeas Data)",
-    text: [
-      "Al registrarte, comprar o suscribirte a nuestra newsletter, autorizas a Proyecto E Group SAS a recolectar y tratar tus datos personales conforme a la Ley 1581 de 2012.",
-      "Usaremos tu correo para facturación, soporte y para enviarte tácticas, ofertas y contenido de valor. Puedes pedir que te saquemos de la lista de correos en cualquier momento escribiendo a nuestro canal de soporte.",
-    ],
-  },
-  {
-    title: "9. Reglas del Torneo (Ley Aplicable y Jurisdicción)",
-    text: [
-      "Estos Términos y Condiciones se rigen por las leyes de la República de Colombia. Cualquier disputa legal que no pueda resolverse amistosamente en los camerinos, será sometida a la jurisdicción de los jueces colombianos.",
-      "Debes ser mayor de 18 años para operar en esta plataforma.",
-    ],
-  },
-  {
-    title: "10. Peticiones, Quejas y Reclamos (PQR)",
-    text: [
-      "Para soporte técnico, facturación o dudas, el único canal oficial es: hola@ligaemprendedora.com. Tiempo de respuesta legal: hasta 15 días hábiles.",
-      "Al escribirnos, te daremos un número de radicado para hacerle seguimiento a tu jugada.",
-      "Nos reservamos el derecho de actualizar estos términos en cualquier momento.",
-    ],
-  },
-];
 ---
 
 <BaseLayout
   title="Términos y Condiciones | Liga Emprendedora"
-  description="Reglas, condiciones de compra, entregas, devoluciones y uso de los contenidos de Liga Emprendedora. Proyecto E Group SAS."
+  description="Reglas, condiciones de compra, entregas, devoluciones y uso de los contenidos de Liga Emprendedora."
 >
   <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
     <Header dark />
@@ -155,105 +17,78 @@ const termsBlocks = [
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(225,200,117,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(22,39,65,0)_42%)]"></div>
           <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div>
         </div>
-
-        <div class="relative mx-auto max-w-5xl">
+        <div class="relative mx-auto max-w-3xl">
           <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
-            Legal · Proyecto E Group SAS
+            Legal · Liga Emprendedora
           </p>
-
-          <h1 class="mt-4 max-w-4xl text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
+          <h1 class="mt-4 text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
             Términos y Condiciones
           </h1>
-
-          <p class="mt-6 max-w-3xl text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
-            Bienvenido a la Liga Emprendedora. Los presentes Términos y Condiciones regulan la relación entre Proyecto E Group SAS, sociedad titular de la marca comercial Liga Emprendedora, y el usuario. Al usar este sitio, dejar tus datos o adquirir nuestros servicios, aceptas estas condiciones. Si no estás de acuerdo, no entres a la cancha.
+          <p class="mt-6 text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
+            Liga Emprendedora · Proyecto E Group SAS
           </p>
         </div>
       </section>
 
-      <section class="px-4 py-10 md:px-6 md:py-14">
-        <div class="mx-auto max-w-5xl space-y-6">
-          <div class="rounded-4xl border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:p-8">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">
-              Resumen rápido
+      <section class="px-4 py-12 md:px-6 md:py-16">
+        <div class="mx-auto max-w-3xl">
+          <div class="prose prose-lg max-w-none text-[#162741]">
+
+            <p class="mb-8 text-base leading-8 text-[#334865] md:text-[1.05rem]">
+              Bienvenido a la Liga Emprendedora. Los presentes Términos y Condiciones regulan la relación entre Proyecto E Group SAS (en adelante, "La Empresa"), sociedad titular de la marca comercial Liga Emprendedora, y el usuario. Al usar este sitio, dejar tus datos o adquirir nuestros servicios, aceptas estas condiciones. Si no estás de acuerdo, no entres a la cancha.
             </p>
-            <p class="mt-4 max-w-4xl text-base leading-8 text-[#334865] md:text-[1.05rem]">
-              La Empresa no vende libros directamente; redirige a Amazon y Buscalibre. Las membresías
-              y mentorías sí son servicios directos con factura electrónica. Garantía de 7 días para mentorías.
-              Tu acceso es personal e intransferible. Los resultados dependen de tu ejecución.
-            </p>
-          </div>
 
-          <div class="grid gap-6 md:grid-cols-2">
-            {summaryCards.map((card) => (
-              <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
-                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
-                  Términos
-                </p>
-                <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
-                  {card.title}
-                </h2>
-                <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
-                  {card.text}
-                </p>
-              </article>
-            ))}
-          </div>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">1. Glosario Táctico (Definiciones)</h2>
+            <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]">
+              <li>"Jugador Élite", "Capitán" y "DT": Niveles de membresía y paquetes de servicios digitales y mentorías.</li>
+              <li>"Distribuidores Externos": Amazon y Buscalibre. Terceros responsables de la venta, impresión y logística de los libros.</li>
+              <li>"Ecosistema Digital": Contenido, mentorías, masterclasses y newsletters gestionados directamente por La Empresa.</li>
+            </ul>
 
-          <div class="space-y-6">
-            {termsBlocks.map((block) => (
-              <article class={`rounded-[30px] border p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7 ${block.highlight ? "border-[#E1C875]/30 bg-[#162741] text-white" : "border-[#162741]/10 bg-white text-[#162741]"}`}>
-                <p class={`text-[11px] font-semibold uppercase tracking-[0.2em] ${block.highlight ? "text-[#E1C875]" : "text-[#9a8954]"}`}>
-                  Reglas del juego
-                </p>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">2. Venta de Libros (Operación de Terceros)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">La Empresa no vende ni distribuye directamente ejemplares físicos, digitales o audiolibros. Nuestra web actúa exclusivamente como vitrina de redirección hacia Amazon y Buscalibre. La transacción financiera, el procesamiento de datos de pago y la logística de entrega son responsabilidad absoluta del distribuidor elegido por el usuario. Cualquier reclamación sobre el estado del libro, retrasos o problemas de descarga debe tramitarse directamente con el servicio al cliente de Amazon o Buscalibre.</p>
 
-                <h2 class={`mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] ${block.highlight ? "text-white" : "text-[#162741]"}`}>
-                  {block.title}
-                </h2>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">3. Servicios Directos (Membresías y Mentorías)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Los paquetes de mentoría y masterclasses se contratan directamente en nuestra plataforma.</p>
+            <p class="mb-2 font-semibold text-[#162741]">Pagos y Facturación:</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Los pagos son procesados por pasarelas seguras (Bold o Stripe). Proyecto E Group SAS emite factura electrónica por cada transacción directa, la cual llegará al correo registrado cumpliendo la normativa fiscal de Colombia.</p>
+            <p class="mb-2 font-semibold text-[#162741]">Plataformas de terceros (Hotmart):</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Para los cursos alojados en Hotmart, dicha plataforma actúa como vendedor directo (Merchant of Record). El usuario acepta someterse adicionalmente a los términos, condiciones y políticas de procesamiento de pago de Hotmart.</p>
 
-                {block.text && (
-                  <div class="mt-4 space-y-4">
-                    {block.text.map((paragraph) => (
-                      <p class={`text-sm leading-8 md:text-[15px] ${block.highlight ? "text-white/82" : "text-[#425674]"}`}>
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                )}
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">4. Garantía de Satisfacción y Reembolsos</h2>
+            <p class="mb-2 font-semibold text-[#162741]">Para Libros y Cursos en Hotmart:</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Aplican exclusivamente las políticas y tiempos de devolución de Amazon, Buscalibre o Hotmart. La Empresa no gestiona estos reembolsos.</p>
+            <p class="mb-2 font-semibold text-[#162741]">Para Servicios Directos (Mentorías):</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Ofrecemos una garantía de satisfacción de siete (7) días calendario tras la compra. Si el contenido no cumple, puedes pedir el reembolso total. Tras este periodo, el marcador es definitivo y no hay devoluciones.</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Tiempos de desembolso: El dinero puede tardar entre 15 y 30 días hábiles (transferencia), y hasta 60 días (tarjeta de crédito), dependiendo de la lentitud de tu banco.</p>
 
-                {block.sections && (
-                  <div class="mt-6 space-y-6">
-                    {block.sections.map((section) => (
-                      <div class={`rounded-2xl border p-5 ${block.highlight ? "border-white/10 bg-white/5" : "border-[#162741]/8 bg-[#f8fafc]"}`}>
-                        <h3 class={`text-lg font-extrabold tracking-[-0.02em] ${block.highlight ? "text-white" : "text-[#162741]"}`}>
-                          {section.subtitle}
-                        </h3>
-                        <div class="mt-3 space-y-3">
-                          {section.text.map((paragraph) => (
-                            <p class={`text-sm leading-8 md:text-[15px] ${block.highlight ? "text-white/80" : "text-[#425674]"}`}>
-                              {paragraph}
-                            </p>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">5. Derecho de Retracto y Reversión de Pagos</h2>
+            <p class="mb-2 font-semibold text-[#162741]">Retracto:</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Según la ley colombiana, puedes retractarte de la compra de servicios digitales dentro de los 5 días hábiles siguientes, siempre y cuando no hayas comenzado a consumir el servicio (ej. descargar material, acceder a la plataforma o asistir a una sesión). Si entras a la cancha, el derecho de retracto se extingue.</p>
+            <p class="mb-2 font-semibold text-[#162741]">Reversión:</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Aplica en casos de fraude, cobro no solicitado o producto defectuoso. Debes notificar a La Empresa y a tu banco en un plazo de 5 días hábiles desde el evento.</p>
 
-                {block.items && (
-                  <div class="mt-5">
-                    <ul class={`mt-4 space-y-3 text-sm leading-7 md:text-[15px] ${block.highlight ? "text-white/82" : "text-[#425674]"}`}>
-                      {block.items.map((item) => (
-                        <li class="flex items-start gap-3">
-                          <span class={`mt-2 h-2 w-2 shrink-0 rounded-full ${block.highlight ? "bg-[#e0f459]" : "bg-[#9a8954]"}`}></span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </article>
-            ))}
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">6. Exención de Responsabilidad Comercial</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Entregamos educación no formal y tácticas de ejecución real probadas en el asfalto. No garantizamos resultados económicos ni retornos de inversión. El éxito de tu negocio depende de tu disciplina. No somos asesores financieros, legales, ni una entidad captadora vigilada; somos un ecosistema de formación y acción.</p>
+
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">7. Reglas de Vestuario y Propiedad Intelectual</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Todo el contenido (método CANCHA, plantillas, videos, textos y marcas) es propiedad intelectual exclusiva de Oswaldo Vega, licenciada operativamente a La Empresa. Tu compra otorga una licencia de uso estrictamente personal y no comercial.</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Credenciales: Tu acceso es intransferible. Prohibido compartir tu cuenta.</p>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Tarjeta Roja: La piratería, reventa, copia o distribución no autorizada de nuestros materiales resultará en la expulsión inmediata de la Liga sin reembolso, y el inicio de demandas civiles y penales por infracción de derechos de autor.</p>
+
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">8. El VAR de los Datos (Privacidad y Habeas Data)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Al registrarte, comprar o suscribirte a nuestra newsletter, autorizas a Proyecto E Group SAS a recolectar y tratar tus datos personales conforme a la Ley 1581 de 2012. Usaremos tu correo para facturación, soporte y para enviarte tácticas, ofertas y contenido de valor. Puedes pedir que te saquemos de la lista de correos en cualquier momento escribiendo a nuestro canal de soporte.</p>
+
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">9. Reglas del Torneo (Ley Aplicable y Jurisdicción)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Estos Términos y Condiciones se rigen por las leyes de la República de Colombia. Cualquier disputa legal que no pueda resolverse amistosamente en los camerinos, será sometida a la jurisdicción de los jueces colombianos. Debes ser mayor de 18 años para operar en esta plataforma.</p>
+
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">10. Peticiones, Quejas y Reclamos (PQR)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Para soporte técnico, facturación o dudas, el único canal oficial es: <a href="mailto:hola@ligaemprendedora.com" class="font-semibold text-[#162741] underline underline-offset-4">hola@ligaemprendedora.com</a>. Tiempo de respuesta legal: hasta 15 días hábiles. Al escribirnos, te daremos un número de radicado para hacerle seguimiento a tu jugada. Nos reservamos el derecho de actualizar estos términos en cualquier momento.</p>
+
+            <div class="mt-12 border-t border-[#162741]/10 pt-8 text-sm text-[#162741]/40">
+              Proyecto E Group SAS · NIT 830.037.581-9 · Calle 98 # 22-64 Of 1002, Bogotá, Colombia · Vigente desde el 2 de abril de 2026
+            </div>
+
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 ---
 const plans = [
   {
-    name: "Pack Jugador élite",
+    name: "Pack Jugador Élite",
     kicker: "Para los que quieren la táctica",
     priceLabel: "Digital",
     featured: false,
@@ -11,51 +11,57 @@ const plans = [
       'Acceso al "Búnker Digital": 15 plantillas y 3 checklists.',
     ],
     cta: "Entrar a la Cantera",
-    microcopy: "🌎 Disponible para todo el mundo. Acceso inmediato.",
+    microcopy: "Disponible para todo el mundo. Acceso inmediato.",
   },
   {
     name: "Pack Capitán",
-    kicker: "Requiere Pack Jugador Élite · Para los que entran a ganar",
+    kicker: "Para los que entran a ganar",
     priceLabel: "Físico + Digital",
     featured: true,
     premium: false,
-    prerequisite: true,
     items: [
       "Todo lo del Pack Jugador Élite incluido +",
       "Libro Emprende Futbolero (Edición Física).",
-      "Libro Digital de entrega inmediata.",
-      'Acceso al "Búnker Digital" completo (18 Herramientas descargables).',
-      "Pase directo al Club MVP90 (Comunidad de WhatsApp, retos y lives).",
+      "Búnker Digital completo (18 herramientas).",
+      "Pase al Club MVP90 · Comunidad, retos y lives.",
       "Suscripción al Newsletter Táctico Semanal.",
-      'Masterclass grabada: "Cómo financiarte con cero presupuesto".',
+      "Masterclass grabada: financiarte con cero presupuesto.",
     ],
     cta: "Ponerme la Cinta de Capitán",
-    microcopy: " Debes tener el Pack Jugador Élite para acceder a este plan.",
+    microcopy: "➕ Pack adicional. Requiere tener el Pack Jugador Élite activo.",
   },
   {
     name: "Pack DT",
-    kicker: "Requiere Pack Jugador Élite · Solo 50 cupos",
+    kicker: "Para los que van a dirigir",
     priceLabel: "VIP",
     featured: false,
     premium: true,
-    prerequisite: true,
     items: [
-      "Todo lo del Pack Capitán incluido (Libro, Búnker, Comunidad, Newsletter, Masterclass).",
-      "Libro Físico firmado por el autor.",
-      "Consultoría 1:1: Una sesión táctica privada online de 45 min directamente con Oswaldo Vega.",
-      "Encuentro de camerino: Una sesión grupal de Q&A en vivo con los 50 Directores Técnicos.",
+      "Todo lo del Pack Capitán incluido.",
+      "Libro físico firmado por el autor.",
+      "Consultoría 1:1 · Sesión táctica privada de 45 min con Oswaldo Vega.",
+      "Encuentro de camerino · Q&A en vivo con los 50 DTs.",
     ],
     cta: "Fichar como DT hoy",
     microcopy:
-      "🇨🇴 Envío del libro físico exclusivo para Colombia. Las mentorías virtuales aplican para todo el mundo. Debes tener el Pack Jugador Élite para acceder a este plan.",
+      "➕ Pack adicional. Requiere tener el Pack Jugador Élite activo. Las mentorías virtuales aplican para todo el mundo.",
   },
 ];
 
-const distributors = [
-  { label: "Amazon", href: "#" },
-  { label: "Buscalibre", href: "#" },
-  { label: "Mercado Libre", href: "#" },
-  { label: "Gonvill", href: "#" },
+const amazonLinks = [
+  { label: "México", href: "#" },
+  { label: "Estados Unidos y el resto de Latinoamérica", href: "#" },
+  { label: "España", href: "#" },
+];
+
+const buscalibreLinks = [
+  { label: "Colombia", href: "#" },
+  { label: "México", href: "#" },
+  { label: "Perú", href: "#" },
+  { label: "Ecuador", href: "#" },
+  { label: "Chile", href: "#" },
+  { label: "Argentina", href: "#" },
+  { label: "Uruguay", href: "#" },
 ];
 ---
 
@@ -75,31 +81,91 @@ const distributors = [
         Los fichajes · Pricing
       </p>
       <h2 class="mt-5 text-[2.35rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
-        El pitazo está por sonar. ¿Desde dónde vas a jugar este torneo?
+        El pitazo está por sonar. ¿Desde dónde vas a jugar?
       </h2>
     </div>
 
-    <div class="mt-14 grid gap-6 lg:grid-cols-3 lg:items-stretch">
-      {plans.map((plan) => {
-        const cardClass = plan.featured
-          ? "relative flex h-full flex-col rounded-[30px] border border-white/14 bg-white p-7 text-[#162741] shadow-[0_28px_90px_rgba(0,0,0,0.24)] lg:scale-[1.035]"
-          : plan.premium
-            ? "relative flex h-full flex-col rounded-[30px] border-2 border-[#E1C875] bg-[#0b1220] p-7 text-white shadow-[0_30px_100px_rgba(0,0,0,0.34)]"
-            : "relative flex h-full flex-col rounded-[30px] border border-white/12 bg-white/5 p-7 text-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm";
+    <!-- PASO 1 — Pack Jugador Élite, ancho completo -->
+    <div class="mt-14">
+      <div class="mb-4 flex items-center gap-3">
+        <span class="rounded-full bg-[#e0f459] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#162741]">
+          Paso 1 · Empieza aquí
+        </span>
+        <div class="h-px flex-1 bg-white/10"></div>
+        <span class="text-xs text-white/40">La base de todo</span>
+      </div>
 
-        const kickerClass = plan.featured || plan.premium ? "text-[#9a8954]" : "text-[#E1C875]";
+      {(() => {
+        const plan = plans[0];
+        return (
+          <article class="relative flex flex-col rounded-[30px] border border-white/12 bg-white/5 p-7 text-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm md:flex-row md:items-start md:gap-10">
+            <div class="md:w-72 md:shrink-0">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
+                {plan.kicker}
+              </p>
+              <h3 class="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-white">
+                {plan.name}
+              </h3>
+              <span class="mt-4 inline-block rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white">
+                {plan.priceLabel}
+              </span>
+              <a
+                href="#compra-libro"
+                class="mt-6 inline-flex min-h-[58px] w-full items-center justify-center rounded-full bg-[#e0f459] px-6 text-center text-sm font-extrabold uppercase tracking-[0.12em] text-[#162741] shadow-[0_0_24px_rgba(224,244,89,0.22)] transition hover:-translate-y-px hover:shadow-[0_0_36px_rgba(224,244,89,0.34)]"
+              >
+                {plan.cta}
+              </a>
+              <p class="mt-4 text-sm leading-6 text-white/78">{plan.microcopy}</p>
+            </div>
+            <div class="mt-8 grid flex-1 gap-3 md:mt-0 md:grid-cols-2">
+              {plan.items.map((item) => (
+                <div class="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/10 px-4 py-4">
+                  <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#e0f459] text-[#162741] shadow-[0_0_14px_rgba(224,244,89,0.16)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 9.2 17 19 7.5" />
+                    </svg>
+                  </span>
+                  <p class="text-sm leading-7 text-white/82 md:text-[0.98rem] md:leading-7">{item}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        );
+      })()}
+    </div>
+
+    <!-- DIVISOR PASO 2 -->
+    <div class="my-10 flex items-center gap-4">
+      <div class="h-px flex-1 bg-white"></div>
+      <div class="flex items-center gap-2 rounded-full border border-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7-7 7-7-7" />
+        </svg>
+        Paso 2 · Paquetes adicionales
+      </div>
+      <div class="h-px flex-1 bg-white"></div>
+    </div>
+    <p class="mb-6 text-center text-sm leading-6 text-white">
+      Estos packs se suman al Pack Jugador Élite — no son independientes.<br/>
+      <span class="text-white text-xs">Primero ficha en el Paso 1, luego elige tu adicional.</span>
+    </p>
+
+    <!-- UPGRADES — Capitán y DT en grid de 2 -->
+    <div class="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+      {plans.slice(1).map((plan) => {
+        const cardClass = plan.featured
+          ? "relative flex h-full flex-col rounded-[30px] border border-white/14 bg-white p-7 text-[#162741] shadow-[0_28px_90px_rgba(0,0,0,0.24)]"
+          : "relative flex h-full flex-col rounded-[30px] border-2 border-[#E1C875] bg-[#0b1220] p-7 text-white shadow-[0_30px_100px_rgba(0,0,0,0.34)]";
+
+        const kickerClass = "text-[#9a8954]";
         const titleClass = plan.featured ? "text-[#162741]" : "text-white";
         const bodyClass = plan.featured ? "text-[#334865]" : "text-white/78";
         const chipClass = plan.featured
           ? "border border-[#162741]/10 bg-[#162741]/5 text-[#162741]"
-          : plan.premium
-            ? "border border-[#E1C875]/30 bg-[#E1C875]/10 text-[#E1C875]"
-            : "border border-white/10 bg-white/6 text-white";
+          : "border border-[#E1C875]/30 bg-[#E1C875]/10 text-[#E1C875]";
         const bulletWrapClass = plan.featured
           ? "border border-[#162741]/10 bg-[#162741]/4"
-          : plan.premium
-            ? "border border-white/8 bg-white/4"
-            : "border border-white/8 bg-black/10";
+          : "border border-white/8 bg-white/4";
         const bulletTextClass = plan.featured ? "text-[#334865]" : "text-white/82";
 
         return (
@@ -110,18 +176,20 @@ const distributors = [
               </div>
             )}
 
-            {plan.prerequisite && (
-              <div class="mb-4 flex items-center gap-2 rounded-2xl border border-[#E1C875]/40 bg-[#E1C875]/8 px-4 py-3">
-                <span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#E1C875]/50 bg-[#E1C875]/20 text-[#9a8954]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v-3m0-3h.01M5.07 19h13.86c1.1 0 1.8-1.2 1.24-2.14L13.24 4.3c-.56-.96-1.92-.96-2.48 0L3.83 16.86C3.27 17.8 3.97 19 5.07 19z" />
-                  </svg>
-                </span>
-                <p class="text-xs font-semibold text-[#9a8954]">
-                  Primero necesitas el Pack Jugador Élite
-                </p>
+            {!plan.featured && (
+              <div class="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[#E1C875]/30 bg-[#E1C875]/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#E1C875]">
+                Solo 50 cupos
               </div>
             )}
+
+            <div class="mb-4 flex items-center gap-2 rounded-2xl border border-[#E1C875]/40 bg-[#E1C875]/8 px-4 py-3">
+              <span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#E1C875]/50 bg-[#E1C875]/20 text-[#9a8954] text-sm font-extrabold">
+                +
+              </span>
+              <p class="text-xs font-semibold text-[#9a8954]">
+                Pack adicional · Se suma al Pack Jugador Élite
+              </p>
+            </div>
 
             <div class="flex items-start justify-between gap-4">
               <div>
@@ -132,7 +200,6 @@ const distributors = [
                   {plan.name}
                 </h3>
               </div>
-
               <span class={`rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] ${chipClass}`}>
                 {plan.priceLabel}
               </span>
@@ -170,25 +237,79 @@ const distributors = [
       })}
     </div>
 
-    <div class="mt-10 rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:p-8">
-      <p class="text-[15px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-2xl">
-        Aviso táctico internacional
-      </p>
-      <p class="mt-4 max-w-5xl text-base leading-8 text-white/80 md:text-[1.02rem] md:leading-8">
-        ¿Vives fuera de Colombia y necesitas el libro en papel para rayarlo? El acceso a mis mentorías,
-        al Newsletter y al Club MVP90 se adquiere únicamente en esta página. Asegura tu cupo en el
-        Pack Jugador Élite o Pack DT aquí mismo, y luego pide tu copia física a través de nuestros distribuidores aliados:
-      </p>
+    <div id="compra-libro" class="mt-10 overflow-hidden rounded-[30px] border border-white/14 bg-white shadow-[0_28px_90px_rgba(0,0,0,0.24)]">
 
-      <div class="mt-5 flex flex-wrap gap-3">
-        {distributors.map((item) => (
-          <a
-            href={item.href}
-            class="inline-flex items-center rounded-full border border-[#E1C875]/32 bg-[#E1C875]/10 px-4 py-2 text-sm font-semibold text-[#E1C875] transition hover:bg-[#E1C875]/16"
-          >
-            {item.label}
-          </a>
-        ))}
+      <!-- Header -->
+      <div class="border-b border-[#162741]/8 px-8 py-6 md:px-10">
+        <p class="sm:text-xl md:text-2xlfont-semibold uppercase tracking-[0.28em] text-[#9a8954]">
+          Compra Emprende futbolero 
+        </p>
+        <p class="mt-2 text-xl leading-6 text-[#162741]">
+          Elige tu plataforma y el país donde lo quieres recibir.
+        </p>
+      </div>
+
+      <!-- Dos columnas -->
+      <div class="grid divide-y divide-[#162741]/8 md:grid-cols-2 md:divide-x md:divide-y-0">
+
+        <!-- Amazon -->
+        <div class="px-8 py-7 md:px-10">
+          <div class="mb-5 flex items-center gap-3">
+            <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#FF9900]">
+              <!-- Amazon logo -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="#fff">
+                <path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.074-1.047-.869-1.234-1.272-1.807-2.099-1.727 1.761-2.951 2.288-5.19 2.288-2.652 0-4.713-1.637-4.713-4.906 0-2.557 1.387-4.291 3.361-5.148 1.712-.754 4.105-.887 5.937-1.093v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.818-1.775-.818-1.205 0-2.277.617-2.54 1.897-.054.285-.265.567-.549.58l-3.064-.331c-.259-.058-.548-.266-.472-.66C5.57.876 8.983 0 12.043 0c1.634 0 3.77.435 5.061 1.674 1.634 1.524 1.478 3.556 1.478 5.771v5.228c0 1.572.652 2.265 1.264 3.114.216.301.262.66-.01.886-.686.574-1.907 1.634-2.582 2.232l-.11-.11zM23.928 20.049c-3.444 2.713-8.444 4.157-12.745 4.157-6.027 0-11.453-2.228-15.562-5.938-.322-.292-.034-.689.354-.462 4.436 2.581 9.912 4.131 15.574 4.131 3.818 0 8.02-.791 11.884-2.431.583-.249 1.07.382.495.543z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-extrabold tracking-[-0.03em] text-[#162741]">Amazon</h3>
+            <span class="rounded-full border border-[#162741]/10 bg-[#162741]/5 px-2.5 py-1 text-[10px] font-semibold text-[#162741]/60">
+              Digital · Tapa blanda · Tapa dura
+            </span>
+          </div>
+          <div class="space-y-2">
+            {amazonLinks.map((item) => (
+              <a
+                href={item.href}
+                class="group flex items-center justify-between rounded-2xl border border-[#162741]/8 bg-[#162741]/3 px-4 py-3 transition hover:border-[#162741]/16 hover:bg-[#162741]/7"
+              >
+                <span class="text-sm font-semibold text-[#162741]">{item.label}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#162741]/30 transition group-hover:text-[#162741]/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Buscalibre -->
+        <div class="px-8 py-7 md:px-10">
+          <div class="mb-5 flex items-center gap-3">
+            <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#e0f459] text-[#162741]">
+              <!-- Book icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-extrabold tracking-[-0.03em] text-[#162741]">Buscalibre</h3>
+            <span class="rounded-full border border-[#162741]/10 bg-[#162741]/5 px-2.5 py-1 text-[10px] font-semibold text-[#162741]/60">
+              Tapa blanda con solapas
+            </span>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            {buscalibreLinks.map((item) => (
+              <a
+                href={item.href}
+                class="group flex items-center justify-between rounded-2xl border border-[#162741]/8 bg-[#162741]/3 px-4 py-3 transition hover:border-[#162741]/16 hover:bg-[#162741]/7"
+              >
+                <span class="text-sm font-semibold text-[#162741]">{item.label}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0 text-[#162741]/30 transition group-hover:text-[#162741]/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

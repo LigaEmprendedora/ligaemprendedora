@@ -2,68 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
-const supportEmail = "hola@ligaemprendedora.com";
-
-const cards = [
-  {
-    title: "Responsable del tratamiento",
-    text: "Proyecto E Group SAS, identificada con NIT 830.037.581-9, con domicilio principal en Calle 98 # 22-64 Of 1002 en Bogotá (Colombia), titular de la marca comercial Liga Emprendedora y operadora de los activos digitales de Oswaldo Vega.",
-  },
-  {
-    title: "Datos que recolectamos",
-    items: [
-      "Identificación y contacto: nombre completo, correo electrónico, número de teléfono (WhatsApp) y país de residencia.",
-      "Interacciones: historial de compras, soporte (PQRs) y comportamiento dentro de nuestra web.",
-      "Información de navegación: dirección IP, tipo de dispositivo y datos arrojados por cookies de seguimiento.",
-    ],
-  },
-  {
-    title: "Información de pagos",
-    text: "La Empresa NO almacena los datos de tu tarjeta de crédito. Los pagos son procesados de forma encriptada por pasarelas seguras de terceros: Bold, Stripe y Hotmart, las cuales operan bajo sus propias políticas y estándares de seguridad.",
-    highlight: true,
-  },
-  {
-    title: "Cero Datos Sensibles",
-    text: "La Empresa NO recolectará ni tratará datos sensibles (información de salud, origen racial, inclinaciones políticas o religiosas). Este ecosistema está diseñado exclusivamente para mayores de 18 años. Si detectamos el registro de un menor, su información será eliminada de inmediato.",
-  },
-  {
-    title: "¿Cómo obtenemos tu información?",
-    items: [
-      "Directamente: cuando llenas un formulario, te registras para descargar una plantilla gratuita en El Búnker, o compras un pase (Jugador Élite, Capitán, DT).",
-      "Por Redes Sociales: cuando interactúas con nuestras cuentas oficiales en Instagram, TikTok, LinkedIn o YouTube.",
-      "Automáticamente: a través de cookies, web beacons y herramientas como Google Analytics o Meta Pixel para entender cómo navegas y mostrarte anuncios relevantes.",
-    ],
-  },
-  {
-    title: "Finalidades del tratamiento",
-    items: [
-      "Darte acceso inmediato a El Búnker, los lives y la comunidad (Club MVP90).",
-      "Procesar tus pagos, emitir la factura electrónica y enviar confirmaciones.",
-      "Enviarte el Newsletter táctico y comunicaciones urgentes sobre tus mentorías.",
-      "Atender tus Peticiones, Quejas o Reclamos (PQRs).",
-      "Mostrarte publicidad segmentada para que no te lleguen ofertas de productos que ya compraste.",
-    ],
-  },
-];
-
-const tercerosAliados = [
-  "Pasarelas de Pago (Bold, Stripe, Hotmart): procesan tu dinero de forma encriptada. Nosotros no almacenamos los datos de tu tarjeta.",
-  "Logística (Amazon, Buscalibre): si compraste un libro a través de ellos, tus datos en esa transacción se rigen por sus propias políticas.",
-  "Herramientas de Marketing y Servidores: plataformas de email marketing o alojamiento web operan como encargados del tratamiento bajo acuerdos estrictos de confidencialidad.",
-];
-
-const derechos = [
-  "Conocer y Acceder: saber exactamente qué datos tuyos tenemos y solicitar prueba de la autorización que nos diste.",
-  "Actualizar y Rectificar: corregir información desactualizada o errónea.",
-  "Revocar y Suprimir: pedir que te demos de baja del Newsletter o eliminemos tus datos, siempre que no exista un deber legal o contractual que nos obligue a retenerlos.",
-  "Acudir a la SIC: presentar quejas ante la Superintendencia de Industria y Comercio si consideras que hemos fallado, una vez hayas agotado el reclamo directo con nosotros.",
-];
 ---
 
 <BaseLayout
   title="Política de Privacidad | Liga Emprendedora"
-  description="Tratamiento de datos personales, finalidad, derechos del titular y política de privacidad de Liga Emprendedora. Proyecto E Group SAS."
+  description="Tratamiento de datos personales, finalidad, derechos del titular y política de privacidad de Liga Emprendedora."
 >
   <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
     <Header dark />
@@ -74,168 +17,89 @@ const derechos = [
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(225,200,117,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(22,39,65,0)_42%)]"></div>
           <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div>
         </div>
-
-        <div class="relative mx-auto max-w-5xl">
+        <div class="relative mx-auto max-w-3xl">
           <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
-            Legal · Proyecto E Group SAS
+            Legal · Liga Emprendedora
           </p>
-
-          <h1 class="mt-4 max-w-4xl text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
+          <h1 class="mt-4 text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
             Política de Privacidad
           </h1>
-
-          <p class="mt-6 max-w-3xl text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
-            Este documento establece cómo manejamos tu información. La transparencia es una regla innegociable en nuestro camerino.
+          <p class="mt-6 text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
+            Liga Emprendedora · Proyecto E Group SAS
           </p>
         </div>
       </section>
 
-      <section class="px-4 py-10 md:px-6 md:py-14">
-        <div class="mx-auto max-w-5xl space-y-6">
-          <div class="rounded-4xl border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:p-8">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">
-              Resumen rápido
+      <section class="px-4 py-12 md:px-6 md:py-16">
+        <div class="mx-auto max-w-3xl">
+          <div class="prose prose-lg max-w-none text-[#162741]">
+
+            <p class="mb-8 text-base leading-8 text-[#334865] md:text-[1.05rem]">
+              Este documento establece cómo manejamos tu información. La transparencia es una regla innegociable en nuestro camerino. Proyecto E Group SAS, identificada con NIT 830.037.581-9, con domicilio principal en Calle 98 # 22-64 Of 1002 en Bogotá (Colombia), titular de la marca comercial Liga Emprendedora y operadora de los activos digitales de Oswaldo Vega, es la responsable del tratamiento de tus datos personales.
             </p>
-            <p class="mt-4 max-w-4xl text-base leading-8 text-[#334865] md:text-[1.05rem]">
-              Tus datos están seguros. Usamos tu información para entregarte accesos, procesar pagos,
-              integrarte a nuestras comunidades y enviarte contenido táctico. No almacenamos datos de
-              tarjetas, no vendemos tu información a terceros y cumplimos con la Ley 1581 de 2012.
-            </p>
-          </div>
 
-          <div class="grid gap-6 md:grid-cols-2">
-            {cards.map((card) => (
-              <article class={`rounded-[30px] border p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7 ${card.highlight ? "border-[#E1C875]/30 bg-[#162741] text-white" : "border-[#162741]/10 bg-white text-[#162741]"}`}>
-                <p class={`text-[11px] font-semibold uppercase tracking-[0.2em] ${card.highlight ? "text-[#E1C875]" : "text-[#9a8954]"}`}>
-                  Política de privacidad
-                </p>
-
-                <h2 class={`mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] ${card.highlight ? "text-white" : "text-[#162741]"}`}>
-                  {card.title}
-                </h2>
-
-                {card.text && (
-                  <p class={`mt-4 text-sm leading-8 md:text-[15px] ${card.highlight ? "text-white/80" : "text-[#425674]"}`}>
-                    {card.text}
-                  </p>
-                )}
-
-                {card.items && (
-                  <ul class={`mt-4 space-y-3 text-sm leading-7 md:text-[15px] ${card.highlight ? "text-white/80" : "text-[#425674]"}`}>
-                    {card.items.map((item) => (
-                      <li class="flex items-start gap-3">
-                        <span class={`mt-2 h-2 w-2 shrink-0 rounded-full ${card.highlight ? "bg-[#e0f459]" : "bg-[#9a8954]"}`}></span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </article>
-            ))}
-          </div>
-
-          <!-- Terceros aliados -->
-          <article class="rounded-[30px] border border-[#E1C875]/30 bg-[#162741] p-6 text-white shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#E1C875]">
-              El tercer tiempo
-            </p>
-            <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-white">
-              Terceros Aliados y Transferencia Internacional
-            </h2>
-            <p class="mt-4 text-sm leading-8 text-white/80 md:text-[15px]">
-              Para operar a nivel global, nos apoyamos en jugadores externos. Al aceptar esta política, nos autorizas a compartir o transferir tu información a servidores ubicados fuera de Colombia, únicamente a los siguientes aliados operativos:
-            </p>
-            <ul class="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-[15px]">
-              {tercerosAliados.map((item) => (
-                <li class="flex items-start gap-3">
-                  <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#e0f459]"></span>
-                  <span>{item}</span>
-                </li>
-              ))}
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">1. ¿Qué datos recolectamos para que entres a la cancha?</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Recolectamos únicamente la información táctica necesaria para que el ecosistema funcione:</p>
+            <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]">
+              <li>Identificación y Contacto: Nombre completo, correo electrónico, número de teléfono (WhatsApp) y país de residencia.</li>
+              <li>Interacciones: Historial de compras, soporte (PQRs) y tu comportamiento dentro de nuestra web.</li>
+              <li>Información de Navegación: Dirección IP, tipo de dispositivo y datos arrojados por cookies de seguimiento.</li>
             </ul>
-          </article>
 
-          <!-- Derechos del titular -->
-          <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
-              Tus derechos como titular
-            </p>
-            <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
-              Tú eres el dueño de tu pase
-            </h2>
-            <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
-              Según la Ley 1581 de 2012, en cualquier momento tienes derecho a:
-            </p>
-            <ul class="mt-4 space-y-3 text-sm leading-7 text-[#425674] md:text-[15px]">
-              {derechos.map((item) => (
-                <li class="flex items-start gap-3">
-                  <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#9a8954]"></span>
-                  <span>{item}</span>
-                </li>
-              ))}
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">2. Cero Datos Sensibles y Protección a Menores</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">No nos interesa tu vida privada fuera de los negocios. La Empresa NO recolectará ni tratará datos sensibles (como información de salud, origen racial, inclinaciones políticas o religiosas). Asimismo, este ecosistema está diseñado exclusivamente para mayores de 18 años con capacidad legal. Si detectamos el registro de un menor de edad, su información será eliminada de inmediato de nuestra base de datos.</p>
+
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">3. ¿Cómo obtenemos tu información?</h2>
+            <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]">
+              <li>Directamente: Cuando llenas un formulario, te registras para descargar una plantilla gratuita en El Búnker, o compras un pase (Jugador Élite, Capitán, DT).</li>
+              <li>Por Redes Sociales: Cuando interactúas con nuestras cuentas oficiales en Instagram, TikTok, LinkedIn o YouTube.</li>
+              <li>Automáticamente (Táctica de Rastreo): A través de cookies, web beacons y herramientas como Google Analytics o Meta Pixel para entender cómo navegas y mostrarte anuncios relevantes.</li>
             </ul>
-          </article>
 
-          <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <!-- Procedimientos -->
-            <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
-                El VAR · Procedimientos
-              </p>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">4. ¿Para qué usamos tus datos? (Finalidades)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">No vendemos humo ni vendemos tus bases de datos. Usamos tu información para:</p>
+            <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]">
+              <li>Darte acceso inmediato a El Búnker, los lives y la comunidad (Club MVP90).</li>
+              <li>Procesar tus pagos, emitir la factura electrónica y enviar confirmaciones.</li>
+              <li>Enviarte el Newsletter táctico y comunicaciones urgentes sobre tus mentorías.</li>
+              <li>Atender tus Peticiones, Quejas o Reclamos (PQRs).</li>
+              <li>Mostrarte publicidad segmentada para que no te lleguen ofertas de productos que ya compraste.</li>
+            </ul>
 
-              <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
-                Cómo ejercer tus derechos
-              </h2>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">5. El Tercer Tiempo (Terceros Aliados y Transferencia Internacional)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Para operar a nivel global, nos apoyamos en jugadores externos. Al aceptar esta política, nos autorizas a compartir o transferir tu información a servidores ubicados fuera de Colombia, únicamente a los siguientes aliados operativos:</p>
+            <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]">
+              <li>Pasarelas de Pago (Bold, Stripe, Hotmart): Ellos procesan tu dinero de forma encriptada. Nosotros no almacenamos los datos de tu tarjeta de crédito.</li>
+              <li>Logística (Amazon, Buscalibre): Si compraste un libro físico o digital a través de ellos, tus datos en esa transacción se rigen por sus propias políticas.</li>
+              <li>Herramientas de Marketing y Servidores: Plataformas de email marketing o alojamiento web operan como encargados del tratamiento bajo acuerdos estrictos de confidencialidad y estándares internacionales de seguridad.</li>
+            </ul>
 
-              <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
-                Envía un correo a nuestro canal oficial con tu nombre completo, identificación y tu solicitud clara:
-              </p>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">6. Tus Derechos como Titular</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Tú eres el dueño de tu pase. Según la Ley 1581 de 2012, en cualquier momento tienes derecho a:</p>
+            <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]">
+              <li>Conocer y Acceder: Saber exactamente qué datos tuyos tenemos en nuestro sistema y solicitar prueba de la autorización que nos diste.</li>
+              <li>Actualizar y Rectificar: Corregir información desactualizada o errónea.</li>
+              <li>Revocar y Suprimir: Pedir que te demos de baja del Newsletter o eliminemos tus datos, siempre que no exista un deber legal o contractual que nos obligue a retenerlos (ej. temas contables y de facturación).</li>
+              <li>Acudir a la SIC: Presentar quejas ante la Superintendencia de Industria y Comercio si consideras que hemos fallado en el trato de tu información, una vez hayas agotado el reclamo directo con nosotros.</li>
+            </ul>
 
-              <div class="mt-5 rounded-2xl border border-[#162741]/8 bg-[#f8fafc] px-5 py-4">
-                <a
-                  href={`mailto:${supportEmail}`}
-                  class="text-base font-bold text-[#162741] underline underline-offset-4"
-                >
-                  {supportEmail}
-                </a>
-              </div>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">7. El VAR (Procedimientos y Tiempos de Respuesta)</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Si necesitas ejercer tus derechos, envía un correo directo a <a href="mailto:hola@ligaemprendedora.com" class="font-semibold text-[#162741] underline underline-offset-4">hola@ligaemprendedora.com</a> con tu nombre completo, identificación y tu solicitud clara.</p>
+            <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]">
+              <li>Para Consultas: Te responderemos en un máximo de 10 días hábiles.</li>
+              <li>Para Reclamos (Actualización o Supresión): Analizaremos la jugada y te daremos respuesta en un máximo de 15 días hábiles.</li>
+            </ul>
 
-              <div class="mt-5 space-y-3">
-                <div class="rounded-2xl border border-[#162741]/8 bg-[#f8fafc] px-4 py-3">
-                  <p class="text-sm text-[#425674]"><span class="font-bold text-[#162741]">Consultas:</span> máximo 10 días hábiles.</p>
-                </div>
-                <div class="rounded-2xl border border-[#162741]/8 bg-[#f8fafc] px-4 py-3">
-                  <p class="text-sm text-[#425674]"><span class="font-bold text-[#162741]">Reclamos (actualización o supresión):</span> máximo 15 días hábiles.</p>
-                </div>
-              </div>
-            </article>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">8. Cookies y Estrategia Digital</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Usamos cookies para que no tengas que iniciar sesión cada vez que entras a la página y para entender qué plantillas se descargan más. Puedes bloquearlas desde tu navegador, pero si apagas las cookies esenciales, es probable que El Búnker no te funcione correctamente.</p>
 
-            <!-- Cookies y vigencia -->
-            <div class="space-y-6">
-              <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
-                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
-                  Cookies
-                </p>
-                <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
-                  Estrategia Digital
-                </h2>
-                <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
-                  Usamos cookies para que no tengas que iniciar sesión cada vez y para entender qué plantillas se descargan más. Puedes bloquearlas desde tu navegador, pero si apagas las cookies esenciales, es probable que El Búnker no te funcione correctamente.
-                </p>
-              </article>
+            <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">9. Seguridad y Vigencia</h2>
+            <p class="mb-4 text-base leading-8 text-[#334865]">Mantenemos tu información encriptada y bajo medidas de seguridad proporcionales al asfalto digital. Esta política entra en vigencia a partir del 2 de abril de 2026. Las bases de datos tendrán una vigencia igual al tiempo en que La Empresa mantenga sus operaciones comerciales, o hasta que la ley ordene su destrucción. Nos reservamos el derecho de actualizar esta política; si hacemos un cambio estructural que cambie las reglas del juego, te lo notificaremos por correo.</p>
 
-              <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
-                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
-                  Vigencia
-                </p>
-                <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
-                  Seguridad y vigencia
-                </h2>
-                <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
-                  Mantenemos tu información encriptada y bajo medidas de seguridad proporcionales. Esta política entra en vigencia a partir del 2 de abril de 2026. Si hacemos un cambio estructural que cambie las reglas del juego, te lo notificaremos por correo.
-                </p>
-              </article>
+            <div class="mt-12 border-t border-[#162741]/10 pt-8 text-sm text-[#162741]/40">
+              Proyecto E Group SAS · NIT 830.037.581-9 · Calle 98 # 22-64 Of 1002, Bogotá, Colombia · Vigente desde el 2 de abril de 2026
             </div>
+
           </div>
         </div>
       </section>
