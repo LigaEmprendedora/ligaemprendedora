@@ -5,107 +5,146 @@ import Footer from "../components/Footer.astro";
 
 const summaryCards = [
   {
-    title: "Productos digitales",
-    text: "Se entregan de forma inmediata una vez se confirme el pago. Recibirás por correo electrónico los accesos, credenciales o enlaces correspondientes.",
+    title: "Venta de libros",
+    text: "La Empresa no vende ni distribuye directamente ejemplares físicos, digitales o audiolibros. Nuestra web actúa como vitrina de redirección hacia Amazon y Buscalibre. Cualquier reclamación debe tramitarse con el distribuidor.",
   },
   {
-    title: "Productos físicos",
-    text: "Aplican solo para envíos dentro de Colombia. El tiempo estimado de entrega es de 3 a 8 días hábiles, dependiendo de la ciudad y del operador logístico.",
+    title: "Servicios directos",
+    text: "Los paquetes de mentoría y masterclasses se contratan directamente en nuestra plataforma. Los pagos son procesados por pasarelas seguras (Bold o Stripe). Proyecto E Group SAS emite factura electrónica.",
   },
   {
-    title: "Mentorías y sesiones",
-    text: "Las sesiones del Pack DT se agendan según disponibilidad dentro de los 30 días posteriores a la compra y su prestación es virtual.",
+    title: "Garantía de satisfacción",
+    text: "Para servicios directos (mentorías), ofrecemos garantía de 7 días calendario. Para libros y cursos en Hotmart, aplican las políticas de cada plataforma.",
   },
   {
-    title: "Devoluciones",
-    text: "Los productos digitales cuentan con garantía de satisfacción de 7 días calendario. Los productos físicos aplican para cambios o reposiciones por defectos o daños reportados a tiempo.",
+    title: "Propiedad intelectual",
+    text: "Tu compra otorga una licencia de uso personal y no comercial. La piratería, reventa o distribución no autorizada resultará en expulsión inmediata y acciones legales.",
   },
 ];
 
 const termsBlocks = [
   {
-    title: "1. Aceptación de las reglas del juego",
+    title: "1. Glosario Táctico (Definiciones)",
     text: [
-      "Al adquirir el libro Emprende Futbolero, el acceso a El Búnker o cualquier producto de Liga Emprendedora, aceptas estos Términos y Condiciones.",
-      "Si no estás de acuerdo con estas reglas, por favor no realices la compra.",
+      '"Jugador Élite", "Capitán" y "DT": Niveles de membresía y paquetes de servicios digitales y mentorías.',
+      '"Distribuidores Externos": Amazon y Buscalibre. Terceros responsables de la venta, impresión y logística de los libros.',
+      '"Ecosistema Digital": Contenido, mentorías, masterclasses y newsletters gestionados directamente por La Empresa.',
     ],
   },
   {
-    title: "2. Promesa de valor y exención de responsabilidad",
+    title: "2. Venta de Libros (Operación de Terceros)",
     text: [
-      "Emprende Futbolero y el método CANCHA son herramientas de estructuración, estrategia y alta gerencia. Entregamos tácticas, plantillas y conocimiento basado en experiencia real.",
-      "Sin embargo, no garantizamos resultados financieros, comerciales ni de facturación. Tus resultados dependen de tu disciplina, tu ejecución y las condiciones del mercado. Nosotros te damos el mapa; tú decides cómo jugar el partido.",
+      "La Empresa no vende ni distribuye directamente ejemplares físicos, digitales o audiolibros. Nuestra web actúa exclusivamente como vitrina de redirección hacia Amazon y Buscalibre.",
+      "La transacción financiera, el procesamiento de datos de pago y la logística de entrega son responsabilidad absoluta del distribuidor elegido por el usuario.",
+      "Cualquier reclamación sobre el estado del libro, retrasos o problemas de descarga debe tramitarse directamente con el servicio al cliente de Amazon o Buscalibre.",
+    ],
+  },
+  {
+    title: "3. Servicios Directos (Membresías y Mentorías)",
+    text: [
+      "Los paquetes de mentoría y masterclasses se contratan directamente en nuestra plataforma.",
+    ],
+    sections: [
+      {
+        subtitle: "3.1 Pagos y Facturación",
+        text: [
+          "Los pagos son procesados por pasarelas seguras (Bold o Stripe). Proyecto E Group SAS emite factura electrónica por cada transacción directa, la cual llegará al correo registrado cumpliendo la normativa fiscal de Colombia.",
+        ],
+      },
+      {
+        subtitle: "3.2 Plataformas de terceros (Hotmart)",
+        text: [
+          "Para los cursos alojados en Hotmart, dicha plataforma actúa como vendedor directo (Merchant of Record). El usuario acepta someterse adicionalmente a los términos, condiciones y políticas de procesamiento de pago de Hotmart.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "4. Garantía de Satisfacción y Reembolsos",
+    sections: [
+      {
+        subtitle: "4.1 Para Libros y Cursos en Hotmart",
+        text: [
+          "Aplican exclusivamente las políticas y tiempos de devolución de Amazon, Buscalibre o Hotmart. La Empresa no gestiona estos reembolsos.",
+        ],
+      },
+      {
+        subtitle: "4.2 Para Servicios Directos (Mentorías)",
+        text: [
+          "Ofrecemos una garantía de satisfacción de siete (7) días calendario tras la compra. Si el contenido no cumple, puedes pedir el reembolso total. Tras este periodo, el marcador es definitivo y no hay devoluciones.",
+        ],
+      },
+      {
+        subtitle: "4.3 Tiempos de desembolso",
+        text: [
+          "El dinero puede tardar entre 15 y 30 días hábiles (transferencia), y hasta 60 días (tarjeta de crédito), dependiendo de la lentitud de tu banco.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "5. Derecho de Retracto y Reversión de Pagos",
+    sections: [
+      {
+        subtitle: "5.1 Retracto",
+        text: [
+          "Según la ley colombiana, puedes retractarte de la compra de servicios digitales dentro de los 5 días hábiles siguientes, siempre y cuando no hayas comenzado a consumir el servicio (ej. descargar material, acceder a la plataforma o asistir a una sesión). Si entras a la cancha, el derecho de retracto se extingue.",
+        ],
+      },
+      {
+        subtitle: "5.2 Reversión",
+        text: [
+          "Aplica en casos de fraude, cobro no solicitado o producto defectuoso. Debes notificar a La Empresa y a tu banco en un plazo de 5 días hábiles desde el evento.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "6. Exención de Responsabilidad Comercial",
+    text: [
+      "Entregamos educación no formal y tácticas de ejecución real probadas en el asfalto. No garantizamos resultados económicos ni retornos de inversión.",
+      "El éxito de tu negocio depende de tu disciplina. No somos asesores financieros, legales, ni una entidad captadora vigilada; somos un ecosistema de formación y acción.",
     ],
     highlight: true,
   },
   {
-    title: "3. Logística y entregas",
-    sections: [
-      {
-        subtitle: "3.1 Productos digitales",
-        text: [
-          "Los productos digitales, incluyendo el Pack Canterano y los accesos digitales incluidos en otros packs, se entregan de forma inmediata una vez se confirme el pago.",
-          "Recibirás por correo electrónico los accesos, credenciales o enlaces correspondientes.",
-        ],
-      },
-      {
-        subtitle: "3.2 Productos físicos",
-        text: [
-          "Los productos físicos, incluyendo el Pack Capitán y el Pack DT, tienen envío exclusivo dentro de Colombia.",
-          "Los tiempos estimados de entrega son de 3 a 8 días hábiles, dependiendo de la ciudad y del operador logístico.",
-          "Si una compra de producto físico se realiza con dirección de envío internacional, Liga Emprendedora podrá cancelar la orden o adaptar la compra a una versión digital equivalente.",
-        ],
-      },
-      {
-        subtitle: "3.3 Mentorías y sesiones",
-        text: [
-          "Las sesiones 1:1 y grupales incluidas en el Pack DT se agendarán según disponibilidad de agenda dentro de los 30 días posteriores a la compra.",
-          "El acceso a estas sesiones es virtual y puede prestarse a clientes en cualquier país.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "4. Política de devoluciones y garantía",
-    sections: [
-      {
-        subtitle: "4.1 Productos digitales",
-        text: [
-          "Ofrecemos una garantía de satisfacción de 7 días calendario contados desde la fecha de compra.",
-          "Si accedes a El Búnker, revisas el contenido y consideras que no te aporta valor, podrás solicitar la devolución dentro de ese plazo.",
-        ],
-      },
-      {
-        subtitle: "4.2 Productos físicos",
-        text: [
-          "Los productos físicos solo aplican para cambios o reposiciones en caso de defectos de impresión o daños atribuibles al transporte, siempre que sean reportados dentro de los 5 días calendario siguientes a la recepción.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "5. Propiedad intelectual",
+    title: "7. Reglas de Vestuario y Propiedad Intelectual",
     text: [
-      "Todo el contenido de Liga Emprendedora, incluyendo textos, plantillas, materiales descargables, videos, metodologías, marca, identidad visual y recursos de El Búnker o El Pizarrón, es propiedad exclusiva de Oswaldo Vega o de sus titulares autorizados.",
-      "La compra otorga únicamente una licencia de uso personal e individual.",
+      "Todo el contenido (método CANCHA, plantillas, videos, textos y marcas) es propiedad intelectual exclusiva de Oswaldo Vega, licenciada operativamente a La Empresa. Tu compra otorga una licencia de uso estrictamente personal y no comercial.",
     ],
     items: [
-      "Revender.",
-      "Copiar.",
-      "Distribuir.",
-      "Sublicenciar.",
-      "Compartir con terceros.",
-      "Usar el contenido con fines comerciales ajenos al propio emprendimiento del comprador.",
+      "Credenciales: Tu acceso es intransferible. Prohibido compartir tu cuenta.",
+      "Tarjeta Roja: La piratería, reventa, copia o distribución no autorizada de nuestros materiales resultará en la expulsión inmediata de la Liga sin reembolso, y el inicio de demandas civiles y penales por infracción de derechos de autor.",
     ],
-    closing:
-      "En caso de uso indebido, piratería o distribución no autorizada, Liga Emprendedora podrá suspender el acceso y ejercer las acciones legales correspondientes.",
+  },
+  {
+    title: "8. El VAR de los Datos (Privacidad y Habeas Data)",
+    text: [
+      "Al registrarte, comprar o suscribirte a nuestra newsletter, autorizas a Proyecto E Group SAS a recolectar y tratar tus datos personales conforme a la Ley 1581 de 2012.",
+      "Usaremos tu correo para facturación, soporte y para enviarte tácticas, ofertas y contenido de valor. Puedes pedir que te saquemos de la lista de correos en cualquier momento escribiendo a nuestro canal de soporte.",
+    ],
+  },
+  {
+    title: "9. Reglas del Torneo (Ley Aplicable y Jurisdicción)",
+    text: [
+      "Estos Términos y Condiciones se rigen por las leyes de la República de Colombia. Cualquier disputa legal que no pueda resolverse amistosamente en los camerinos, será sometida a la jurisdicción de los jueces colombianos.",
+      "Debes ser mayor de 18 años para operar en esta plataforma.",
+    ],
+  },
+  {
+    title: "10. Peticiones, Quejas y Reclamos (PQR)",
+    text: [
+      "Para soporte técnico, facturación o dudas, el único canal oficial es: hola@ligaemprendedora.com. Tiempo de respuesta legal: hasta 15 días hábiles.",
+      "Al escribirnos, te daremos un número de radicado para hacerle seguimiento a tu jugada.",
+      "Nos reservamos el derecho de actualizar estos términos en cualquier momento.",
+    ],
   },
 ];
 ---
 
 <BaseLayout
   title="Términos y Condiciones | Liga Emprendedora"
-  description="Reglas, condiciones de compra, entregas, devoluciones y uso de los contenidos de Liga Emprendedora."
+  description="Reglas, condiciones de compra, entregas, devoluciones y uso de los contenidos de Liga Emprendedora. Proyecto E Group SAS."
 >
   <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
     <Header dark />
@@ -119,7 +158,7 @@ const termsBlocks = [
 
         <div class="relative mx-auto max-w-5xl">
           <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
-            Legal · Liga Emprendedora
+            Legal · Proyecto E Group SAS
           </p>
 
           <h1 class="mt-4 max-w-4xl text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
@@ -127,8 +166,7 @@ const termsBlocks = [
           </h1>
 
           <p class="mt-6 max-w-3xl text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
-            Estas son las reglas del juego para el uso, compra y acceso a los productos,
-            contenidos y servicios de Liga Emprendedora.
+            Bienvenido a la Liga Emprendedora. Los presentes Términos y Condiciones regulan la relación entre Proyecto E Group SAS, sociedad titular de la marca comercial Liga Emprendedora, y el usuario. Al usar este sitio, dejar tus datos o adquirir nuestros servicios, aceptas estas condiciones. Si no estás de acuerdo, no entres a la cancha.
           </p>
         </div>
       </section>
@@ -140,9 +178,9 @@ const termsBlocks = [
               Resumen rápido
             </p>
             <p class="mt-4 max-w-4xl text-base leading-8 text-[#334865] md:text-[1.05rem]">
-              Al comprar en Liga Emprendedora aceptas las condiciones de uso, entrega,
-              devoluciones y propiedad intelectual de nuestros productos. Te damos acceso
-              a herramientas, contenidos y acompañamiento, pero los resultados dependen de tu ejecución.
+              La Empresa no vende libros directamente; redirige a Amazon y Buscalibre. Las membresías
+              y mentorías sí son servicios directos con factura electrónica. Garantía de 7 días para mentorías.
+              Tu acceso es personal e intransferible. Los resultados dependen de tu ejecución.
             </p>
           </div>
 
@@ -204,10 +242,6 @@ const termsBlocks = [
 
                 {block.items && (
                   <div class="mt-5">
-                    <p class={`text-sm leading-8 md:text-[15px] ${block.highlight ? "text-white/82" : "text-[#425674]"}`}>
-                      Queda estrictamente prohibido:
-                    </p>
-
                     <ul class={`mt-4 space-y-3 text-sm leading-7 md:text-[15px] ${block.highlight ? "text-white/82" : "text-[#425674]"}`}>
                       {block.items.map((item) => (
                         <li class="flex items-start gap-3">
@@ -217,12 +251,6 @@ const termsBlocks = [
                       ))}
                     </ul>
                   </div>
-                )}
-
-                {block.closing && (
-                  <p class={`mt-5 text-sm leading-8 md:text-[15px] ${block.highlight ? "text-white/82" : "text-[#425674]"}`}>
-                    {block.closing}
-                  </p>
                 )}
               </article>
             ))}

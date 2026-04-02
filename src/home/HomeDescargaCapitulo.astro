@@ -1,0 +1,169 @@
+---
+const interesesLectura = [
+  "Emprendimiento y startups",
+  "Ventas y negociación",
+  "Liderazgo y gestión de equipos",
+  "Mentalidad y desarrollo personal",
+  "Finanzas y modelos de negocio",
+];
+
+/* ───────────────────────────────────────────────
+   CONFIGURACIÓN DE LA DESCARGA
+   ───────────────────────────────────────────────
+   Reemplaza el "#" con el enlace de descarga directa
+   de Google Drive. Paso a paso:
+
+   1. Sube el PDF del primer capítulo a Google Drive.
+   2. Clic derecho → "Compartir" → "Cualquier persona
+      con el enlace" → Rol: Lector.
+   3. El enlace se ve así:
+      https://drive.google.com/file/d/XXXXXXXXX/view?usp=sharing
+   4. Copia el ID del archivo (la parte XXXXXXXXX).
+   5. Arma el enlace de descarga directa:
+      https://drive.google.com/uc?export=download&id=XXXXXXXXX
+   6. Pégalo aquí abajo.
+
+   LÓGICA: Este formulario usa el mismo sistema que
+   los recursos del Búnker (BaseLayout.astro):
+   · data-download-link  → enlace del PDF
+   · data-resource-form  → activa el script global
+   · [data-download-message] → donde aparece el enlace
+   · Los datos van a Google Sheets automáticamente
+     (mismo SCRIPT_URL del BaseLayout).
+   ─────────────────────────────────────────────── */
+const downloadLink = "https://drive.google.com/file/d/1wtMKf1mhupr-Hi5Ms-sQFmA6N48zI-W0/view?usp=sharing"; // Enlace del primer capítulo
+---
+
+<section class="relative isolate overflow-hidden bg-[#f6f5f2] px-4 py-20 text-[#162741] md:px-6 md:py-28">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f2_100%)]"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-[#162741]/8"></div>
+    <div class="absolute inset-x-0 bottom-0 h-px bg-[#162741]/8"></div>
+    <div class="absolute -left-16 top-12 h-64 w-64 rounded-full bg-[#E1C875]/10 blur-3xl"></div>
+    <div class="absolute right-0 bottom-16 h-72 w-72 rounded-full bg-[#162741]/4 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+
+    <!-- ══════ LADO IZQUIERDO — LIBRO ══════ -->
+    <div class="flex flex-col items-center lg:items-start">
+      <p class="text-[15px] font-semibold uppercase tracking-[0.3em] text-[#9a8954] md:text-2xl">
+        Lectura gratuita
+      </p>
+
+      <h2 class="mt-5 text-center text-[2.2rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-[#162741] sm:text-5xl md:text-6xl lg:text-left">
+        Descarga el primer capítulo y empieza a leer <em>Emprende Futbolero</em> hoy mismo
+      </h2>
+
+      <p class="mt-7 max-w-xl text-center text-base leading-8 text-[#334865] md:text-[1.12rem] md:leading-9 lg:text-left">
+        Diligencia el formulario para recibir el primer capítulo del libro que te enseña a estructurar, validar y lanzar tu negocio en 90 días con el método CANCHA.
+      </p>
+
+      <!-- Portada del libro -->
+      <div class="mt-10 flex justify-center lg:justify-start">
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-4xl bg-[radial-gradient(circle_at_center,rgba(225,200,117,0.18),transparent_65%)] blur-2xl"></div>
+          <img
+            src="/portada.webp"
+            alt="Portada del libro Emprende Futbolero"
+            class="relative h-auto w-full max-w-[320px] rounded-[22px] border border-[#162741]/10 shadow-[0_28px_80px_rgba(22,39,65,0.14)]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════ LADO DERECHO — FORMULARIO ══════ -->
+    <div class="relative">
+      <div class="absolute inset-x-6 top-6 h-full rounded-[34px] bg-[radial-gradient(circle_at_center,rgba(225,200,117,0.12),transparent_60%)] blur-2xl"></div>
+
+      <div class="relative rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_28px_90px_rgba(22,39,65,0.10)] md:p-8">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">
+          Capítulo gratuito
+        </p>
+        <h3 class="mt-3 text-2xl font-extrabold tracking-[-0.03em] text-[#162741] md:text-[2rem]">
+          Recibe el primer capítulo en tu correo
+        </h3>
+        <p class="mt-4 text-sm leading-7 text-[#4f627b]">
+          Diligencia el formulario y descarga el primer capítulo de <em>Emprende Futbolero</em> de forma inmediata.
+        </p>
+
+        <!-- ═══ FORMULARIO — Mismo patrón que los recursos del Búnker ═══ -->
+        <form
+          class="mt-7 space-y-5"
+          name="descarga-capitulo"
+          method="POST"
+          data-download-link={downloadLink}
+          data-resource-form
+        >
+          <input type="hidden" name="form-name" value="descarga-capitulo" />
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-[#55657d]">
+              Nombre completo*
+            </label>
+            <input
+              type="text"
+              name="nombre"
+              required
+              class="mt-2 w-full rounded-2xl border border-[#d8dde6] bg-white px-4 py-3 text-sm outline-none transition focus:border-[#162741] focus:ring-2 focus:ring-[#162741]/8"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-[#55657d]">
+              Email*
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              class="mt-2 w-full rounded-2xl border border-[#d8dde6] bg-white px-4 py-3 text-sm outline-none transition focus:border-[#162741] focus:ring-2 focus:ring-[#162741]/8"
+            />
+          </div>
+
+          <!-- Checkboxes de intereses de lectura -->
+          <fieldset>
+            <legend class="block text-xs font-semibold uppercase tracking-[0.14em] text-[#55657d]">
+              ¿Qué tipo de libros lees o te interesan?
+            </legend>
+            <div class="mt-3 space-y-2.5">
+              {interesesLectura.map((interes) => (
+                <label class="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#162741]/8 bg-[#f6f5f2] px-4 py-3 transition hover:border-[#E1C875]/50 hover:bg-[#E1C875]/6">
+                  <input
+                    type="checkbox"
+                    name="intereses_lectura"
+                    value={interes}
+                    class="h-4 w-4 rounded border-[#d8dde6] text-[#162741] accent-[#162741]"
+                  />
+                  <span class="text-sm text-[#334865]">{interes}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <button
+            type="submit"
+            class="mt-2 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-[#e0f459] px-6 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#162741] hover:text-[#e0f459] hover:shadow-[0_8px_40px_rgba(22,39,65,0.3)] hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Envíame el primer capítulo
+          </button>
+
+          <p class="text-center text-[11px] leading-6 text-[#6b7280]">
+            Puedes cancelar tu suscripción a la lista de correos en cualquier momento.
+          </p>
+
+          <p class="text-xs leading-5 text-[#667085]">
+            Al continuar, aceptas nuestros
+            <a href="/terminos" class="underline">Términos y Condiciones</a>
+            y nuestra
+            <a href="/politica-privacidad" class="underline">Política de Privacidad</a>.
+          </p>
+
+          <!-- Mensaje de descarga (el script global de BaseLayout lo muestra tras el envío exitoso) -->
+          <div class="hidden rounded-2xl bg-[#ecfdf3] px-4 py-4 text-sm text-[#14532d]" data-download-message></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

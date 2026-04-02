@@ -10,7 +10,7 @@ const arsenalItems = [
   },
   {
     title: "El Club MVP90",
-    text: "Acceso a nuestra comunidad privada de WhatsApp. Participa en retos de ejecución, livestácticos y no vuelvas a jugar solo.",
+    text: 'Acceso a nuestra comunidad privada de WhatsApp. Participa en retos de ejecución, <em>lives</em>tácticos y no vuelvas a jugar solo.',
   },
   {
     title: "15 herramientas gerenciales más",
@@ -36,11 +36,12 @@ const arsenalItems = [
       </p>
 
       <h2 class="mt-5 text-[2.35rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-[#162741] sm:text-5xl md:text-6xl">
-        18 Herramientas de Combate y un Vestuario Activo. No compras un libro, adquieres un ecosistema.
+        Hasta 18 herramientas de combate y un camerino activo. No compras un libro, adquieres un ecosistema.
       </h2>
 
       <p class="mt-7 max-w-2xl text-base leading-8 text-[#334865] md:text-[1.12rem] md:leading-9">
-        Con tu pase a <span class="font-semibold text-[#162741]">Emprende Futbolero</span>, desbloqueas la bóveda privada.
+        Con tu <span class="font-semibold text-[#162741]">Pack Jugador Élite</span> accedes a 15 plantillas y 3 checklists.
+        Con el <span class="font-semibold text-[#162741]">Pack Capitán</span> desbloqueas las 18 herramientas completas, la comunidad MVP90, el newsletter y la masterclass.
         Un vistazo a tu arsenal:
       </p>
 
@@ -57,8 +58,7 @@ const arsenalItems = [
               <h3 class="text-lg font-extrabold tracking-[-0.02em] text-[#162741] md:text-[1.2rem]">
                 <span class="text-[#9a8954]">●</span> {item.title}
               </h3>
-              <p class="mt-2 text-sm leading-7 text-[#334865] md:text-[1rem] md:leading-8">
-                {item.text}
+              <p class="mt-2 text-sm leading-7 text-[#334865] md:text-[1rem] md:leading-8" set:html={item.text}>
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@ const arsenalItems = [
           <div class="flex items-center justify-between gap-4">
             <div>
               <p class="text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#E1C875]">Club MVP90</p>
-              <p class="mt-2 text-2xl font-extrabold tracking-[-0.03em] text-white">Vestuario activo</p>
+              <p class="mt-2 text-2xl font-extrabold tracking-[-0.03em] text-white">camerino activo</p>
             </div>
             <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e0f459] text-[#162741] shadow-[0_0_20px_rgba(224,244,89,0.28)]">
               <svg
@@ -153,7 +153,7 @@ const arsenalItems = [
       stroke-linejoin="round"
       d="M6 5h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4 3v-3H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
     />
-  </svg>
+  </svg>El camerino
             </span>
           </div>
 
@@ -162,7 +162,7 @@ const arsenalItems = [
               <p class="text-sm font-semibold text-white">Retos de ejecución semanales</p>
             </div>
             <div class="rounded-2xl border border-white/10 bg-white/6 px-4 py-3">
-              <p class="text-sm font-semibold text-white">Livestácticos y feedback real</p>
+              <p class="text-sm font-semibold text-white"><em>Lives</em>tácticos y feedback real</p>
             </div>
             <div class="rounded-2xl border border-white/10 bg-white/6 px-4 py-3">
               <p class="text-sm font-semibold text-white">No vuelves a jugar solo</p>

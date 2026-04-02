@@ -1,7 +1,7 @@
 ---
 const plans = [
   {
-    name: "Pack Canterano",
+    name: "Pack Jugador élite",
     kicker: "Para los que quieren la táctica",
     priceLabel: "Digital",
     featured: false,
@@ -15,36 +15,39 @@ const plans = [
   },
   {
     name: "Pack Capitán",
-    kicker: "El más elegido · Para los que entran a ganar",
+    kicker: "Requiere Pack Jugador Élite · Para los que entran a ganar",
     priceLabel: "Físico + Digital",
     featured: true,
     premium: false,
+    prerequisite: true,
     items: [
+      "Todo lo del Pack Jugador Élite incluido +",
       "Libro Emprende Futbolero (Edición Física).",
       "Libro Digital de entrega inmediata.",
-      'Acceso al "Búnker Digital" (18 Herramientas descargables).',
+      'Acceso al "Búnker Digital" completo (18 Herramientas descargables).',
       "Pase directo al Club MVP90 (Comunidad de WhatsApp, retos y lives).",
       "Suscripción al Newsletter Táctico Semanal.",
       'Masterclass grabada: "Cómo financiarte con cero presupuesto".',
     ],
     cta: "Ponerme la Cinta de Capitán",
-    microcopy: "🇨🇴 Envío de la edición física exclusivo para Colombia.",
+    microcopy: " Debes tener el Pack Jugador Élite para acceder a este plan.",
   },
   {
     name: "Pack DT",
-    kicker: "Solo 50 cupos · La experiencia de las grandes ligas",
+    kicker: "Requiere Pack Jugador Élite · Solo 50 cupos",
     priceLabel: "VIP",
     featured: false,
     premium: true,
+    prerequisite: true,
     items: [
-      "Todo lo del Pack Capitán (Libro, Búnker, Comunidad, Newsletter, Masterclass).",
+      "Todo lo del Pack Capitán incluido (Libro, Búnker, Comunidad, Newsletter, Masterclass).",
       "Libro Físico firmado por el autor.",
       "Consultoría 1:1: Una sesión táctica privada online de 45 min directamente con Oswaldo Vega.",
-      "Encuentro de Vestuario: Una sesión grupal de Q&A en vivo con los 50 Directores Técnicos.",
+      "Encuentro de camerino: Una sesión grupal de Q&A en vivo con los 50 Directores Técnicos.",
     ],
     cta: "Fichar como DT hoy",
     microcopy:
-      "🇨🇴 Envío del libro físico exclusivo para Colombia. Las mentorías virtuales aplican para todo el mundo.",
+      "🇨🇴 Envío del libro físico exclusivo para Colombia. Las mentorías virtuales aplican para todo el mundo. Debes tener el Pack Jugador Élite para acceder a este plan.",
   },
 ];
 
@@ -107,6 +110,19 @@ const distributors = [
               </div>
             )}
 
+            {plan.prerequisite && (
+              <div class="mb-4 flex items-center gap-2 rounded-2xl border border-[#E1C875]/40 bg-[#E1C875]/8 px-4 py-3">
+                <span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#E1C875]/50 bg-[#E1C875]/20 text-[#9a8954]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v-3m0-3h.01M5.07 19h13.86c1.1 0 1.8-1.2 1.24-2.14L13.24 4.3c-.56-.96-1.92-.96-2.48 0L3.83 16.86C3.27 17.8 3.97 19 5.07 19z" />
+                  </svg>
+                </span>
+                <p class="text-xs font-semibold text-[#9a8954]">
+                  Primero necesitas el Pack Jugador Élite
+                </p>
+              </div>
+            )}
+
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class={`text-[11px] font-semibold uppercase tracking-[0.28em] md:text-xs ${kickerClass}`}>
@@ -161,7 +177,7 @@ const distributors = [
       <p class="mt-4 max-w-5xl text-base leading-8 text-white/80 md:text-[1.02rem] md:leading-8">
         ¿Vives fuera de Colombia y necesitas el libro en papel para rayarlo? El acceso a mis mentorías,
         al Newsletter y al Club MVP90 se adquiere únicamente en esta página. Asegura tu cupo en el
-        Pack Digital o Pack DT aquí mismo, y luego pide tu copia física a través de nuestros distribuidores aliados:
+        Pack Jugador Élite o Pack DT aquí mismo, y luego pide tu copia física a través de nuestros distribuidores aliados:
       </p>
 
       <div class="mt-5 flex flex-wrap gap-3">

@@ -3,50 +3,67 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const supportEmail = "soporte@ligaemprendedora.com";
+const supportEmail = "hola@ligaemprendedora.com";
 
 const cards = [
   {
     title: "Responsable del tratamiento",
-    text: "El responsable del tratamiento de los datos personales es Oswaldo Vega y el equipo de Liga Emprendedora, operando desde Colombia.",
+    text: "Proyecto E Group SAS, identificada con NIT 830.037.581-9, con domicilio principal en Calle 98 # 22-64 Of 1002 en Bogotá (Colombia), titular de la marca comercial Liga Emprendedora y operadora de los activos digitales de Oswaldo Vega.",
   },
   {
     title: "Datos que recolectamos",
     items: [
-      "Nombre completo y correo electrónico, para crear accesos, entregar contenidos y enviar el newsletter.",
-      "Número de teléfono o WhatsApp, cuando sea necesario para integrar a la persona al Club MVP90 u otras comunidades incluidas en su compra.",
-      "Dirección física, únicamente cuando el cliente compra un producto físico con envío dentro de Colombia.",
+      "Identificación y contacto: nombre completo, correo electrónico, número de teléfono (WhatsApp) y país de residencia.",
+      "Interacciones: historial de compras, soporte (PQRs) y comportamiento dentro de nuestra web.",
+      "Información de navegación: dirección IP, tipo de dispositivo y datos arrojados por cookies de seguimiento.",
     ],
   },
   {
     title: "Información de pagos",
-    text: "Liga Emprendedora no almacena ni tiene acceso a los datos completos de tarjetas débito o crédito. Los pagos son procesados por pasarelas seguras de terceros, como Hotmart, Stripe o PayU, las cuales operan bajo sus propias políticas y estándares de seguridad.",
+    text: "La Empresa NO almacena los datos de tu tarjeta de crédito. Los pagos son procesados de forma encriptada por pasarelas seguras de terceros: Bold, Stripe y Hotmart, las cuales operan bajo sus propias políticas y estándares de seguridad.",
     highlight: true,
+  },
+  {
+    title: "Cero Datos Sensibles",
+    text: "La Empresa NO recolectará ni tratará datos sensibles (información de salud, origen racial, inclinaciones políticas o religiosas). Este ecosistema está diseñado exclusivamente para mayores de 18 años. Si detectamos el registro de un menor, su información será eliminada de inmediato.",
+  },
+  {
+    title: "¿Cómo obtenemos tu información?",
+    items: [
+      "Directamente: cuando llenas un formulario, te registras para descargar una plantilla gratuita en El Búnker, o compras un pase (Jugador Élite, Capitán, DT).",
+      "Por Redes Sociales: cuando interactúas con nuestras cuentas oficiales en Instagram, TikTok, LinkedIn o YouTube.",
+      "Automáticamente: a través de cookies, web beacons y herramientas como Google Analytics o Meta Pixel para entender cómo navegas y mostrarte anuncios relevantes.",
+    ],
   },
   {
     title: "Finalidades del tratamiento",
     items: [
-      "Entregar los productos y servicios adquiridos.",
-      "Habilitar accesos a contenidos y comunidades.",
-      "Enviar notificaciones operativas, lives, retos y actualizaciones.",
-      "Enviar comunicaciones tácticas, educativas y comerciales.",
-      "Cumplir obligaciones contables, tributarias y administrativas.",
+      "Darte acceso inmediato a El Búnker, los lives y la comunidad (Club MVP90).",
+      "Procesar tus pagos, emitir la factura electrónica y enviar confirmaciones.",
+      "Enviarte el Newsletter táctico y comunicaciones urgentes sobre tus mentorías.",
+      "Atender tus Peticiones, Quejas o Reclamos (PQRs).",
+      "Mostrarte publicidad segmentada para que no te lleguen ofertas de productos que ya compraste.",
     ],
   },
-  {
-    title: "Compartición de datos",
-    text: "No vendemos, alquilamos ni cedemos bases de datos a terceros con fines publicitarios externos. Solo compartimos información estrictamente necesaria con aliados operativos, como plataformas de email marketing, pasarelas de pago, operadores logísticos o empresas de mensajería.",
-  },
-  {
-    title: "Tus derechos",
-    text: "Como titular de los datos, puedes solicitar en cualquier momento conocer la información que tenemos sobre ti, actualizarla, corregirla o solicitar su eliminación.",
-  },
+];
+
+const tercerosAliados = [
+  "Pasarelas de Pago (Bold, Stripe, Hotmart): procesan tu dinero de forma encriptada. Nosotros no almacenamos los datos de tu tarjeta.",
+  "Logística (Amazon, Buscalibre): si compraste un libro a través de ellos, tus datos en esa transacción se rigen por sus propias políticas.",
+  "Herramientas de Marketing y Servidores: plataformas de email marketing o alojamiento web operan como encargados del tratamiento bajo acuerdos estrictos de confidencialidad.",
+];
+
+const derechos = [
+  "Conocer y Acceder: saber exactamente qué datos tuyos tenemos y solicitar prueba de la autorización que nos diste.",
+  "Actualizar y Rectificar: corregir información desactualizada o errónea.",
+  "Revocar y Suprimir: pedir que te demos de baja del Newsletter o eliminemos tus datos, siempre que no exista un deber legal o contractual que nos obligue a retenerlos.",
+  "Acudir a la SIC: presentar quejas ante la Superintendencia de Industria y Comercio si consideras que hemos fallado, una vez hayas agotado el reclamo directo con nosotros.",
 ];
 ---
 
 <BaseLayout
   title="Política de Privacidad | Liga Emprendedora"
-  description="Tratamiento de datos personales, finalidad, derechos del titular y política de privacidad de Liga Emprendedora."
+  description="Tratamiento de datos personales, finalidad, derechos del titular y política de privacidad de Liga Emprendedora. Proyecto E Group SAS."
 >
   <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
     <Header dark />
@@ -60,7 +77,7 @@ const cards = [
 
         <div class="relative mx-auto max-w-5xl">
           <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
-            Legal · Liga Emprendedora
+            Legal · Proyecto E Group SAS
           </p>
 
           <h1 class="mt-4 max-w-4xl text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
@@ -68,7 +85,7 @@ const cards = [
           </h1>
 
           <p class="mt-6 max-w-3xl text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
-            Así tratamos tus datos personales cuando te registras, compras o participas en los productos, recursos y comunidades de Liga Emprendedora.
+            Este documento establece cómo manejamos tu información. La transparencia es una regla innegociable en nuestro camerino.
           </p>
         </div>
       </section>
@@ -80,7 +97,9 @@ const cards = [
               Resumen rápido
             </p>
             <p class="mt-4 max-w-4xl text-base leading-8 text-[#334865] md:text-[1.05rem]">
-              Tus datos están seguros en Liga Emprendedora. Usamos tu información para entregarte accesos, enviarte productos, integrarte a nuestras comunidades y enviarte comunicaciones tácticas y comerciales. No almacenamos datos de tarjetas y no vendemos tu información a terceros.
+              Tus datos están seguros. Usamos tu información para entregarte accesos, procesar pagos,
+              integrarte a nuestras comunidades y enviarte contenido táctico. No almacenamos datos de
+              tarjetas, no vendemos tu información a terceros y cumplimos con la Ley 1581 de 2012.
             </p>
           </div>
 
@@ -115,10 +134,53 @@ const cards = [
             ))}
           </div>
 
+          <!-- Terceros aliados -->
+          <article class="rounded-[30px] border border-[#E1C875]/30 bg-[#162741] p-6 text-white shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#E1C875]">
+              El tercer tiempo
+            </p>
+            <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-white">
+              Terceros Aliados y Transferencia Internacional
+            </h2>
+            <p class="mt-4 text-sm leading-8 text-white/80 md:text-[15px]">
+              Para operar a nivel global, nos apoyamos en jugadores externos. Al aceptar esta política, nos autorizas a compartir o transferir tu información a servidores ubicados fuera de Colombia, únicamente a los siguientes aliados operativos:
+            </p>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-[15px]">
+              {tercerosAliados.map((item) => (
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#e0f459]"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <!-- Derechos del titular -->
+          <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
+              Tus derechos como titular
+            </p>
+            <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
+              Tú eres el dueño de tu pase
+            </h2>
+            <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
+              Según la Ley 1581 de 2012, en cualquier momento tienes derecho a:
+            </p>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-[#425674] md:text-[15px]">
+              {derechos.map((item) => (
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#9a8954]"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+
           <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <!-- Procedimientos -->
             <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
               <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
-                Contacto
+                El VAR · Procedimientos
               </p>
 
               <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
@@ -126,7 +188,7 @@ const cards = [
               </h2>
 
               <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
-                Para conocer, actualizar, rectificar o solicitar la eliminación de tus datos personales, puedes escribirnos en cualquier momento a:
+                Envía un correo a nuestro canal oficial con tu nombre completo, identificación y tu solicitud clara:
               </p>
 
               <div class="mt-5 rounded-2xl border border-[#162741]/8 bg-[#f8fafc] px-5 py-4">
@@ -137,21 +199,43 @@ const cards = [
                   {supportEmail}
                 </a>
               </div>
+
+              <div class="mt-5 space-y-3">
+                <div class="rounded-2xl border border-[#162741]/8 bg-[#f8fafc] px-4 py-3">
+                  <p class="text-sm text-[#425674]"><span class="font-bold text-[#162741]">Consultas:</span> máximo 10 días hábiles.</p>
+                </div>
+                <div class="rounded-2xl border border-[#162741]/8 bg-[#f8fafc] px-4 py-3">
+                  <p class="text-sm text-[#425674]"><span class="font-bold text-[#162741]">Reclamos (actualización o supresión):</span> máximo 15 días hábiles.</p>
+                </div>
+              </div>
             </article>
 
-            <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
-                Vigencia
-              </p>
+            <!-- Cookies y vigencia -->
+            <div class="space-y-6">
+              <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
+                  Cookies
+                </p>
+                <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
+                  Estrategia Digital
+                </h2>
+                <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
+                  Usamos cookies para que no tengas que iniciar sesión cada vez y para entender qué plantillas se descargan más. Puedes bloquearlas desde tu navegador, pero si apagas las cookies esenciales, es probable que El Búnker no te funcione correctamente.
+                </p>
+              </article>
 
-              <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
-                Cambios a esta política
-              </h2>
-
-              <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
-                Liga Emprendedora podrá actualizar esta Política de Privacidad cuando sea necesario para reflejar cambios operativos, legales o comerciales. La versión vigente será siempre la publicada en este sitio web.
-              </p>
-            </article>
+              <article class="rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_50px_rgba(22,39,65,0.05)] md:p-7">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9a8954]">
+                  Vigencia
+                </p>
+                <h2 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
+                  Seguridad y vigencia
+                </h2>
+                <p class="mt-4 text-sm leading-8 text-[#425674] md:text-[15px]">
+                  Mantenemos tu información encriptada y bajo medidas de seguridad proporcionales. Esta política entra en vigencia a partir del 2 de abril de 2026. Si hacemos un cambio estructural que cambie las reglas del juego, te lo notificaremos por correo.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
