@@ -3,97 +3,204 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-type Category =
-  | "Todas"
-  | "Plantillas"
-  | "Frameworks"
-  | "Herramientas"
-  | "Guías prácticas"
-  | "Agentes IA";
+type LessonType = "leccion" | "powerplay" | "especial" | "bono";
 
-type IconType = "doc" | "sliders" | "user" | "grid" | "calc" | "target";
-
-type Resource = {
+type Lesson = {
+  type: LessonType;
+  label: string;
   title: string;
-  description: string;
-  icon: IconType;
-  category: Category;
+  plantilla: string;
   href: string;
-  eyebrow?: string;
-  badge?: string;
 };
 
-const categories: Category[] = [
-  "Todas",
-  "Plantillas",
-  "Frameworks",
-  "Herramientas",
-  "Guías prácticas",
-  "Agentes IA",
-];
+type Period = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  lessons: Lesson[];
+};
 
-const resources: Resource[] = [
+const periods: Period[] = [
   {
-    title: "Plan de Negocio One-Page",
-    description: "Define la esencia de tu negocio en una sola hoja y aterriza propuesta, modelo y próximos pasos.",
-    icon: "doc",
-    category: "Plantillas",
-    href: "/recursos/plan-negocio-one-page",
-    eyebrow: "Base táctica",
-    badge: "Más usado",
+    id: "pretemporada",
+    eyebrow: "Pretemporada",
+    title: "Identidad y primer silbatazo",
+    lessons: [
+      {
+        type: "leccion",
+        label: "Lección 1",
+        title: "Estar preparado para hacer el cambio",
+        plantilla: "El escáner del DT · Análisis DOFA + Gap Analysis",
+        href: "/bunker/leccion-1",
+      },
+    ],
   },
   {
-    title: "Análisis DAFO Interactivo",
-    description: "Convierte intuición en lectura estratégica para detectar fortalezas, riesgos y oportunidades reales.",
-    icon: "sliders",
-    category: "Frameworks",
-    href: "/recursos/dafo-interactivo",
-    eyebrow: "Mapa de juego",
+    id: "primer-tiempo",
+    eyebrow: "Primer tiempo",
+    title: "Descubrir el juego",
+    lessons: [
+      {
+        type: "leccion",
+        label: "Lección 2",
+        title: "Sin actitud ganadora",
+        plantilla: "El choque · Modelo GROW",
+        href: "/bunker/leccion-2",
+      },
+      {
+        type: "leccion",
+        label: "Lección 3",
+        title: "Me sentí campeón antes de tiempo",
+        plantilla: "El filtro de la cantera · Validación de ideas",
+        href: "/bunker/leccion-3",
+      },
+      {
+        type: "powerplay",
+        label: "Power-play CANCHA #1",
+        title: "De la emoción a los números",
+        plantilla: "Auditoría de cimentación · Costos + Audiencia",
+        href: "/bunker/powerplay-1",
+      },
+      {
+        type: "leccion",
+        label: "Lección 4",
+        title: "Mi cabeza en otro lado",
+        plantilla: "La matriz de la cancha · Prioridades de Eisenhower",
+        href: "/bunker/leccion-4",
+      },
+      {
+        type: "leccion",
+        label: "Lección 5",
+        title: "Me ganó el miedo",
+        plantilla: "El manual de jugadas · Procedimientos Operativos Estándar",
+        href: "/bunker/leccion-5",
+      },
+    ],
   },
   {
-    title: "Guía de Pitch para Inversores",
-    description: "Ordena tu narrativa para explicar problema, oportunidad y potencial sin sonar genérico.",
-    icon: "user",
-    category: "Guías prácticas",
-    href: "/recursos/guia-pitch-inversores",
-    eyebrow: "Narrativa",
+    id: "medio-tiempo",
+    eyebrow: "Medio tiempo",
+    title: "Charla técnica",
+    lessons: [
+      {
+        type: "especial",
+        label: "Lección especial",
+        title: "El salto – Vencer mis creencias a 3000 m",
+        plantilla: "El túnel de salida · Vencer creencias limitantes",
+        href: "/bunker/leccion-especial-salto",
+      },
+    ],
   },
   {
-    title: "Canvas de Modelo de Negocio",
-    description: "Visualiza tu modelo con claridad y detecta dónde se crea valor y dónde se fuga.",
-    icon: "grid",
-    category: "Plantillas",
-    href: "/recursos/canvas-modelo-negocio",
-    eyebrow: "Arquitectura",
+    id: "segundo-tiempo",
+    eyebrow: "Segundo tiempo",
+    title: "Aprender a definir",
+    lessons: [
+      {
+        type: "leccion",
+        label: "Lección 6",
+        title: "No definí",
+        plantilla: "Cobrar el penalti · Objetivos SMART",
+        href: "/bunker/leccion-6",
+      },
+      {
+        type: "leccion",
+        label: "Lección 7",
+        title: "Vivir de estadísticas",
+        plantilla: "El pase filtrado · Bootstrapping y Triangulación",
+        href: "/bunker/leccion-7",
+      },
+      {
+        type: "leccion",
+        label: "Lección 8",
+        title: "No luché hasta el final",
+        plantilla: "El pacto de camerino · Definición de OKRs",
+        href: "/bunker/leccion-8",
+      },
+      {
+        type: "powerplay",
+        label: "Power-play CANCHA #2",
+        title: "El alma del equipo",
+        plantilla: "Auditoría de identidad · Narrativa + Cultura",
+        href: "/bunker/powerplay-2",
+      },
+      {
+        type: "leccion",
+        label: "Lección 9",
+        title: "Escuchar al público equivocado",
+        plantilla: "El filtro de la tribuna · Validación de audiencia",
+        href: "/bunker/leccion-9",
+      },
+    ],
   },
   {
-    title: "Calculadora de CAC y LTV",
-    description: "Entiende si tu crecimiento es sano o si estás comprando clientes a pérdida.",
-    icon: "calc",
-    category: "Herramientas",
-    href: "/recursos/calculadora-cac-ltv",
-    eyebrow: "Números",
-    badge: "Clave",
+    id: "tiempo-extra",
+    eyebrow: "Tiempo extra",
+    title: "Estrategia y crecimiento",
+    lessons: [
+      {
+        type: "leccion",
+        label: "Lección 10",
+        title: "Jugar solo",
+        plantilla: "La alineación táctica · Matriz RACI",
+        href: "/bunker/leccion-10",
+      },
+      {
+        type: "powerplay",
+        label: "Power-play CANCHA #3",
+        title: "El pitazo final",
+        plantilla: "Plan de ataque inmediato · Habilidades + Acción",
+        href: "/bunker/powerplay-3",
+      },
+      {
+        type: "leccion",
+        label: "Lección 11",
+        title: "Subestimar al rival",
+        plantilla: "El radar de scouting · Análisis de competidores",
+        href: "/bunker/leccion-11",
+      },
+      {
+        type: "especial",
+        label: "Lección especial",
+        title: "Jugué sin conocer las reglas",
+        plantilla: "El draft de refuerzos · Contratación y delegación",
+        href: "/bunker/leccion-especial-reglas",
+      },
+      {
+        type: "especial",
+        label: "Lección especial",
+        title: "Soluciones creativas en momentos clave",
+        plantilla: "El trueque estratégico · Financiación con presupuesto cero",
+        href: "/bunker/leccion-especial-soluciones",
+      },
+    ],
   },
   {
-    title: "Framework de OKRs para Startups",
-    description: "Baja visión a ejecución y alinea prioridades para que el equipo deje de correr sin dirección.",
-    icon: "target",
-    category: "Frameworks",
-    href: "/recursos/framework-okrs-startups",
-    eyebrow: "Enfoque",
+    id: "ultimo-minuto",
+    eyebrow: "Último minuto",
+    title: "El próximo partido",
+    lessons: [
+      {
+        type: "especial",
+        label: "Lección especial · Bonus",
+        title: "Un mentor invisible",
+        plantilla: "La junta directiva invisible · Auditoría de mentores",
+        href: "/bunker/leccion-especial-mentor",
+      },
+    ],
   },
 ];
 ---
 
 <BaseLayout
-  title="Recursos | Liga Emprendedora"
-  description="Plantillas, frameworks, herramientas y guías prácticas para lanzar, ordenar y ejecutar mejor tu negocio."
+  title="El Búnker | Liga Emprendedora"
+  description="Todas las lecciones del Búnker organizadas por tiempos de partido. Plantillas, frameworks y jugadas tácticas para emprendedores."
 >
   <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
     <Header dark />
 
     <main class="flex-1">
+      <!-- HERO -->
       <section class="relative overflow-hidden bg-[#162741] px-4 pb-16 pt-32 text-white md:px-6 md:pb-24 md:pt-36 lg:pt-40">
         <div class="pointer-events-none absolute inset-0">
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(224,244,89,0.10),transparent_24%),radial-gradient(circle_at_82%_20%,rgba(225,200,117,0.14),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(22,39,65,0)_44%)]"></div>
@@ -105,16 +212,15 @@ const resources: Resource[] = [
         <div class="relative mx-auto grid max-w-7xl items-end gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:gap-14">
           <div class="max-w-3xl">
             <p class="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E1C875] md:text-xs">
-              Centro de comando
+              El Búnker · Programa completo
             </p>
 
             <h1 class="mt-5 text-4xl font-extrabold leading-[0.95] tracking-[-0.05em] text-white sm:text-5xl md:text-6xl lg:text-[4.4rem]">
-              Recursos para dejar de improvisar y empezar a ejecutar con táctica.
+              Cada lección. Cada jugada. Organizada por tiempo de partido.
             </h1>
 
             <p class="mt-7 max-w-2xl text-base leading-8 text-white/76 md:text-[1.15rem] md:leading-9">
-              Plantillas, frameworks, herramientas y guías diseñadas para emprendedores que quieren ordenar su juego,
-              entender sus números y lanzar con más claridad.
+              Desde la pretemporada hasta el último minuto: las lecciones, plantillas y power-plays que convierten errores reales en ventaja táctica.
             </p>
 
             <div class="mt-9 flex flex-wrap items-center gap-4">
@@ -123,195 +229,180 @@ const resources: Resource[] = [
                 data-explore
                 class="inline-flex items-center justify-center rounded-full bg-[#e0f459] px-7 py-3.5 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.16)] transition hover:-translate-y-px hover:shadow-[0_0_36px_rgba(224,244,89,0.26)]"
               >
-                Explorar recursos
+                Ver todas las lecciones
               </button>
 
               <span class="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/54 md:text-xs">
-                Playbooks listos para usar
+                6 tiempos · 17 lecciones
               </span>
             </div>
           </div>
 
           <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
             <div class="rounded-[28px] border border-white/10 bg-white/7 p-5 backdrop-blur-sm">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E1C875]">6 recursos</p>
-              <p class="mt-3 text-sm leading-7 text-white/78">Herramientas iniciales para validar, estructurar y comunicar tu negocio.</p>
+              <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E1C875]">11 lecciones</p>
+              <p class="mt-3 text-sm leading-7 text-white/78">Errores reales convertidos en plantillas accionables para no repetirlos en tu cancha.</p>
             </div>
             <div class="rounded-[28px] border border-white/10 bg-white/7 p-5 backdrop-blur-sm">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E1C875]">Enfoque práctico</p>
-              <p class="mt-3 text-sm leading-7 text-white/78">Menos teoría suelta. Más plantillas accionables y marcos que sí aterrizan decisiones.</p>
+              <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E1C875]">3 Power-plays</p>
+              <p class="mt-3 text-sm leading-7 text-white/78">Sesiones de trabajo intensivo para aterrizar números, identidad y plan de acción inmediato.</p>
             </div>
             <div class="rounded-[28px] border border-white/10 bg-white/7 p-5 backdrop-blur-sm">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E1C875]">Liga mindset</p>
-              <p class="mt-3 text-sm leading-7 text-white/78">Pensados para jugar ofensivo, sin dispersión y con visión de largo plazo.</p>
+              <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E1C875]">Bono VIP</p>
+              <p class="mt-3 text-sm leading-7 text-white/78">Tu mapa de 90 días: el tablero táctico para ejecutar lo aprendido desde el primer día.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="recursos" class="px-4 py-12 md:px-6 md:py-16">
-        <div class="mx-auto max-w-7xl">
-          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div class="max-w-2xl">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">
-                Elige tu módulo
-              </p>
-              <h2 class="mt-3 text-3xl font-extrabold leading-tight tracking-[-0.04em] text-[#162741] md:text-5xl">
-                Tu arsenal táctico, ordenado por tipo de jugada.
-              </h2>
-            </div>
+      <!-- LECCIONES POR TIEMPO -->
+      <section id="lecciones" class="px-4 py-12 md:px-6 md:py-16">
+        <div class="mx-auto max-w-4xl space-y-14">
 
-            <div class="overflow-x-auto pb-1">
-              <nav class="flex gap-2 rounded-full border border-[#162741]/10 bg-white p-1 shadow-[0_10px_30px_rgba(22,39,65,0.05)]">
-                {categories.map((cat) => (
-                  <button
-                    type="button"
-                    data-tab={cat}
-                    class="tab-button whitespace-nowrap rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-200 md:text-[13px]"
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </nav>
-            </div>
-          </div>
-
-          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {resources.map((res) => (
-              <article
-                class="resource-card group flex h-full flex-col rounded-[30px] border border-[#162741]/10 bg-white p-6 shadow-[0_16px_40px_rgba(22,39,65,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(22,39,65,0.08)]"
-                data-resource-category={res.category}
-              >
-                <div class="flex items-start justify-between gap-4">
-                  <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-[#E1C875]/30 bg-[#162741] text-[#e0f459] shadow-[0_12px_32px_rgba(22,39,65,0.16)]">
-                    {res.icon === "doc" && (
-                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                        <polyline points="14 2 14 8 20 8" />
-                        <line x1="16" y1="13" x2="8" y2="13" />
-                        <line x1="16" y1="17" x2="8" y2="17" />
-                        <line x1="10" y1="9" x2="8" y2="9" />
-                      </svg>
-                    )}
-                    {res.icon === "sliders" && (
-                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="4" y1="21" x2="4" y2="14" />
-                        <line x1="4" y1="10" x2="4" y2="3" />
-                        <line x1="12" y1="21" x2="12" y2="12" />
-                        <line x1="12" y1="8" x2="12" y2="3" />
-                        <line x1="20" y1="21" x2="20" y2="16" />
-                        <line x1="20" y1="12" x2="20" y2="3" />
-                        <line x1="1" y1="14" x2="7" y2="14" />
-                        <line x1="9" y1="8" x2="15" y2="8" />
-                        <line x1="17" y1="16" x2="23" y2="16" />
-                      </svg>
-                    )}
-                    {res.icon === "user" && (
-                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                        <circle cx="12" cy="7" r="4" />
-                      </svg>
-                    )}
-                    {res.icon === "grid" && (
-                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="7" height="7" />
-                        <rect x="14" y="3" width="7" height="7" />
-                        <rect x="14" y="14" width="7" height="7" />
-                        <rect x="3" y="14" width="7" height="7" />
-                      </svg>
-                    )}
-                    {res.icon === "calc" && (
-                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-                        <line x1="8" y1="6" x2="16" y2="6" />
-                        <line x1="8" y1="11" x2="8" y2="11.01" />
-                        <line x1="12" y1="11" x2="12" y2="11.01" />
-                        <line x1="16" y1="11" x2="16" y2="11.01" />
-                        <line x1="8" y1="15" x2="8" y2="15.01" />
-                        <line x1="12" y1="15" x2="12" y2="15.01" />
-                        <line x1="16" y1="15" x2="16" y2="15.01" />
-                        <line x1="8" y1="19" x2="8" y2="19.01" />
-                        <line x1="12" y1="19" x2="12" y2="19.01" />
-                        <line x1="16" y1="19" x2="16" y2="19.01" />
-                      </svg>
-                    )}
-                    {res.icon === "target" && (
-                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="9" />
-                        <circle cx="12" cy="12" r="5" />
-                        <circle cx="12" cy="12" r="1.75" />
-                      </svg>
-                    )}
-                  </div>
-
-                  {res.badge && (
-                    <span class="rounded-full border border-[#E1C875]/25 bg-[#E1C875]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">
-                      {res.badge}
-                    </span>
-                  )}
-                </div>
-
-                {res.eyebrow && (
-                  <p class="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#9a8954]">
-                    {res.eyebrow}
+          {periods.map((period) => (
+            <div id={period.id}>
+              <!-- Period heading -->
+              <div class="mb-6 flex items-center gap-4">
+                <div class="flex-1">
+                  <p class="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9a8954]">
+                    {period.eyebrow}
                   </p>
-                )}
-
-                <h3 class="mt-3 text-2xl font-extrabold leading-tight tracking-[-0.03em] text-[#162741]">
-                  {res.title}
-                </h3>
-
-                <p class="mt-4 flex-1 text-sm leading-7 text-[#4b5f78] md:text-[15px]">
-                  {res.description}
-                </p>
-
-                <div class="mt-8 flex items-center justify-between gap-4 border-t border-[#162741]/8 pt-5">
-                  <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#162741]/50">
-                    {res.category}
-                  </span>
-
-                  <a
-                    href={res.href}
-                    class="inline-flex items-center gap-2 rounded-full bg-[#e0f459] px-5 py-3 text-xs font-extrabold uppercase tracking-[0.12em] text-[#162741] shadow-[0_0_24px_rgba(224,244,89,0.14)] transition hover:-translate-y-px hover:shadow-[0_0_32px_rgba(224,244,89,0.22)]"
-                  >
-                    <span>Ver recurso</span>
-                    <span aria-hidden="true">→</span>
-                  </a>
+                  <h2 class="mt-1.5 text-2xl font-extrabold leading-tight tracking-[-0.04em] text-[#162741] md:text-3xl">
+                    {period.title}
+                  </h2>
                 </div>
-              </article>
-            ))}
-          </div>
-
-          <div class="mt-14 overflow-hidden rounded-[34px] border border-[#162741]/10 bg-[#162741] text-white shadow-[0_22px_70px_rgba(22,39,65,0.10)]">
-            <div class="grid gap-8 px-6 py-8 md:px-8 md:py-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-12">
-              <div>
-                <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#E1C875]">
-                  Próximamente en el búnker
-                </p>
-                <h3 class="mt-4 text-3xl font-extrabold leading-tight tracking-[-0.04em] text-white md:text-[2.4rem]">
-                  Recursos PRO para jugar con más profundidad financiera y operativa.
-                </h3>
-                <p class="mt-5 max-w-2xl text-sm leading-8 text-white/74 md:text-base">
-                  Modelos financieros, contratos base, sistemas de seguimiento y masterclasses tácticas para emprendedores que ya están entrando al partido con intención seria.
-                </p>
+                <div class="h-px flex-1 bg-[#162741]/10"></div>
               </div>
 
-              <div class="flex flex-wrap gap-3 lg:justify-end">
-                <button
-                  type="button"
-                  class="inline-flex items-center justify-center rounded-full bg-[#e0f459] px-6 py-3.5 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.16)] transition hover:-translate-y-px hover:shadow-[0_0_36px_rgba(224,244,89,0.26)]"
-                >
-                  Notifícame
-                </button>
-                <a
-                  href="/#pitazo-final"
-                  class="inline-flex items-center justify-center rounded-full border border-white/14 px-6 py-3.5 text-sm font-bold uppercase tracking-[0.14em] text-white/82 transition hover:bg-white/7 hover:text-white"
-                >
-                  Ver programa completo
-                </a>
+              <!-- Lessons list -->
+              <div class="space-y-3">
+                {period.lessons.map((lesson) => (
+                  <Fragment>
+                    {lesson.type === "powerplay" && (
+                      <a
+                        href={lesson.href}
+                        class="group flex items-center gap-5 rounded-3xl bg-[#162741] px-6 py-5 shadow-[0_12px_40px_rgba(22,39,65,0.14)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_56px_rgba(22,39,65,0.20)] md:px-7"
+                      >
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e0f459] shadow-[0_0_20px_rgba(224,244,89,0.30)]">
+                          <svg viewBox="0 0 24 24" class="h-5 w-5 text-[#162741]" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                          </svg>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#e0f459]">{lesson.label}</p>
+                          <p class="mt-0.5 text-base font-extrabold leading-snug tracking-[-0.02em] text-white md:text-lg">{lesson.title}</p>
+                          <p class="mt-1 text-[13px] text-white/56">{lesson.plantilla}</p>
+                        </div>
+                        <span class="ml-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/14 text-white/60 transition group-hover:border-[#e0f459]/60 group-hover:text-[#e0f459]">
+                          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </span>
+                      </a>
+                    )}
+                    {lesson.type === "especial" && (
+                      <a
+                        href={lesson.href}
+                        class="group flex items-center gap-5 rounded-3xl border border-[#E1C875]/35 bg-[#E1C875]/8 px-6 py-5 transition duration-300 hover:-translate-y-0.5 hover:border-[#E1C875]/60 hover:bg-[#E1C875]/14 hover:shadow-[0_12px_40px_rgba(225,200,117,0.12)] md:px-7"
+                      >
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#E1C875]/30 bg-white text-[#9a8954] shadow-sm">
+                          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                          </svg>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#9a8954]">{lesson.label}</p>
+                          <p class="mt-0.5 text-base font-extrabold leading-snug tracking-[-0.02em] text-[#162741] md:text-lg">{lesson.title}</p>
+                          <p class="mt-1 text-[13px] text-[#4b5f78]">{lesson.plantilla}</p>
+                        </div>
+                        <span class="ml-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#162741]/12 text-[#162741]/40 transition group-hover:border-[#9a8954]/50 group-hover:text-[#9a8954]">
+                          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </span>
+                      </a>
+                    )}
+                    {lesson.type === "leccion" && (
+                      <a
+                        href={lesson.href}
+                        class="group flex items-center gap-5 rounded-3xl border border-[#162741]/10 bg-white px-6 py-5 shadow-[0_8px_28px_rgba(22,39,65,0.05)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgba(22,39,65,0.09)] md:px-7"
+                      >
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#E1C875]/30 bg-[#162741] text-[#e0f459] shadow-[0_8px_20px_rgba(22,39,65,0.14)]">
+                          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                            <polyline points="14 2 14 8 20 8" />
+                          </svg>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#9a8954]">{lesson.label}</p>
+                          <p class="mt-0.5 text-base font-extrabold leading-snug tracking-[-0.02em] text-[#162741] md:text-lg">{lesson.title}</p>
+                          <p class="mt-1 text-[13px] text-[#4b5f78]">{lesson.plantilla}</p>
+                        </div>
+                        <span class="ml-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#162741]/12 text-[#162741]/40 transition group-hover:border-[#162741]/30 group-hover:text-[#162741]">
+                          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </span>
+                      </a>
+                    )}
+                  </Fragment>
+                ))}
               </div>
             </div>
+          ))}
+
+          <!-- BONO VIP -->
+          <div id="bono-vip">
+            <div class="mb-6 flex items-center gap-4">
+              <div class="flex-1">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9a8954]">
+                  Bono VIP
+                </p>
+                <h2 class="mt-1.5 text-2xl font-extrabold leading-tight tracking-[-0.04em] text-[#162741] md:text-3xl">
+                  El tablero táctico
+                </h2>
+              </div>
+              <div class="h-px flex-1 bg-[#162741]/10"></div>
+            </div>
+
+            <a
+              href="/bunker/bono-vip"
+              class="group relative flex items-center gap-6 overflow-hidden rounded-[28px] bg-[#162741] px-7 py-7 shadow-[0_20px_60px_rgba(22,39,65,0.18)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_80px_rgba(22,39,65,0.24)]"
+            >
+              <!-- Background glow -->
+              <div class="pointer-events-none absolute inset-0">
+                <div class="absolute -right-8 -top-8 h-48 w-48 rounded-full bg-[#e0f459]/10 blur-3xl"></div>
+                <div class="absolute -bottom-6 left-12 h-36 w-36 rounded-full bg-[#E1C875]/10 blur-2xl"></div>
+              </div>
+
+              <div class="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#E1C875]/40 bg-linear-to-br from-[#E1C875] to-[#c9a94e] shadow-[0_0_32px_rgba(225,200,117,0.30)]">
+                <svg viewBox="0 0 24 24" class="h-7 w-7 text-[#162741]" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </div>
+
+              <div class="relative min-w-0 flex-1">
+                <div class="flex flex-wrap items-center gap-2">
+                  <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#E1C875]">
+                    Acceso exclusivo
+                  </p>
+                  <span class="rounded-full border border-[#E1C875]/30 bg-[#E1C875]/12 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#E1C875]">
+                    VIP
+                  </span>
+                </div>
+                <p class="mt-1.5 text-lg font-extrabold leading-snug tracking-[-0.02em] text-white md:text-xl">
+                  Tu Mapa de 90 días
+                </p>
+                <p class="mt-1.5 text-[13px] leading-relaxed text-white/60">
+                  El tablero táctico para ejecutar todo lo aprendido desde el primer día. Convierte las lecciones en acciones concretas con fechas y métricas.
+                </p>
+              </div>
+
+              <span class="relative ml-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E1C875]/30 text-[#E1C875] transition group-hover:border-[#E1C875] group-hover:bg-[#E1C875]/12">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
           </div>
+
         </div>
       </section>
     </main>
@@ -322,58 +413,13 @@ const resources: Resource[] = [
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       const exploreBtn = document.querySelector("[data-explore]");
-      const recursosSection = document.getElementById("recursos");
+      const leccionesSection = document.getElementById("lecciones");
 
-      if (exploreBtn && recursosSection) {
+      if (exploreBtn && leccionesSection) {
         exploreBtn.addEventListener("click", () => {
-          recursosSection.scrollIntoView({ behavior: "smooth" });
+          leccionesSection.scrollIntoView({ behavior: "smooth" });
         });
       }
-
-      const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
-      const cards = Array.from(document.querySelectorAll(".resource-card"));
-
-      const setActiveCategory = (category) => {
-        tabButtons.forEach((btn) => {
-          const isActive = btn.dataset.tab === category;
-
-          if (isActive) {
-            btn.classList.add("bg-[#162741]", "text-white", "shadow-sm");
-            btn.classList.remove("text-[#53657e]", "hover:bg-[#162741]/4");
-          } else {
-            btn.classList.add("text-[#53657e]", "hover:bg-[#162741]/4");
-            btn.classList.remove("bg-[#162741]", "text-white", "shadow-sm");
-          }
-        });
-
-        cards.forEach((card) => {
-          const cardCat = card.dataset.resourceCategory;
-          const visible = category === "Todas" || cardCat === category;
-
-          if (visible) {
-            card.classList.remove("hidden");
-            card.style.opacity = "0";
-            card.style.transform = "translateY(10px)";
-            requestAnimationFrame(() => {
-              card.style.transition = "opacity 0.28s ease, transform 0.28s ease";
-              card.style.opacity = "1";
-              card.style.transform = "translateY(0)";
-            });
-          } else {
-            card.classList.add("hidden");
-          }
-        });
-      };
-
-      setActiveCategory("Todas");
-
-      tabButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const cat = btn.dataset.tab;
-          if (cat) setActiveCategory(cat);
-        });
-      });
     });
   </script>
 </BaseLayout>
-

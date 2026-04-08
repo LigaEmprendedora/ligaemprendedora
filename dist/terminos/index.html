@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="es" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Términos y Condiciones | Liga Emprendedora</title><link rel="icon" href="/favico.png" type="image/png"><link rel="stylesheet" href="/_astro/bunker.C0l69QYC.css"></head> <body class="bg-white text-gray-900 antialiased">  <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]"> <header id="site-header" class="site-header fixed inset-x-0 top-0 z-50 transition-all duration-300" data-astro-cid-3ef6ksr2> <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-0 md:px-6" data-astro-cid-3ef6ksr2> <a href="/#hero" class="flex items-center gap-2" aria-label="Ir al inicio de Liga Emprendedora" data-astro-cid-3ef6ksr2> <img src="/Logo_liga2.webp" alt="Logo Liga Emprendedora" class="h-22 w-auto" data-astro-cid-3ef6ksr2> </a> <nav class="hidden items-center gap-6 text-sm font-medium text-white/80 md:flex" data-astro-cid-3ef6ksr2> <a href="/#hero" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Inicio </a><a href="/#camerino" class="transition hover:text-white" data-astro-cid-3ef6ksr2> El camerino </a><a href="/#doble-motor" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Método </a><a href="/#fichajes" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Fichajes </a><a href="/#faq-var" class="transition hover:text-white" data-astro-cid-3ef6ksr2> FAQ </a><a href="/newsletter" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Newsletter </a> <a href="/#pitazo-final" class="rounded-full bg-[#e0f459] px-4 py-2 text-sm font-semibold text-[#162741] shadow-[0_0_22px_rgba(224,244,89,0.18)] transition hover:shadow-[0_0_30px_rgba(224,244,89,0.28)]" data-astro-cid-3ef6ksr2>
+Únete
+</a> </nav> <button type="button" id="mobile-menu-button" class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 md:hidden" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false" data-astro-cid-3ef6ksr2> <div class="space-y-1.5" data-astro-cid-3ef6ksr2> <span class="block h-0.5 w-4 rounded-full bg-white" data-astro-cid-3ef6ksr2></span> <span class="block h-0.5 w-4 rounded-full bg-white" data-astro-cid-3ef6ksr2></span> <span class="block h-0.5 w-4 rounded-full bg-white" data-astro-cid-3ef6ksr2></span> </div> </button> </div> <div id="mobile-menu" class="hidden border-t border-white/8 bg-[#162741]/95 backdrop-blur-md md:hidden" data-astro-cid-3ef6ksr2> <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 md:px-6" data-astro-cid-3ef6ksr2> <a href="/#hero" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Inicio </a><a href="/#camerino" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> El camerino </a><a href="/#doble-motor" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Método </a><a href="/#fichajes" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Fichajes </a><a href="/#faq-var" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> FAQ </a><a href="/newsletter" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Newsletter </a> <a href="/#pitazo-final" class="mt-2 inline-flex items-center justify-center rounded-full bg-[#e0f459] px-4 py-2.5 text-sm font-semibold text-[#162741] shadow-[0_0_22px_rgba(224,244,89,0.18)] transition hover:shadow-[0_0_30px_rgba(224,244,89,0.28)]" data-mobile-link data-astro-cid-3ef6ksr2>
+Únete
+</a> </nav> </div> </header>  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('site-header');
+    const openBtn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('[data-mobile-link]');
+
+    if (!header) return;
+
+    const updateHeaderOnScroll = () => {
+      if (window.scrollY > 24) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    };
+
+    updateHeaderOnScroll();
+    window.addEventListener('scroll', updateHeaderOnScroll);
+
+    if (!openBtn || !menu) return;
+
+    const toggleMenu = () => {
+      menu.classList.toggle('hidden');
+      const expanded = openBtn.getAttribute('aria-expanded') === 'true';
+      openBtn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    };
+
+    openBtn.addEventListener('click', toggleMenu);
+
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        openBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+</script> <main class="flex-1"> <section class="relative overflow-hidden bg-[#162741] px-4 pb-16 pt-20 text-white md:px-6 md:pb-20 md:pt-28"> <div class="pointer-events-none absolute inset-0"> <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(225,200,117,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(22,39,65,0)_42%)]"></div> <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div> </div> <div class="relative mx-auto max-w-3xl"> <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
+Legal · Liga Emprendedora
+</p> <h1 class="mt-4 text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
+Términos y Condiciones
+</h1> <p class="mt-6 text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
+Liga Emprendedora · Proyecto E Group SAS
+</p> </div> </section> <section class="px-4 py-12 md:px-6 md:py-16"> <div class="mx-auto max-w-3xl"> <div class="prose prose-lg max-w-none text-[#162741]"> <p class="mb-8 text-base leading-8 text-[#334865] md:text-[1.05rem]">
+Bienvenido a la Liga Emprendedora. Los presentes Términos y Condiciones regulan la relación entre Proyecto E Group SAS (en adelante, "La Empresa"), sociedad titular de la marca comercial Liga Emprendedora, y el usuario. Al usar este sitio, dejar tus datos o adquirir nuestros servicios, aceptas estas condiciones. Si no estás de acuerdo, no entres a la cancha.
+</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">1. Glosario Táctico (Definiciones)</h2> <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]"> <li>"Jugador Élite", "Capitán" y "DT": Niveles de membresía y paquetes de servicios digitales y mentorías.</li> <li>"Distribuidores Externos": Amazon y Buscalibre. Terceros responsables de la venta, impresión y logística de los libros.</li> <li>"Ecosistema Digital": Contenido, mentorías, masterclasses y newsletters gestionados directamente por La Empresa.</li> </ul> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">2. Venta de Libros (Operación de Terceros)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">La Empresa no vende ni distribuye directamente ejemplares físicos, digitales o audiolibros. Nuestra web actúa exclusivamente como vitrina de redirección hacia Amazon y Buscalibre. La transacción financiera, el procesamiento de datos de pago y la logística de entrega son responsabilidad absoluta del distribuidor elegido por el usuario. Cualquier reclamación sobre el estado del libro, retrasos o problemas de descarga debe tramitarse directamente con el servicio al cliente de Amazon o Buscalibre.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">3. Servicios Directos (Membresías y Mentorías)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Los paquetes de mentoría y masterclasses se contratan directamente en nuestra plataforma.</p> <p class="mb-2 font-semibold text-[#162741]">Pagos y Facturación:</p> <p class="mb-4 text-base leading-8 text-[#334865]">Los pagos son procesados por pasarelas seguras (Bold o Stripe). Proyecto E Group SAS emite factura electrónica por cada transacción directa, la cual llegará al correo registrado cumpliendo la normativa fiscal de Colombia.</p> <p class="mb-2 font-semibold text-[#162741]">Plataformas de terceros (Hotmart):</p> <p class="mb-4 text-base leading-8 text-[#334865]">Para los cursos alojados en Hotmart, dicha plataforma actúa como vendedor directo (Merchant of Record). El usuario acepta someterse adicionalmente a los términos, condiciones y políticas de procesamiento de pago de Hotmart.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">4. Garantía de Satisfacción y Reembolsos</h2> <p class="mb-2 font-semibold text-[#162741]">Para Libros y Cursos en Hotmart:</p> <p class="mb-4 text-base leading-8 text-[#334865]">Aplican exclusivamente las políticas y tiempos de devolución de Amazon, Buscalibre o Hotmart. La Empresa no gestiona estos reembolsos.</p> <p class="mb-2 font-semibold text-[#162741]">Para Servicios Directos (Mentorías):</p> <p class="mb-4 text-base leading-8 text-[#334865]">Ofrecemos una garantía de satisfacción de siete (7) días calendario tras la compra. Si el contenido no cumple, puedes pedir el reembolso total. Tras este periodo, el marcador es definitivo y no hay devoluciones.</p> <p class="mb-4 text-base leading-8 text-[#334865]">Tiempos de desembolso: El dinero puede tardar entre 15 y 30 días hábiles (transferencia), y hasta 60 días (tarjeta de crédito), dependiendo de la lentitud de tu banco.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">5. Derecho de Retracto y Reversión de Pagos</h2> <p class="mb-2 font-semibold text-[#162741]">Retracto:</p> <p class="mb-4 text-base leading-8 text-[#334865]">Según la ley colombiana, puedes retractarte de la compra de servicios digitales dentro de los 5 días hábiles siguientes, siempre y cuando no hayas comenzado a consumir el servicio (ej. descargar material, acceder a la plataforma o asistir a una sesión). Si entras a la cancha, el derecho de retracto se extingue.</p> <p class="mb-2 font-semibold text-[#162741]">Reversión:</p> <p class="mb-4 text-base leading-8 text-[#334865]">Aplica en casos de fraude, cobro no solicitado o producto defectuoso. Debes notificar a La Empresa y a tu banco en un plazo de 5 días hábiles desde el evento.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">6. Exención de Responsabilidad Comercial</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Entregamos educación no formal y tácticas de ejecución real probadas en el asfalto. No garantizamos resultados económicos ni retornos de inversión. El éxito de tu negocio depende de tu disciplina. No somos asesores financieros, legales, ni una entidad captadora vigilada; somos un ecosistema de formación y acción.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">7. Reglas de Vestuario y Propiedad Intelectual</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Todo el contenido (método CANCHA, plantillas, videos, textos y marcas) es propiedad intelectual exclusiva de Oswaldo Vega, licenciada operativamente a La Empresa. Tu compra otorga una licencia de uso estrictamente personal y no comercial.</p> <p class="mb-4 text-base leading-8 text-[#334865]">Credenciales: Tu acceso es intransferible. Prohibido compartir tu cuenta.</p> <p class="mb-4 text-base leading-8 text-[#334865]">Tarjeta Roja: La piratería, reventa, copia o distribución no autorizada de nuestros materiales resultará en la expulsión inmediata de la Liga sin reembolso, y el inicio de demandas civiles y penales por infracción de derechos de autor.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">8. El VAR de los Datos (Privacidad y Habeas Data)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Al registrarte, comprar o suscribirte a nuestra newsletter, autorizas a Proyecto E Group SAS a recolectar y tratar tus datos personales conforme a la Ley 1581 de 2012. Usaremos tu correo para facturación, soporte y para enviarte tácticas, ofertas y contenido de valor. Puedes pedir que te saquemos de la lista de correos en cualquier momento escribiendo a nuestro canal de soporte.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">9. Reglas del Torneo (Ley Aplicable y Jurisdicción)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Estos Términos y Condiciones se rigen por las leyes de la República de Colombia. Cualquier disputa legal que no pueda resolverse amistosamente en los camerinos, será sometida a la jurisdicción de los jueces colombianos. Debes ser mayor de 18 años para operar en esta plataforma.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">10. Peticiones, Quejas y Reclamos (PQR)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Para soporte técnico, facturación o dudas, el único canal oficial es: <a href="mailto:hola@ligaemprendedora.com" class="font-semibold text-[#162741] underline underline-offset-4">hola@ligaemprendedora.com</a>. Tiempo de respuesta legal: hasta 15 días hábiles. Al escribirnos, te daremos un número de radicado para hacerle seguimiento a tu jugada. Nos reservamos el derecho de actualizar estos términos en cualquier momento.</p> <div class="mt-12 border-t border-[#162741]/10 pt-8 text-sm text-[#162741]/40">
+Proyecto E Group SAS · NIT 830.037.581-9 · Calle 98 # 22-64 Of 1002, Bogotá, Colombia · Vigente desde el 2 de abril de 2026
+</div> </div> </div> </section> </main> <footer class="border-t border-[#162741]/8 bg-[#f6f5f2]"> <div class="mx-auto grid max-w-6xl gap-8 px-4 py-8 md:grid-cols-3 md:items-center md:px-6"> <div class="flex flex-col items-center gap-3 text-center md:items-start md:text-left"> <img src="/Logo_liga.png" alt="Logo Liga Emprendedora" class="h-12 w-auto opacity-90"> <p class="max-w-xs text-sm italic text-[#162741]/70">
+“El emprendimiento no se aprende desde la tribuna. Se entrena en la cancha.”
+</p> </div> <div class="flex flex-col items-center justify-center gap-3 text-center"> <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#162741]/45">
+Síguenos
+</p> <div class="flex items-center justify-center gap-3"> <a href="https://www.linkedin.com/company/ligaemprendedora/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Liga Emprendedora" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#162741]/10 bg-white/70 text-[#162741]/70 shadow-sm transition hover:-translate-y-0.5 hover:border-[#162741]/20 hover:text-[#162741] hover:shadow-[0_10px_24px_rgba(22,39,65,0.08)]"> <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.01 2.01 0 0 0 3.25 5c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2ZM20.75 13.02c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.1-3.38 1.87V8.5H9.69c.04.88 0 11.5 0 11.5h3.37v-6.42c0-.34.02-.68.13-.92.27-.67.88-1.36 1.91-1.36 1.35 0 1.89 1.03 1.89 2.54V20H20.75v-6.98Z"></path> </svg> </a> <a href="https://www.youtube.com/@ligaemprendedora" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Liga Emprendedora" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#162741]/10 bg-white/70 text-[#162741]/70 shadow-sm transition hover:-translate-y-0.5 hover:border-[#162741]/20 hover:text-[#162741] hover:shadow-[0_10px_24px_rgba(22,39,65,0.08)]"> <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M21.58 7.19a2.98 2.98 0 0 0-2.1-2.11C17.62 4.5 12 4.5 12 4.5s-5.62 0-7.48.58a2.98 2.98 0 0 0-2.1 2.11A31.2 31.2 0 0 0 2 12a31.2 31.2 0 0 0 .42 4.81 2.98 2.98 0 0 0 2.1 2.11c1.86.58 7.48.58 7.48.58s5.62 0 7.48-.58a2.98 2.98 0 0 0 2.1-2.11c.42-1.55.42-4.81.42-4.81s0-3.26-.42-4.81ZM10.2 15.03V8.97L15.5 12l-5.3 3.03Z"></path> </svg> </a> <a href="https://www.instagram.com/liga.emprendedora/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Liga Emprendedora" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#162741]/10 bg-white/70 text-[#162741]/70 shadow-sm transition hover:-translate-y-0.5 hover:border-[#162741]/20 hover:text-[#162741] hover:shadow-[0_10px_24px_rgba(22,39,65,0.08)]"> <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5ZM17.2 6.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7.1A4.9 4.9 0 1 1 7.1 12 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 15.1 12 3.1 3.1 0 0 0 12 8.9Z"></path> </svg> </a> </div> </div> <div class="flex flex-col items-center gap-2 text-center md:items-end md:text-right"> <div class="flex flex-col gap-1 text-xs text-[#162741]/55"> <a href="/terminos" class="underline-offset-2 hover:underline">
+Términos & Condiciones
+</a> <a href="/politica-privacidad" class="underline-offset-2 hover:underline">
+Política de Privacidad
+</a> </div> <p class="text-xs text-[#162741]/55">
+© 2026 Liga Emprendedora
+</p> </div> </div> </footer> </div>  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbz4BZPlvEa1-78yTjp6nBdGH9-UCP02lK2VRrFUA7iSX4It2ODw6nR0_TsMmxabTD52tg/exec";
+
+    const forms = Array.from(document.querySelectorAll("form[name]"));
+
+    forms.forEach((form) => {
+      if (form.dataset.bound === "true") return;
+      form.dataset.bound = "true";
+
+      const isResourceForm = form.hasAttribute("data-download-link");
+
+      form.addEventListener("submit", async (event) => {
+        const formData = new FormData(form);
+
+        if (isResourceForm) {
+          event.preventDefault();
+
+          const body = new URLSearchParams();
+          for (const [key, value] of formData.entries()) {
+            if (typeof value === "string") {
+              body.append(key, value);
+            }
+          }
+
+          try {
+            await fetch("/", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: body.toString(),
+            });
+          } catch (err) {
+            console.error("Error enviando a Netlify:", err);
+          }
+
+          try {
+            await fetch(SCRIPT_URL, {
+              method: "POST",
+              mode: "no-cors",
+              body: formData,
+            });
+          } catch (err) {
+            console.error("Error enviando a Google Sheets:", err);
+          }
+
+          const downloadLink = form.dataset.downloadLink;
+          const messageEl = form.querySelector("[data-download-message]");
+
+          if (downloadLink && messageEl) {
+            messageEl.innerHTML = `
+              <strong>¡Listo! Ya puedes descargar tu recurso.</strong><br /><br />
+              <a
+                href="${downloadLink}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline font-semibold text-[#14532d]"
+              >
+                Haz clic aquí para descargarlo
+              </a>
+            `;
+            messageEl.classList.remove("hidden");
+          }
+
+          form.reset();
+          return;
+        }
+
+        try {
+          fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          });
+        } catch (err) {
+          console.error("Error enviando a Google Sheets:", err);
+        }
+      });
+    });
+  });
+</script> </body> </html>

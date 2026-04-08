@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="es" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Política de Privacidad | Liga Emprendedora</title><link rel="icon" href="/favico.png" type="image/png"><link rel="stylesheet" href="/_astro/bunker.C0l69QYC.css"></head> <body class="bg-white text-gray-900 antialiased">  <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]"> <header id="site-header" class="site-header fixed inset-x-0 top-0 z-50 transition-all duration-300" data-astro-cid-3ef6ksr2> <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-0 md:px-6" data-astro-cid-3ef6ksr2> <a href="/#hero" class="flex items-center gap-2" aria-label="Ir al inicio de Liga Emprendedora" data-astro-cid-3ef6ksr2> <img src="/Logo_liga2.webp" alt="Logo Liga Emprendedora" class="h-22 w-auto" data-astro-cid-3ef6ksr2> </a> <nav class="hidden items-center gap-6 text-sm font-medium text-white/80 md:flex" data-astro-cid-3ef6ksr2> <a href="/#hero" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Inicio </a><a href="/#camerino" class="transition hover:text-white" data-astro-cid-3ef6ksr2> El camerino </a><a href="/#doble-motor" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Método </a><a href="/#fichajes" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Fichajes </a><a href="/#faq-var" class="transition hover:text-white" data-astro-cid-3ef6ksr2> FAQ </a><a href="/newsletter" class="transition hover:text-white" data-astro-cid-3ef6ksr2> Newsletter </a> <a href="/#pitazo-final" class="rounded-full bg-[#e0f459] px-4 py-2 text-sm font-semibold text-[#162741] shadow-[0_0_22px_rgba(224,244,89,0.18)] transition hover:shadow-[0_0_30px_rgba(224,244,89,0.28)]" data-astro-cid-3ef6ksr2>
+Únete
+</a> </nav> <button type="button" id="mobile-menu-button" class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 md:hidden" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false" data-astro-cid-3ef6ksr2> <div class="space-y-1.5" data-astro-cid-3ef6ksr2> <span class="block h-0.5 w-4 rounded-full bg-white" data-astro-cid-3ef6ksr2></span> <span class="block h-0.5 w-4 rounded-full bg-white" data-astro-cid-3ef6ksr2></span> <span class="block h-0.5 w-4 rounded-full bg-white" data-astro-cid-3ef6ksr2></span> </div> </button> </div> <div id="mobile-menu" class="hidden border-t border-white/8 bg-[#162741]/95 backdrop-blur-md md:hidden" data-astro-cid-3ef6ksr2> <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 md:px-6" data-astro-cid-3ef6ksr2> <a href="/#hero" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Inicio </a><a href="/#camerino" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> El camerino </a><a href="/#doble-motor" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Método </a><a href="/#fichajes" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Fichajes </a><a href="/#faq-var" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> FAQ </a><a href="/newsletter" class="rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/5 hover:text-white" data-mobile-link data-astro-cid-3ef6ksr2> Newsletter </a> <a href="/#pitazo-final" class="mt-2 inline-flex items-center justify-center rounded-full bg-[#e0f459] px-4 py-2.5 text-sm font-semibold text-[#162741] shadow-[0_0_22px_rgba(224,244,89,0.18)] transition hover:shadow-[0_0_30px_rgba(224,244,89,0.28)]" data-mobile-link data-astro-cid-3ef6ksr2>
+Únete
+</a> </nav> </div> </header>  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('site-header');
+    const openBtn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('[data-mobile-link]');
+
+    if (!header) return;
+
+    const updateHeaderOnScroll = () => {
+      if (window.scrollY > 24) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    };
+
+    updateHeaderOnScroll();
+    window.addEventListener('scroll', updateHeaderOnScroll);
+
+    if (!openBtn || !menu) return;
+
+    const toggleMenu = () => {
+      menu.classList.toggle('hidden');
+      const expanded = openBtn.getAttribute('aria-expanded') === 'true';
+      openBtn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    };
+
+    openBtn.addEventListener('click', toggleMenu);
+
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        openBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+</script> <main class="flex-1"> <section class="relative overflow-hidden bg-[#162741] px-4 pb-16 pt-20 text-white md:px-6 md:pb-20 md:pt-28"> <div class="pointer-events-none absolute inset-0"> <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(225,200,117,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(22,39,65,0)_42%)]"></div> <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div> </div> <div class="relative mx-auto max-w-3xl"> <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
+Legal · Liga Emprendedora
+</p> <h1 class="mt-4 text-4xl font-extrabold leading-[0.96] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
+Política de Privacidad
+</h1> <p class="mt-6 text-base leading-8 text-white/74 md:text-[1.08rem] md:leading-9">
+Liga Emprendedora · Proyecto E Group SAS
+</p> </div> </section> <section class="px-4 py-12 md:px-6 md:py-16"> <div class="mx-auto max-w-3xl"> <div class="prose prose-lg max-w-none text-[#162741]"> <p class="mb-8 text-base leading-8 text-[#334865] md:text-[1.05rem]">
+Este documento establece cómo manejamos tu información. La transparencia es una regla innegociable en nuestro camerino. Proyecto E Group SAS, identificada con NIT 830.037.581-9, con domicilio principal en Calle 98 # 22-64 Of 1002 en Bogotá (Colombia), titular de la marca comercial Liga Emprendedora y operadora de los activos digitales de Oswaldo Vega, es la responsable del tratamiento de tus datos personales.
+</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">1. ¿Qué datos recolectamos para que entres a la cancha?</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Recolectamos únicamente la información táctica necesaria para que el ecosistema funcione:</p> <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]"> <li>Identificación y Contacto: Nombre completo, correo electrónico, número de teléfono (WhatsApp) y país de residencia.</li> <li>Interacciones: Historial de compras, soporte (PQRs) y tu comportamiento dentro de nuestra web.</li> <li>Información de Navegación: Dirección IP, tipo de dispositivo y datos arrojados por cookies de seguimiento.</li> </ul> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">2. Cero Datos Sensibles y Protección a Menores</h2> <p class="mb-4 text-base leading-8 text-[#334865]">No nos interesa tu vida privada fuera de los negocios. La Empresa NO recolectará ni tratará datos sensibles (como información de salud, origen racial, inclinaciones políticas o religiosas). Asimismo, este ecosistema está diseñado exclusivamente para mayores de 18 años con capacidad legal. Si detectamos el registro de un menor de edad, su información será eliminada de inmediato de nuestra base de datos.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">3. ¿Cómo obtenemos tu información?</h2> <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]"> <li>Directamente: Cuando llenas un formulario, te registras para descargar una plantilla gratuita en El Búnker, o compras un pase (Jugador Élite, Capitán, DT).</li> <li>Por Redes Sociales: Cuando interactúas con nuestras cuentas oficiales en Instagram, TikTok, LinkedIn o YouTube.</li> <li>Automáticamente (Táctica de Rastreo): A través de cookies, web beacons y herramientas como Google Analytics o Meta Pixel para entender cómo navegas y mostrarte anuncios relevantes.</li> </ul> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">4. ¿Para qué usamos tus datos? (Finalidades)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">No vendemos humo ni vendemos tus bases de datos. Usamos tu información para:</p> <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]"> <li>Darte acceso inmediato a El Búnker, los lives y la comunidad (Club MVP90).</li> <li>Procesar tus pagos, emitir la factura electrónica y enviar confirmaciones.</li> <li>Enviarte el Newsletter táctico y comunicaciones urgentes sobre tus mentorías.</li> <li>Atender tus Peticiones, Quejas o Reclamos (PQRs).</li> <li>Mostrarte publicidad segmentada para que no te lleguen ofertas de productos que ya compraste.</li> </ul> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">5. El Tercer Tiempo (Terceros Aliados y Transferencia Internacional)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Para operar a nivel global, nos apoyamos en jugadores externos. Al aceptar esta política, nos autorizas a compartir o transferir tu información a servidores ubicados fuera de Colombia, únicamente a los siguientes aliados operativos:</p> <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]"> <li>Pasarelas de Pago (Bold, Stripe, Hotmart): Ellos procesan tu dinero de forma encriptada. Nosotros no almacenamos los datos de tu tarjeta de crédito.</li> <li>Logística (Amazon, Buscalibre): Si compraste un libro físico o digital a través de ellos, tus datos en esa transacción se rigen por sus propias políticas.</li> <li>Herramientas de Marketing y Servidores: Plataformas de email marketing o alojamiento web operan como encargados del tratamiento bajo acuerdos estrictos de confidencialidad y estándares internacionales de seguridad.</li> </ul> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">6. Tus Derechos como Titular</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Tú eres el dueño de tu pase. Según la Ley 1581 de 2012, en cualquier momento tienes derecho a:</p> <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]"> <li>Conocer y Acceder: Saber exactamente qué datos tuyos tenemos en nuestro sistema y solicitar prueba de la autorización que nos diste.</li> <li>Actualizar y Rectificar: Corregir información desactualizada o errónea.</li> <li>Revocar y Suprimir: Pedir que te demos de baja del Newsletter o eliminemos tus datos, siempre que no exista un deber legal o contractual que nos obligue a retenerlos (ej. temas contables y de facturación).</li> <li>Acudir a la SIC: Presentar quejas ante la Superintendencia de Industria y Comercio si consideras que hemos fallado en el trato de tu información, una vez hayas agotado el reclamo directo con nosotros.</li> </ul> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">7. El VAR (Procedimientos y Tiempos de Respuesta)</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Si necesitas ejercer tus derechos, envía un correo directo a <a href="mailto:hola@ligaemprendedora.com" class="font-semibold text-[#162741] underline underline-offset-4">hola@ligaemprendedora.com</a> con tu nombre completo, identificación y tu solicitud clara.</p> <ul class="mb-6 space-y-2 text-base leading-8 text-[#334865]"> <li>Para Consultas: Te responderemos en un máximo de 10 días hábiles.</li> <li>Para Reclamos (Actualización o Supresión): Analizaremos la jugada y te daremos respuesta en un máximo de 15 días hábiles.</li> </ul> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">8. Cookies y Estrategia Digital</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Usamos cookies para que no tengas que iniciar sesión cada vez que entras a la página y para entender qué plantillas se descargan más. Puedes bloquearlas desde tu navegador, pero si apagas las cookies esenciales, es probable que El Búnker no te funcione correctamente.</p> <h2 class="mb-3 mt-10 text-xl font-extrabold tracking-[-0.02em] text-[#162741]">9. Seguridad y Vigencia</h2> <p class="mb-4 text-base leading-8 text-[#334865]">Mantenemos tu información encriptada y bajo medidas de seguridad proporcionales al asfalto digital. Esta política entra en vigencia a partir del 2 de abril de 2026. Las bases de datos tendrán una vigencia igual al tiempo en que La Empresa mantenga sus operaciones comerciales, o hasta que la ley ordene su destrucción. Nos reservamos el derecho de actualizar esta política; si hacemos un cambio estructural que cambie las reglas del juego, te lo notificaremos por correo.</p> <div class="mt-12 border-t border-[#162741]/10 pt-8 text-sm text-[#162741]/40">
+Proyecto E Group SAS · NIT 830.037.581-9 · Calle 98 # 22-64 Of 1002, Bogotá, Colombia · Vigente desde el 2 de abril de 2026
+</div> </div> </div> </section> </main> <footer class="border-t border-[#162741]/8 bg-[#f6f5f2]"> <div class="mx-auto grid max-w-6xl gap-8 px-4 py-8 md:grid-cols-3 md:items-center md:px-6"> <div class="flex flex-col items-center gap-3 text-center md:items-start md:text-left"> <img src="/Logo_liga.png" alt="Logo Liga Emprendedora" class="h-12 w-auto opacity-90"> <p class="max-w-xs text-sm italic text-[#162741]/70">
+“El emprendimiento no se aprende desde la tribuna. Se entrena en la cancha.”
+</p> </div> <div class="flex flex-col items-center justify-center gap-3 text-center"> <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#162741]/45">
+Síguenos
+</p> <div class="flex items-center justify-center gap-3"> <a href="https://www.linkedin.com/company/ligaemprendedora/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Liga Emprendedora" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#162741]/10 bg-white/70 text-[#162741]/70 shadow-sm transition hover:-translate-y-0.5 hover:border-[#162741]/20 hover:text-[#162741] hover:shadow-[0_10px_24px_rgba(22,39,65,0.08)]"> <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.01 2.01 0 0 0 3.25 5c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2ZM20.75 13.02c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.1-3.38 1.87V8.5H9.69c.04.88 0 11.5 0 11.5h3.37v-6.42c0-.34.02-.68.13-.92.27-.67.88-1.36 1.91-1.36 1.35 0 1.89 1.03 1.89 2.54V20H20.75v-6.98Z"></path> </svg> </a> <a href="https://www.youtube.com/@ligaemprendedora" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Liga Emprendedora" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#162741]/10 bg-white/70 text-[#162741]/70 shadow-sm transition hover:-translate-y-0.5 hover:border-[#162741]/20 hover:text-[#162741] hover:shadow-[0_10px_24px_rgba(22,39,65,0.08)]"> <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M21.58 7.19a2.98 2.98 0 0 0-2.1-2.11C17.62 4.5 12 4.5 12 4.5s-5.62 0-7.48.58a2.98 2.98 0 0 0-2.1 2.11A31.2 31.2 0 0 0 2 12a31.2 31.2 0 0 0 .42 4.81 2.98 2.98 0 0 0 2.1 2.11c1.86.58 7.48.58 7.48.58s5.62 0 7.48-.58a2.98 2.98 0 0 0 2.1-2.11c.42-1.55.42-4.81.42-4.81s0-3.26-.42-4.81ZM10.2 15.03V8.97L15.5 12l-5.3 3.03Z"></path> </svg> </a> <a href="https://www.instagram.com/liga.emprendedora/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Liga Emprendedora" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#162741]/10 bg-white/70 text-[#162741]/70 shadow-sm transition hover:-translate-y-0.5 hover:border-[#162741]/20 hover:text-[#162741] hover:shadow-[0_10px_24px_rgba(22,39,65,0.08)]"> <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5ZM17.2 6.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7.1A4.9 4.9 0 1 1 7.1 12 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 15.1 12 3.1 3.1 0 0 0 12 8.9Z"></path> </svg> </a> </div> </div> <div class="flex flex-col items-center gap-2 text-center md:items-end md:text-right"> <div class="flex flex-col gap-1 text-xs text-[#162741]/55"> <a href="/terminos" class="underline-offset-2 hover:underline">
+Términos & Condiciones
+</a> <a href="/politica-privacidad" class="underline-offset-2 hover:underline">
+Política de Privacidad
+</a> </div> <p class="text-xs text-[#162741]/55">
+© 2026 Liga Emprendedora
+</p> </div> </div> </footer> </div>  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbz4BZPlvEa1-78yTjp6nBdGH9-UCP02lK2VRrFUA7iSX4It2ODw6nR0_TsMmxabTD52tg/exec";
+
+    const forms = Array.from(document.querySelectorAll("form[name]"));
+
+    forms.forEach((form) => {
+      if (form.dataset.bound === "true") return;
+      form.dataset.bound = "true";
+
+      const isResourceForm = form.hasAttribute("data-download-link");
+
+      form.addEventListener("submit", async (event) => {
+        const formData = new FormData(form);
+
+        if (isResourceForm) {
+          event.preventDefault();
+
+          const body = new URLSearchParams();
+          for (const [key, value] of formData.entries()) {
+            if (typeof value === "string") {
+              body.append(key, value);
+            }
+          }
+
+          try {
+            await fetch("/", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: body.toString(),
+            });
+          } catch (err) {
+            console.error("Error enviando a Netlify:", err);
+          }
+
+          try {
+            await fetch(SCRIPT_URL, {
+              method: "POST",
+              mode: "no-cors",
+              body: formData,
+            });
+          } catch (err) {
+            console.error("Error enviando a Google Sheets:", err);
+          }
+
+          const downloadLink = form.dataset.downloadLink;
+          const messageEl = form.querySelector("[data-download-message]");
+
+          if (downloadLink && messageEl) {
+            messageEl.innerHTML = `
+              <strong>¡Listo! Ya puedes descargar tu recurso.</strong><br /><br />
+              <a
+                href="${downloadLink}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline font-semibold text-[#14532d]"
+              >
+                Haz clic aquí para descargarlo
+              </a>
+            `;
+            messageEl.classList.remove("hidden");
+          }
+
+          form.reset();
+          return;
+        }
+
+        try {
+          fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          });
+        } catch (err) {
+          console.error("Error enviando a Google Sheets:", err);
+        }
+      });
+    });
+  });
+</script> </body> </html>
