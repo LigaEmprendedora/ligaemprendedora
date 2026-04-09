@@ -3,224 +3,584 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
-const pageTitle = "Lección 1: Estar preparado para hacer el cambio | Liga Emprendedora";
-const pageDescription =
-  "Plantilla en Excel/Sheets para calcular CAC, LTV y la salud real de tu adquisición.";
-const downloadLink = "https://drive.google.com/file/d/1kBm57EsG-_mN5tlgMVXjOkfyQFDX04Rk/view?usp=sharing";
-
-const bullets = [
-  "Un diagnóstico honesto de tus fortalezas reales vs. las que crees tener.",
-  "Las brechas críticas entre donde estás y donde necesitas estar.",
-  "Un mapa claro de amenazas externas antes de que te sorprendan.",
-  "Las oportunidades que ya tienes enfrente y aún no estás ejecutando.",
-];
-
-const signals = [
-  { label: "Sección", value: "Pretemporada" },
-  { label: "Herramienta", value: "DOFA + Gap Analysis" },
-  { label: "Plantilla", value: "El escáner del DT" },
-];
-
+const pageTitle = "El Escáner del DT | Liga Emprendedora";
+const pageDescription = "Diagnóstico estratégico de tu negocio. Sé brutalmente honesto: si mientes en el pizarrón, pierdes en la cancha.";
+const downloadLink = "https://drive.google.com/file/d/TU_ID_AQUI/view?usp=sharing";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   <div class="flex min-h-screen flex-col bg-[#f6f5f2] text-[#162741]">
     <Header dark />
-
     <main class="flex-1">
+
+      <!-- HERO -->
       <section class="relative overflow-hidden bg-[#162741] px-4 pb-14 pt-28 text-white md:px-6 md:pb-20 md:pt-32">
         <div class="pointer-events-none absolute inset-0">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(225,200,117,0.18),transparent_28%),radial-gradient(circle_at_top_right,rgba(224,244,89,0.10),transparent_20%),linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(22,39,65,0)_42%)]"></div>
-          <div class="absolute -left-10 top-10 h-52 w-52 rounded-full bg-white/5 blur-3xl"></div>
-          <div class="absolute right-0 top-0 h-72 w-72 rounded-full bg-[#e0f459]/10 blur-3xl"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(225,200,117,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(224,244,89,0.10),transparent_24%)]"></div>
+          <div class="absolute left-0 top-0 h-72 w-72 rounded-full bg-white/5 blur-3xl"></div>
           <div class="absolute inset-x-0 bottom-0 h-px bg-white/10"></div>
         </div>
-
         <div class="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1.1fr)_380px] lg:items-end">
           <div class="max-w-3xl">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">
-              Búnker · Pretemporada
-            </p>
-            <h1 class="mt-5 text-4xl font-extrabold leading-[0.95] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
-              Lección 1: Estar preparado para hacer el cambio
-            </h1>
-            <p class="mt-6 max-w-2xl text-base leading-8 text-white/76 md:text-[1.08rem]">
-              "El escáner del DT" — Análisis DOFA + Gap Analysis
-            </p>
-
-            <div class="mt-8 grid gap-3 sm:grid-cols-3">
-              {signals.map((item) => (
-                <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-sm">
-                  <p class="text-[10px] uppercase tracking-[0.2em] text-white/55">{item.label}</p>
-                  <p class="mt-2 text-sm font-semibold text-white">{item.value}</p>
-                </div>
-              ))}
-            </div>
+            <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875] md:text-xs">Recursos · Lección 1</p>
+            <h1 class="mt-5 text-4xl font-extrabold leading-[0.95] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">El Escáner del DT</h1>
+            <p class="mt-4 text-lg font-semibold text-[#E1C875]">Estar preparado para hacer el cambio.</p>
           </div>
-
           <aside class="rounded-[30px] border border-white/12 bg-white/6 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur-md">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E1C875]">Qué desbloqueas</p>
+            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E1C875]">Instrucción del DT</p>
             <ul class="mt-4 space-y-3 text-sm leading-7 text-white/78">
-              {bullets.map((item) => (
-                <li class="flex gap-3">
-                  <span class="mt-2 h-2 w-2 rounded-full bg-[#e0f459]"></span>
-                  <span>{item}</span>
-                </li>
-              ))}
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#e0f459]"></span><span>Prohibido escribir obviedades como "somos puntuales".</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#e0f459]"></span><span>Escribe factores reales que den dinero o te lo estén haciendo perder.</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#e0f459]"></span><span>Al terminar, descarga tu borrador firmado en PDF.</span></li>
             </ul>
-            <a
-              href="#descarga-leccion-1"
-              class="mt-6 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-[#e0f459] px-5 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_30px_rgba(224,244,89,0.18)] transition hover:-translate-y-px hover:shadow-[0_0_40px_rgba(224,244,89,0.28)]"
-            >
+            <a href="#descarga-escaner" class="mt-6 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-[#e0f459] px-5 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_30px_rgba(224,244,89,0.18)] transition hover:-translate-y-px">
               Quiero la plantilla
             </a>
           </aside>
         </div>
       </section>
 
-      <section id="descarga-leccion-1" class="px-4 py-12 md:px-6 md:py-16">
-        <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1.05fr)_420px]">
-          <div>
-            <article class="rounded-[30px] border border-[#162741] bg-[#162741] p-7 shadow-[0_18px_60px_rgba(22,39,65,0.14)] md:p-8">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E1C875]">
-                Instrucción del DT
-              </p>
-              <p class="mt-5 text-base leading-8 text-white/88 md:text-[1.08rem] md:leading-9">
-                Sé brutalmente honesto. Si mientes en el pizarrón, pierdes en la cancha. Usa este cuadrante para entender si tu equipo está listo para el ascenso o si necesitas cambios urgentes antes del pitazo inicial.
-              </p>
-            </article>
+      <!-- MAIN CONTENT -->
+      <section class="px-4 py-12 md:px-6 md:py-16">
+
+        
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_400px]">
+
+            <!-- COLUMNA IZQUIERDA: Formulario interactivo -->
+            <div class="space-y-10">
+                <!-- PASO 1 -->
+              <div class="pt-2">
+                <h2 class="text-2xl font-semibold uppercase tracking-[0.28em] text-[#9a8954]">Instrucción del DT:</h2>
+                <p class="mt-1 text-2xl font-extrabold tracking-[-0.03em] text-[#162741]">
+                  Sé brutalmente honesto. Si mientes en
+el pizarrón, pierdes en la cancha. Usa este cuadrante para
+entender si tu equipo está listo para el ascenso o si
+necesitas cambios urgentes antes del pitazo inicial.
+                </p>
+                
+              </div>
+
+              <!-- BLOQUE USUARIO / IMAGEN -->
+              <div class="rounded-[28px] border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:p-8">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
+                  <div class="space-y-4">
+                    <div>
+                      <label class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Nombre de usuario</label>
+                      <input id="field-nombre" type="text" placeholder="Tu nombre o usuario"
+                        class="mt-1 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                    </div>
+                    <div>
+                      <label class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Liga / Comunidad</label>
+                      <input id="field-liga" type="text" placeholder="Liga Emprendedora"
+                        class="mt-1 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                    </div>
+                    <div>
+                      <label class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Fecha</label>
+                      <input id="field-fecha" type="date"
+                        class="mt-1 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <img id="img-portada" src="/ima-lecci-1.jpg" alt="Lección 1 · El Escáner del DT"
+                      crossorigin="anonymous" class="h-72 w-auto rounded-2xl object-contain" />
+                    <p class="text-[10px] text-[#9a8954]">Emprende Futbolero · Liga Emprendedora</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PASO 1 -->
+              <div class="pt-2">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a8954]">Paso 1</p>
+                <h2 class="mt-1 text-2xl font-extrabold tracking-[-0.03em] text-[#162741]">
+                  La Matriz de Diagnóstico
+                  <span class="text-base font-normal text-[#52657e]"> — Tu Radiografía</span>
+                </h2>
+                <p class="mt-2 text-sm leading-7 text-[#52657e]">
+                  <span class="font-semibold text-[#162741]">Regla del DT:</span>
+                  Prohibido escribir obviedades como "somos puntuales". Escribe factores reales que den dinero o que te lo estén haciendo perder.
+                </p>
+              </div>
+
+              <!-- MATRIZ 2x2 -->
+              <div class="grid gap-5 md:grid-cols-2">
+                <!-- FORTALEZAS -->
+                <article class="rounded-[28px] border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)]">
+                  <div class="flex items-start gap-3">
+                    <img id="img-trofeo" src="/trofeo.jpg" alt="Fortalezas" crossorigin="anonymous" class="h-16 w-auto shrink-0 object-contain" />
+                    <div>
+                      <p class="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Mi Estado de Forma · Análisis Interno</p>
+                      <h3 class="text-sm font-extrabold leading-5 text-[#162741]">Mis Estrellas (Fortalezas)</h3>
+                      <p class="mt-1 text-xs italic leading-5 text-[#52657e]">¿Qué nos hace ganar partidos incluso cuando el clima es difícil? ¿En qué somos el 10% mejor que el resto?</p>
+                    </div>
+                  </div>
+                  <textarea id="field-fortaleza-1" rows="3" class="mt-4 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="1. Fortaleza real que nos hace ganar..."></textarea>
+                  <textarea id="field-fortaleza-2" rows="3" class="mt-2 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="2. Otra fortaleza diferenciadora..."></textarea>
+                </article>
+
+                <!-- OPORTUNIDADES -->
+                <article class="rounded-[28px] border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)]">
+                  <div class="flex items-start gap-3">
+                    <img id="img-vinoculos" src="/vinoculos.jpg" alt="Oportunidades" crossorigin="anonymous" class="h-16 w-auto shrink-0 object-contain" />
+                    <div>
+                      <p class="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Lectura del Rival · Análisis Externo</p>
+                      <h3 class="text-sm font-extrabold leading-5 text-[#162741]">El Hueco en la Defensa (Oportunidades)</h3>
+                      <p class="mt-1 text-xs italic leading-5 text-[#52657e]">¿De qué se quejan los clientes de tu competencia? ¿Qué pase a gol te están dejando servido hoy?</p>
+                    </div>
+                  </div>
+                  <textarea id="field-oportunidad-1" rows="3" class="mt-4 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="1. Oportunidad de mercado hoy..."></textarea>
+                  <textarea id="field-oportunidad-2" rows="3" class="mt-2 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="2. Otro hueco que la competencia no cubre..."></textarea>
+                </article>
+
+                <!-- DEBILIDADES -->
+                <article class="rounded-[28px] border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)]">
+                  <div class="flex items-start gap-3">
+                    <img id="img-botiquin" src="/botiquin.jpg" alt="Debilidades" crossorigin="anonymous" class="h-16 w-auto shrink-0 object-contain" />
+                    <div>
+                      <p class="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Mi Estado de Forma · Análisis Interno</p>
+                      <h3 class="text-sm font-extrabold leading-5 text-[#162741]">El Jugador Lesionado (Debilidades)</h3>
+                      <p class="mt-1 text-xs italic leading-5 text-[#52657e]">¿Qué parte del negocio estás maquillando para no enfrentarlo? ¿Qué proceso te hace perder dinero?</p>
+                    </div>
+                  </div>
+                  <textarea id="field-debilidad-1" rows="3" class="mt-4 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="1. Debilidad real que estás evitando ver..."></textarea>
+                  <textarea id="field-debilidad-2" rows="3" class="mt-2 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="2. Proceso que hoy te hace perder dinero..."></textarea>
+                </article>
+
+                <!-- AMENAZAS -->
+                <article class="rounded-[28px] border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)]">
+                  <div class="flex items-start gap-3">
+                    <img id="img-tarjeta" src="/tarjeta.jpg" alt="Amenazas" crossorigin="anonymous" class="h-16 w-auto shrink-0 object-contain" />
+                    <div>
+                      <p class="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Lectura del Rival · Análisis Externo</p>
+                      <h3 class="text-sm font-extrabold leading-5 text-[#162741]">La Tarjeta Amarilla (Amenazas)</h3>
+                      <p class="mt-1 text-xs italic leading-5 text-[#52657e]">¿Qué factor externo (tecnología, economía, leyes) podría sacarte del partido si no reaccionas ya?</p>
+                    </div>
+                  </div>
+                  <textarea id="field-amenaza-1" rows="3" class="mt-4 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="1. Amenaza externa que ya está tocando la puerta..."></textarea>
+                  <textarea id="field-amenaza-2" rows="3" class="mt-2 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="2. Factor externo que podría sacarte del partido..."></textarea>
+                </article>
+              </div>
+
+              <!-- PASO 2 -->
+              <div class="pt-2">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a8954]">Paso 2</p>
+                <h2 class="mt-1 text-2xl font-extrabold tracking-[-0.03em] text-[#162741]">
+                  La Táctica de la Brecha
+                  <span class="text-base font-normal text-[#52657e]"> — Tu Plan de Entrenamiento</span>
+                </h2>
+                <p class="mt-2 text-sm leading-7 text-[#52657e]">
+                  <span class="font-semibold text-[#162741]">💡 Regla del DT:</span>
+                  Tu negocio no va a quebrar por tus debilidades, va a quebrar por no cubrirlas a tiempo cuando aparezca una oportunidad.
+                </p>
+              </div>
+
+              <!-- BRECHA + ACCIÓN -->
+              <div class="grid gap-5 md:grid-cols-2">
+                <article class="rounded-[28px] border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)]">
+                  <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#9a8954]">A. Cruce crítico</p>
+                  <h3 class="mt-1 text-sm font-extrabold text-[#162741]">Mi Brecha Operativa o de Conocimiento es:</h3>
+                  <p class="mt-2 text-xs italic leading-6 text-[#52657e]">Mira tu "Jugador Lesionado" vs "El Hueco en la Defensa". Para aprovechar esa oportunidad hoy mismo, ¿qué te falta?</p>
+                  <textarea id="field-brecha" rows="5" class="mt-3 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-3 py-3 text-sm outline-none transition focus:border-[#162741]" placeholder="Lo que me falta para aprovechar la oportunidad es..."></textarea>
+                </article>
+                <article class="rounded-[28px] border border-[#e0f459]/40 bg-[#162741] p-6 shadow-[0_18px_60px_rgba(22,39,65,0.14)]">
+                  <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#E1C875]">B. Jugada a 15 minutos</p>
+                  <h3 class="mt-1 text-sm font-extrabold text-white">[ ] Mi acción inmediata hoy es:</h3>
+                  <p class="mt-2 text-xs italic leading-6 text-white/60">Una sola acción micro-táctica que no te tome más de 15 min ejecutar HOY.</p>
+                  <textarea id="field-accion" rows="5" class="mt-3 w-full rounded-2xl border border-white/10 bg-white/8 px-3 py-3 text-sm text-white outline-none transition placeholder:text-white/40 focus:border-white/30" placeholder="Hoy voy a..."></textarea>
+                </article>
+              </div>
+
+              <!-- VEREDICTO -->
+              <div class="rounded-[28px] border border-[#E1C875]/30 bg-[#162741] p-6 text-white shadow-[0_18px_60px_rgba(22,39,65,0.12)] md:p-8">
+                <div class="flex items-start gap-4">
+                  <img id="img-dt" src="/dt.png" alt="DT" crossorigin="anonymous" class="h-24 w-auto shrink-0 object-contain" />
+                  <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E1C875]">Veredicto del DT</p>
+                    <p class="mt-2 text-sm leading-7 text-white/80">No esperes a que el mercado te dé permiso para jugar. El mercado solo le da paso a los que ya tienen el uniforme puesto y están calentando en la banda. Si tu brecha es muy grande, no bajes la meta, sube el nivel del entrenamiento.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FIRMA -->
+              <div class="rounded-[28px] border border-[#162741]/10 bg-white p-6 shadow-[0_18px_60px_rgba(22,39,65,0.06)] md:p-8">
+                <div class="grid gap-6 md:grid-cols-2 md:items-end">
+                  <div>
+                    <label class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Firma del Lector</label>
+                    <input id="field-firma" type="text" placeholder="Escribe tu nombre completo"
+                      class="mt-2 w-full rounded-none border-b-2 border-[#162741]/20 bg-transparent px-0 py-2 text-sm outline-none transition focus:border-[#162741]" />
+                  </div>
+                  <div>
+                    <label class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9a8954]">Fecha de compromiso</label>
+                    <input id="field-fecha-firma" type="date"
+                      class="mt-2 w-full rounded-2xl border border-[#162741]/10 bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ── COLUMNA DERECHA: Formulario de descarga ── -->
+            <aside id="descarga-escaner" class="rounded-[30px] border border-[#162741]/10 bg-white p-7 shadow-[0_24px_80px_rgba(22,39,65,0.08)] md:p-8 lg:sticky lg:top-28 self-start">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">Acceso inmediato</p>
+              <h2 class="mt-3 text-2xl font-extrabold tracking-[-0.03em] text-[#162741]">Descarga el PDF que llenaste</h2>
+              <p class="mt-3 text-sm leading-7 text-[#52657e]">Completa tus datos y en segundos tendrás tu escáner listo para revisarlo, compartirlo o imprimirlo.</p>
+
+              <form
+                class="mt-6 space-y-4"
+                data-escaner-form
+              >
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">Nombre completo*</label>
+                  <input type="text" name="nombre" required
+                    class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">Email*</label>
+                  <input type="email" name="email" required
+                    class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">Nombre de la empresa</label>
+                  <input type="text" name="empresa"
+                    class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-[#4b5563]">Teléfono</label>
+                  <input type="tel" name="telefono"
+                    class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]" />
+                </div>
+
+                <button
+                  type="submit"
+                  data-submit-btn
+                  class="inline-flex min-h-[54px] w-full items-center justify-center rounded-full bg-[#e0f459] px-6 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.18)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(224,244,89,0.35)] hover:bg-[#d4e84f] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  <span data-btn-text>Descargar el PDF</span>
+                  <span data-btn-loading class="hidden gap-2 items-center justify-center">
+                    <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+                    </svg>
+                    Generando...
+                  </span>
+                </button>
+
+                <p class="text-[11px] leading-5 text-[#6b7280]">Sin spam. Solo recursos, herramientas y tácticas de negocio de la Liga.</p>
+                <p class="text-xs text-[#667085]">
+                  Al continuar, aceptas nuestros
+                  <a href="/terminos" class="underline">Términos y Condiciones</a>
+                  y nuestra
+                  <a href="/politica-privacidad" class="underline">Política de Privacidad</a>.
+                </p>
+              </form>
+            </aside>
+
           </div>
-
-          <aside class="rounded-4xl border border-[#162741]/10 bg-white p-7 shadow-[0_24px_80px_rgba(22,39,65,0.08)] md:p-8 lg:sticky lg:top-28">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a8954]">
-              Acceso inmediato
-            </p>
-            <h2 class="mt-3 text-2xl font-extrabold tracking-[-0.03em] text-[#162741]">
-              Descarga gratis la lección 1
-            </h2>
-            <p class="mt-3 text-sm leading-7 text-[#52657e]">
-              Déjanos tus datos y verás el enlace directo de descarga al instante.
-            </p>
-
-            <form
-              class="mt-6 space-y-4"
-              name="bunker-leccion-1"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-data-download-link={downloadLink}
-              data-resource-form
-            >
-              <input type="hidden" name="form-name" value="bunker-leccion-1" />
-              <p class="hidden"><label>No llenar: <input name="bot-field" /></label></p>
-
-              <div>
-                <label class="block text-xs font-semibold text-[#4b5563]">Nombre completo*</label>
-                <input
-                  type="text"
-                  name="nombre"
-                  required
-                  class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]"
-                />
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold text-[#4b5563]">Email*</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]"
-                />
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold text-[#4b5563]">Nombre de la empresa</label>
-                <input
-                  type="text"
-                  name="empresa"
-                  class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]"
-                />
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold text-[#4b5563]">Teléfono</label>
-                <input
-                  type="tel"
-                  name="telefono"
-                  class="mt-1.5 w-full rounded-2xl border border-[#d9dfeb] bg-[#fbfbfc] px-4 py-3 text-sm outline-none transition focus:border-[#162741]"
-                />
-              </div>
-
-  <button
-  type="submit"
-  data-submit-btn
-  class="inline-flex min-h-[54px] w-full items-center justify-center rounded-full bg-[#e0f459] px-6 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.18)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(224,244,89,0.35)] hover:bg-[#d4e84f] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
->
-  <span data-btn-text>Descargar recurso</span>
-  <span data-btn-loading class="hidden gap-2 items-center justify-center">
-    <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
-      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
-      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
-    </svg>
-    Enviando...
-  </span>
-</button>
-
-
-              <p class="text-[11px] leading-5 text-[#6b7280]">
-                Sin spam. Solo recursos, herramientas y tácticas de negocio de la Liga.
-              </p>
-
-              <p class="text-xs text-[#667085]">
-                Al continuar, aceptas nuestros
-                <a href="/terminos" class="underline">Términos y Condiciones</a>
-                y nuestra
-                <a href="/politica-privacidad" class="underline">Política de Privacidad</a>.
-              </p>
-
-              <div class="hidden rounded-2xl bg-[#ecfdf3] border border-[#86efac] px-5 py-5 text-sm text-[#14532d]" data-download-message >
-                <p class="font-extrabold text-base text-[#14532d] mb-2">¡Listo, está en la cancha! 🎯</p>
-                <p class="mb-4 text-[#166534]">Tu plantilla está lista para descargar.</p>
-                <a href="#" target="_blank" data-download-href class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#162741] px-5 py-3.5 text-sm font-extrabold uppercase tracking-[0.14em] text-white shadow-[0_0_24px_rgba(22,39,65,0.18)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0_32px_rgba(22,39,65,0.28)]" >
-                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                  </svg>
-                  Descargar ahora
-                </a>
-              </div>
-            </form>
-          </aside>
         </div>
       </section>
     </main>
-
     <Footer />
   </div>
+
+  <!-- Logo oculto para el PDF -->
+  <img id="img-logo-pdf" src="/logo-pdf.jpg" alt="Logo PDF" crossorigin="anonymous" class="hidden" />
+
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Formulario → genera PDF (patrón bunker) -->
   <script is:inline>
-  document.querySelectorAll('[data-resource-form]').forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('[data-submit-btn]');
-      const text = form.querySelector('[data-btn-text]');
-      const loading = form.querySelector('[data-btn-loading]');
-      const message = form.querySelector('[data-download-message]');
-      const downloadHref = form.querySelector('[data-download-href]');
-      const link = form.getAttribute('data-download-link');
-      if (btn && text && loading) {
-        btn.disabled = true;
-        text.classList.add('hidden');
-        loading.classList.remove('hidden');
-      }
-      setTimeout(() => {
-        if (loading) loading.classList.add('hidden');
-        if (btn) btn.classList.add('hidden');
-        if (message) message.classList.remove('hidden');
-        if (downloadHref && link) downloadHref.setAttribute('href', link);
-      }, 1500);
+    document.querySelectorAll('[data-escaner-form]').forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn     = form.querySelector('[data-submit-btn]');
+        const text    = form.querySelector('[data-btn-text]');
+        const loading = form.querySelector('[data-btn-loading]');
+        if (btn && text && loading) {
+          btn.disabled = true;
+          text.classList.add('hidden');
+          loading.classList.remove('hidden');
+          loading.classList.add('flex');
+        }
+        setTimeout(() => {
+          if (typeof window.generarEscanerPDF === 'function') {
+            window.generarEscanerPDF();
+          }
+          // Restaurar botón
+          if (loading) { loading.classList.add('hidden'); loading.classList.remove('flex'); }
+          if (text)    text.classList.remove('hidden');
+          if (btn)     btn.disabled = false;
+        }, 1000);
+      });
     });
-  });
-</script>
+  </script>
+
+  <!-- Generador de PDF -->
+  <script is:inline>
+    window.generarEscanerPDF = () => {
+      if (typeof window.jspdf === "undefined") {
+        alert("La librería de PDF no cargó. Verifica tu conexión e intenta de nuevo.");
+        return;
+      }
+
+      const val = (id) => { const el = document.getElementById(id); return el ? el.value.trim() : ""; };
+      const fmtDate = (str) => { if (!str) return "__ / __ / __"; const [y,m,d] = str.split("-"); return `${d} / ${m} / ${y}`; };
+
+      const imgToBase64 = (imgEl) => {
+        try {
+          if (!imgEl || !imgEl.complete || imgEl.naturalWidth === 0) return null;
+          const canvas = document.createElement("canvas");
+          canvas.width = imgEl.naturalWidth;
+          canvas.height = imgEl.naturalHeight;
+          canvas.getContext("2d").drawImage(imgEl, 0, 0);
+          return canvas.toDataURL("image/jpeg", 0.85);
+        } catch (e) { console.warn("img error:", imgEl?.src, e); return null; }
+      };
+
+      {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+
+        const NAVY  = [22, 39, 65];
+        const GOLD  = [225, 200, 117];
+        const LIME  = [224, 244, 89];
+        const GREY  = [82, 101, 126];
+        const WHITE = [255, 255, 255];
+        const W = 210, M = 14, CW = W - M * 2;
+        const LH = 4.2;
+
+        // Capturar imágenes
+        const b64LogoPdf = imgToBase64(document.getElementById("img-logo-pdf"));
+        const b64Portada = imgToBase64(document.getElementById("img-portada"));
+        const b64Trofeo  = imgToBase64(document.getElementById("img-trofeo"));
+        const b64Vinoc   = imgToBase64(document.getElementById("img-vinoculos"));
+        const b64Boti    = imgToBase64(document.getElementById("img-botiquin"));
+        const b64Tarj    = imgToBase64(document.getElementById("img-tarjeta"));
+        const b64Dt      = imgToBase64(document.getElementById("img-dt"));
+
+        // Helpers
+        const fillRect = (x, y, w, h, color, r = 4) => {
+          doc.setFillColor(...color); doc.roundedRect(x, y, w, h, r, r, "F");
+        };
+        const strokeRect = (x, y, w, h, color, lw = 0.4, r = 4) => {
+          doc.setDrawColor(...color); doc.setLineWidth(lw); doc.roundedRect(x, y, w, h, r, r, "S");
+        };
+        const setF = (size, style, color) => {
+          doc.setFontSize(size); doc.setFont("helvetica", style || "normal"); doc.setTextColor(...(color || NAVY));
+        };
+        const miniLabel = (text, x, y, color) => {
+          setF(5.5, "bold", color || [154, 137, 84]); doc.text(text.toUpperCase(), x, y);
+        };
+        const addImg = (b64, x, y, maxW, maxH, imgEl) => {
+          if (!b64 || !imgEl) return { w: 0, h: 0 };
+          const ratio = imgEl.naturalWidth / imgEl.naturalHeight;
+          let w = maxW, h = maxW / ratio;
+          if (h > maxH) { h = maxH; w = maxH * ratio; }
+          doc.addImage(b64, b64.startsWith("data:image/png") ? "PNG" : "JPEG", x, y, w, h);
+          return { w, h };
+        };
+        const textHeight = (text, maxW, size = 7) => {
+          doc.setFontSize(size);
+          return doc.splitTextToSize(text || "", maxW).length * LH;
+        };
+
+        // ── HEADER: logo izquierda, textos derecha ──
+        const drawHeader = () => {
+          const headerH = 28;
+          fillRect(0, 0, W, headerH, NAVY, 0);
+
+          // Logo a la izquierda
+          if (b64LogoPdf) {
+            const logoEl = document.getElementById("img-logo-pdf");
+            const ratio  = logoEl.naturalWidth / logoEl.naturalHeight;
+            const lh = 22, lw = lh * ratio;
+            doc.addImage(
+              b64LogoPdf,
+              b64LogoPdf.startsWith("data:image/png") ? "PNG" : "JPEG",
+              M, 3, lw, lh
+            );
+          }
+
+          // Textos a la derecha
+          setF(11, "bold", GOLD);
+          doc.text("EMPRENDE FUTBOLERO", W - M, 11, { align: "right" });
+          setF(7, "normal", LIME);
+          doc.text("PLANTILLA: EL ESCÁNER DEL DT", W - M, 19, { align: "right" });
+        };
+
+        // ════════════════════════════════════════
+        // PÁGINA 1
+        // ════════════════════════════════════════
+        drawHeader();
+
+        let y = 34;
+
+        // Bloque usuario
+        fillRect(M, y, CW, 52, WHITE, 5);
+        strokeRect(M, y, CW, 52, NAVY, 0.4, 5);
+
+        const nombre = val("field-nombre") || "—";
+        const liga   = val("field-liga")   || "Liga Emprendedora";
+        const fecha  = fmtDate(val("field-fecha"));
+
+        miniLabel("Nombre de Usuario", M + 4, y + 7);
+        setF(9, "bold", NAVY); doc.text(nombre, M + 4, y + 13);
+        doc.setDrawColor(...NAVY); doc.setLineWidth(0.2);
+        doc.line(M + 4, y + 16, M + CW / 2 - 4, y + 16);
+
+        miniLabel("Liga / Comunidad", M + 4, y + 22);
+        setF(9, "normal", NAVY); doc.text(liga, M + 4, y + 28);
+        doc.line(M + 4, y + 31, M + CW / 2 - 4, y + 31);
+
+        miniLabel("Fecha", M + 4, y + 37);
+        setF(9, "bold", NAVY); doc.text(fecha, M + 4, y + 43);
+        doc.line(M + 4, y + 46, M + CW / 2 - 4, y + 46);
+
+        if (b64Portada) {
+          addImg(b64Portada, W / 2 + 4, y + 2, CW / 2 - 8, 48, document.getElementById("img-portada"));
+        }
+
+        // Título sección 1
+        y = 92;
+        setF(10, "bold", NAVY);
+        doc.text("1. LA MATRIZ DE DIAGNÓSTICO (Tu Radiografía)", M, y);
+        y += 4;
+        setF(7, "italic", GREY);
+        const rule1 = doc.splitTextToSize("Regla del DT: Prohibido escribir obviedades. Escribe factores reales que den dinero o te lo estén haciendo perder.", CW);
+        doc.text(rule1, M, y);
+        y += rule1.length * LH + 3;
+
+        // Grid 2×2 con altura dinámica
+        const cellW = (CW - 4) / 2;
+        const gutter = 4;
+        const PAD = 5;
+
+        const quadrants = [
+          { ids: ["field-fortaleza-1",  "field-fortaleza-2"],  title: "Mis Estrellas (Fortalezas)",            sub: "MI ESTADO DE FORMA · ANÁLISIS INTERNO", accent: GOLD,         imgB64: b64Trofeo, imgElId: "img-trofeo" },
+          { ids: ["field-oportunidad-1","field-oportunidad-2"],title: "El Hueco en la Defensa (Oportunidades)", sub: "LECTURA DEL RIVAL · ANÁLISIS EXTERNO",   accent: [160,185,40], imgB64: b64Vinoc,  imgElId: "img-vinoculos" },
+          { ids: ["field-debilidad-1",  "field-debilidad-2"],  title: "El Jugador Lesionado (Debilidades)",     sub: "MI ESTADO DE FORMA · ANÁLISIS INTERNO", accent: [200,80,80],  imgB64: b64Boti,  imgElId: "img-botiquin" },
+          { ids: ["field-amenaza-1",    "field-amenaza-2"],    title: "La Tarjeta Amarilla (Amenazas)",         sub: "LECTURA DEL RIVAL · ANÁLISIS EXTERNO",   accent: [180,140,20], imgB64: b64Tarj,  imgElId: "img-tarjeta" },
+        ];
+
+        const cellHeights = quadrants.map((q) => {
+          const t1 = val(q.ids[0]), t2 = val(q.ids[1]);
+          const h1 = textHeight("1. " + (t1 || "(vacío)"), cellW - PAD * 2 - 2);
+          const h2 = textHeight("2. " + (t2 || "(vacío)"), cellW - PAD * 2 - 2);
+          return Math.max(42, 22 + h1 + h2 + PAD * 2 + 4);
+        });
+        const rowH = [
+          Math.max(cellHeights[0], cellHeights[1]),
+          Math.max(cellHeights[2], cellHeights[3]),
+        ];
+        const rowY = [y, y + rowH[0] + gutter];
+
+        quadrants.forEach((q, i) => {
+          const col = i % 2, row = Math.floor(i / 2);
+          const cx = M + col * (cellW + gutter);
+          const cy = rowY[row];
+          const ch = rowH[row];
+          const imgEl = document.getElementById(q.imgElId);
+
+          fillRect(cx, cy, cellW, ch, WHITE, 5);
+          strokeRect(cx, cy, cellW, ch, q.accent, 0.6, 5);
+
+          if (q.imgB64 && imgEl) addImg(q.imgB64, cx + PAD, cy + PAD, 12, 12, imgEl);
+
+          setF(5.5, "bold", q.accent);
+          doc.text(q.sub, cx + 20, cy + PAD + 4);
+
+          setF(7.5, "bold", NAVY);
+          const tLines = doc.splitTextToSize(q.title, cellW - 22);
+          doc.text(tLines, cx + 20, cy + PAD + 9);
+
+          const sepY = cy + PAD + 9 + tLines.length * 3.8;
+          doc.setDrawColor(...NAVY); doc.setLineWidth(0.2);
+          doc.line(cx + PAD, sepY, cx + cellW - PAD, sepY);
+
+          const t1 = val(q.ids[0]), t2 = val(q.ids[1]);
+          const l1 = doc.splitTextToSize("1. " + (t1 || "(vacío)"), cellW - PAD * 2 - 2);
+          const l2 = doc.splitTextToSize("2. " + (t2 || "(vacío)"), cellW - PAD * 2 - 2);
+          setF(7, "normal", GREY);
+          const contentY = sepY + 3;
+          doc.text(l1, cx + PAD, contentY);
+          doc.text(l2, cx + PAD, contentY + l1.length * LH + 1);
+        });
+
+        // ════════════════════════════════════════
+        // PÁGINA 2
+        // ════════════════════════════════════════
+        doc.addPage();
+        drawHeader();
+
+        y = 34;
+        setF(10, "bold", NAVY);
+        doc.text("2. LA TÁCTICA DE LA BRECHA (Tu Plan de Entrenamiento)", M, y);
+        y += 4;
+        setF(7, "italic", GREY);
+        const rule2 = doc.splitTextToSize("Regla del DT: Tu negocio no va a quebrar por tus debilidades, va a quebrar por no cubrirlas a tiempo.", CW);
+        doc.text(rule2, M, y);
+        y += rule2.length * LH + 5;
+
+        // BRECHA
+        const bText  = val("field-brecha") || "(sin completar)";
+        const bLines = doc.splitTextToSize(bText, CW - 12);
+        const bH     = Math.max(34, bLines.length * LH + 20);
+        fillRect(M, y, CW, bH, WHITE, 5);
+        strokeRect(M, y, CW, bH, NAVY, 0.4, 5);
+        miniLabel("A. Cruce Crítico — Mi Brecha Operativa o de Conocimiento:", M + 4, y + 8);
+        doc.setDrawColor(...NAVY); doc.setLineWidth(0.2);
+        doc.line(M + 4, y + 11, M + CW - 4, y + 11);
+        setF(8, "normal", NAVY); doc.text(bLines, M + 4, y + 17);
+        y += bH + 5;
+
+        // ACCIÓN
+        const aText  = val("field-accion") || "(sin completar)";
+        const aLines = doc.splitTextToSize(aText, CW - 12);
+        const aH     = Math.max(34, aLines.length * LH + 20);
+        fillRect(M, y, CW, aH, NAVY, 5);
+        setF(6, "bold", LIME); doc.text("B. JUGADA A 15 MINUTOS — [ ] MI ACCIÓN INMEDIATA HOY ES:", M + 4, y + 8);
+        doc.setDrawColor(...LIME); doc.setLineWidth(0.2);
+        doc.line(M + 4, y + 11, M + CW - 4, y + 11);
+        setF(8, "normal", WHITE); doc.text(aLines, M + 4, y + 17);
+        y += aH + 5;
+
+        // VEREDICTO
+        const vText  = "No esperes a que el mercado te dé permiso para jugar. El mercado solo le da paso a los que ya tienen el uniforme puesto y están calentando en la banda. Si tu brecha es muy grande, no bajes la meta, sube el nivel del entrenamiento.";
+        const vLines = doc.splitTextToSize(vText, CW - 36);
+        const vH     = Math.max(32, vLines.length * LH + 18);
+        fillRect(M, y, CW, vH, NAVY, 5);
+        if (b64Dt) addImg(b64Dt, M + 4, y + 3, 18, vH - 6, document.getElementById("img-dt"));
+        setF(6.5, "bold", GOLD); doc.text("VEREDICTO DEL DT", M + 26, y + 9);
+        setF(7.5, "normal", [210,210,210]); doc.text(vLines, M + 26, y + 16);
+        y += vH + 6;
+
+        // FIRMA
+        fillRect(M, y, CW, 34, WHITE, 5);
+        strokeRect(M, y, CW, 34, NAVY, 0.4, 5);
+        miniLabel("Firma del Lector", M + 4, y + 8);
+        doc.setDrawColor(...NAVY); doc.setLineWidth(0.4);
+        doc.line(M + 4, y + 24, M + CW / 2 - 6, y + 24);
+        const firma = val("field-firma") || "";
+        if (firma) { setF(9, "bold", NAVY); doc.text(firma, M + 6, y + 22); }
+        doc.setLineWidth(0.2);
+        doc.line(M + CW / 2, y + 6, M + CW / 2, y + 28);
+        miniLabel("Fecha", M + CW / 2 + 8, y + 8);
+        doc.setLineWidth(0.4);
+        doc.line(M + CW / 2 + 8, y + 24, M + CW - 4, y + 24);
+        setF(10, "bold", NAVY); doc.text(fmtDate(val("field-fecha-firma")), M + CW / 2 + 8, y + 22);
+
+        // Footer
+        const fY = 287;
+        doc.setDrawColor(...NAVY); doc.setLineWidth(0.3);
+        doc.line(M, fY, W - M, fY);
+        setF(6.5, "normal", GREY);
+        doc.text("Liga Emprendedora · Emprende Futbolero · Lección 1: El Escáner del DT", M, fY + 4);
+        doc.text("ligaemprendedora.co", W - M, fY + 4, { align: "right" });
+
+        const safeName = (val("field-nombre") || "escaner")
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .replace(/\s+/g, "-").toLowerCase();
+        doc.save(`escaner-del-dt-${safeName}.pdf`);
+    };
+}
+  </script>
 </BaseLayout>
