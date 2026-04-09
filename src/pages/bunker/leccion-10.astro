@@ -150,12 +150,20 @@ const signals = [
                 />
               </div>
 
-              <button
-                type="submit"
-                class="inline-flex min-h-[54px] w-full items-center justify-center rounded-full bg-[#e0f459] px-6 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.18)] transition hover:-translate-y-px hover:shadow-[0_0_36px_rgba(224,244,89,0.3)]"
-              >
-                Descargar recurso
-              </button>
+       <button
+  type="submit"
+  data-submit-btn
+  class="relative inline-flex min-h-[54px] w-full items-center justify-center rounded-full bg-[#e0f459] px-6 text-sm font-extrabold uppercase tracking-[0.14em] text-[#162741] shadow-[0_0_28px_rgba(224,244,89,0.18)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(224,244,89,0.35)] hover:bg-[#d4e84f] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
+>
+  <span data-btn-text>Descargar recurso</span>
+  <span data-btn-loading class="hidden absolute inset-0 items-center justify-center gap-2">
+    <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+    </svg>
+    Enviando...
+  </span>
+</button>
 
               <p class="text-[11px] leading-5 text-[#6b7280]">
                 Sin spam. Solo recursos, herramientas y tácticas de negocio de la Liga.
@@ -168,10 +176,18 @@ const signals = [
                 <a href="/politica-privacidad" class="underline">Política de Privacidad</a>.
               </p>
 
-              <div
-                class="hidden rounded-2xl bg-[#ecfdf3] px-4 py-4 text-sm text-[#14532d]"
-                data-download-message
-              ></div>
+              <div class="hidden rounded-2xl bg-[#ecfdf3] border border-[#86efac] px-5 py-5 text-sm text-[#14532d]" data-download-message >
+                <p class="font-extrabold text-base text-[#14532d] mb-2">¡Listo, está en la cancha! 🎯</p>
+                <p class="mb-4 text-[#166534]">Tu plantilla está lista para descargar.</p>
+                <a href="#" target="_blank" data-download-href class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#162741] px-5 py-3.5 text-sm font-extrabold uppercase tracking-[0.14em] text-white shadow-[0_0_24px_rgba(22,39,65,0.18)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0_32px_rgba(22,39,65,0.28)]" >
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  Descargar ahora
+                </a>
+              </div>
             </form>
           </aside>
         </div>
@@ -180,4 +196,28 @@ const signals = [
 
     <Footer />
   </div>
+  <script is:inline>
+  document.querySelectorAll('[data-resource-form]').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('[data-submit-btn]');
+      const text = form.querySelector('[data-btn-text]');
+      const loading = form.querySelector('[data-btn-loading]');
+      const message = form.querySelector('[data-download-message]');
+      const downloadHref = form.querySelector('[data-download-href]');
+      const link = form.getAttribute('data-download-link');
+      if (btn && text && loading) {
+        btn.disabled = true;
+        text.classList.add('hidden');
+        loading.classList.remove('hidden');
+      }
+      setTimeout(() => {
+        if (loading) loading.classList.add('hidden');
+        if (btn) btn.classList.add('hidden');
+        if (message) message.classList.remove('hidden');
+        if (downloadHref && link) downloadHref.setAttribute('href', link);
+      }, 1500);
+    });
+  });
+</script>
 </BaseLayout>
