@@ -34,7 +34,7 @@ const interesesLectura = [
 const downloadLink = "https://drive.google.com/file/d/1OozRcbJEnicK2jZp8_rgNf6N4w_Q27dr/view?usp=sharing"; // Enlace del primer capítulo
 ---
 
-<section class="relative isolate overflow-hidden bg-[#f6f5f2] px-4 py-20 text-[#162741] md:px-6 md:py-28">
+<section id="libro" class="relative isolate overflow-hidden bg-[#f6f5f2] px-4 py-20 text-[#162741] md:px-6 md:py-28">
   <div class="pointer-events-none absolute inset-0">
     <div class="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f2_100%)]"></div>
     <div class="absolute inset-x-0 top-0 h-px bg-[#162741]/8"></div>
@@ -123,24 +123,7 @@ const downloadLink = "https://drive.google.com/file/d/1OozRcbJEnicK2jZp8_rgNf6N4
           </div>
 
           <!-- Checkboxes de intereses de lectura -->
-          <fieldset>
-            <legend class="block text-xs font-semibold uppercase tracking-[0.14em] text-[#55657d]">
-              ¿Qué tipo de libros lees o te interesan?
-            </legend>
-            <div class="mt-3 space-y-2.5">
-              {interesesLectura.map((interes) => (
-                <label class="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#162741]/8 bg-[#f6f5f2] px-4 py-3 transition hover:border-[#E1C875]/50 hover:bg-[#E1C875]/6">
-                  <input
-                    type="checkbox"
-                    name="intereses_lectura"
-                    value={interes}
-                    class="h-4 w-4 rounded border-[#d8dde6] text-[#162741] accent-[#162741]"
-                  />
-                  <span class="text-sm text-[#334865]">{interes}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
+          
 
          <!-- DESPUÉS -->
 <button
